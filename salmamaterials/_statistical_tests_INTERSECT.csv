@@ -1,0 +1,57 @@
+hyp_id,tau,modality,t_stat,p_value,significant,sigma_switching,n_switching,sigma_nonswitching,n_nonswitching,effect_direction_matches,notes
+Hyp-1,025,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-2,025,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-3_relaxed,025,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-4_chaos_vs_baseline,025,INTERSECT,,,False,0.0,1162,,0,,n_too_small
+Hyp-5_B4,025,INTERSECT,,,False,,0,0.012345679012345678,81,,n_too_small
+Hyp-5_B9,025,INTERSECT,,,False,,0,0.0,81,,n_too_small; same_as_Hyp-7_if_sig
+Hyp-6,025,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-6_B9,025,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-7,025,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-8_full,025,INTERSECT,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-8_aro,025,INTERSECT,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-9,025,INTERSECT,,,False,,0,,0,,n_too_small; n_b2_neutral=0
+Hyp-10,025,INTERSECT,,,False,2.9803431066749844,1603,,0,,n_too_small
+Maintenance_vs_Drift,025,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-1,050,INTERSECT,,,False,,0,0.16049382716049382,81,,n_too_small
+Hyp-2,050,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-3_relaxed,050,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-4_chaos_vs_baseline,050,INTERSECT,,,False,0.028455284552845527,246,,0,,n_too_small
+Hyp-5_B4,050,INTERSECT,,,False,,0,0.037037037037037035,81,,n_too_small
+Hyp-5_B9,050,INTERSECT,,,False,,0,0.0,81,,n_too_small; same_as_Hyp-7_if_sig
+Hyp-6,050,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-6_B9,050,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-7,050,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-8_full,050,INTERSECT,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-8_aro,050,INTERSECT,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-9,050,INTERSECT,,,False,,0,,0,,n_too_small; n_b2_neutral=0
+Hyp-10,050,INTERSECT,,,False,2.9814763636363635,1375,,0,,n_too_small
+Maintenance_vs_Drift,050,INTERSECT,,,False,,0,0.2308461538461538,13,,n_too_small
+Hyp-1,075,INTERSECT,,,False,,0,0.4444444444444444,81,,n_too_small
+Hyp-2,075,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-3_relaxed,075,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-4_chaos_vs_baseline,075,INTERSECT,,,False,0.10416666666666667,48,,0,,n_too_small
+Hyp-5_B4,075,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-5_B9,075,INTERSECT,,,False,,0,0.0,81,,n_too_small; same_as_Hyp-7_if_sig
+Hyp-6,075,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-6_B9,075,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-7,075,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-8_full,075,INTERSECT,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-8_aro,075,INTERSECT,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-9,075,INTERSECT,,,False,,0,,0,,n_too_small; n_b2_neutral=0
+Hyp-10,075,INTERSECT,,,False,2.9767223769730737,1077,,0,,n_too_small
+Maintenance_vs_Drift,075,INTERSECT,,,False,,0,0.23605555555555557,36,,n_too_small
+Hyp-1,100,INTERSECT,,,False,,0,0.7777777777777778,81,,n_too_small
+Hyp-2,100,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-3_relaxed,100,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-4_chaos_vs_baseline,100,INTERSECT,,,False,,0,0.125,24,,n_too_small
+Hyp-5_B4,100,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-5_B9,100,INTERSECT,,,False,,0,0.0,81,,n_too_small; same_as_Hyp-7_if_sig
+Hyp-6,100,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-6_B9,100,INTERSECT,,,False,,0,,0,,n_too_small
+Hyp-7,100,INTERSECT,,,False,,0,0.0,81,,n_too_small
+Hyp-8_full,100,INTERSECT,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-8_aro,100,INTERSECT,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-9,100,INTERSECT,,,False,,0,,0,,n_too_small; n_b2_neutral=0
+Hyp-10,100,INTERSECT,-1.4873036282142371,0.13732816465387312,False,2.970911424903723,779,3.033333333333333,24,True,
+Maintenance_vs_Drift,100,INTERSECT,,,False,,0,0.2327777777777778,63,,n_too_small

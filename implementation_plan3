@@ -1,0 +1,21 @@
+# BTP Thesis: 60-Minute Rapid Finalization Plan
+
+## Goal
+Achieve high-precision (MAE ~0.3) BTP hypothesis results within the 1-hour deadline by leveraging the faster Qwen-32B engine and RMSSD features.
+
+## Step 1: Rapid V2 Inference (45 mins)
+- **Target File:** [run_groq_mistral.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/InHouseCollectedData/run_groq_mistral.py) (which runs **Qwen-3-32B-Preview**).
+- **Input:** `fitbit_ready_for_llm_v2.csv` (Injected with RMSSD).
+- **Why Qwen?** It is 3x faster than Llama-70B and handles the 1,495 rows without hitting major rate-limit pauses.
+- **Why V2?** Including RMSSD allows the model to differentiate arousal levels that "BPM Average" loses.
+
+## Step 2: Immediate Hypothesis Mapping (10 mins)
+- **Script:** [generate_btp_hyptohesis_FINAL.py](file:///D:/BTP/btp2/salmamaterials/generate_btp_hyptohesis_FINAL.py).
+- **Action:** Point the script to the new Qwen results to generate the final 12-table matrix.
+
+## Step 3: Result Verification (5 mins)
+- Validate that the "All Match (H1)" count increases toward the human baseline.
+- Export results to `MASTER_BTP_HYPOTHESIS_V5_RAPID.csv`.
+
+---
+*Ready to start the Qwen V2 run. Total estimated time: 55 minutes.*

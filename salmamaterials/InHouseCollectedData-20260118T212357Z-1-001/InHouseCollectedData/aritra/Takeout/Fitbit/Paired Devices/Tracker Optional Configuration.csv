@@ -1,0 +1,2 @@
+tracker_id,enabled_notification_types,on_right_hand,clock_face,enable_inactivity_alerts,last_updated_ia_time,last_reboot_time,payments_enabled,last_successful_wifi_connection_time,last_successful_wifi_connectionipv4addr,last_successful_wifi_connectionipv6addr,last_successful_wifi_connectionssid,live_data_disabled
+2959631686,"[INCOMING_CALL, APP_NOTIFICATIONS, CALENDAR, TEXT_MESSAGE]",false,,,,,false,2025-11-06T08:18:24.000Z,/10.5.20.107,,SMR_LAB,

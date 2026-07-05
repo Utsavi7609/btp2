@@ -1,0 +1,8 @@
+timestamp,event_name,email,location,ip,outcome,reason
+Fri Dec 05 12:58:58 UTC 2025,Update profile data,sayantankuila@gmail.com,,172.22.25.152,SUCCESS,
+Fri Nov 21 13:47:18 UTC 2025,Update profile data,sayantankuila@gmail.com,,172.22.18.178,SUCCESS,
+Fri Nov 21 13:45:54 UTC 2025,Update profile data,sayantankuila@gmail.com,,172.22.25.90,SUCCESS,
+Fri Nov 21 12:20:46 UTC 2025,Update profile data,sayantankuila@gmail.com,,172.22.4.77,SUCCESS,
+Thu Nov 20 08:43:37 UTC 2025,Update profile data,sayantankuila@gmail.com,,172.22.4.148,SUCCESS,
+Thu Nov 20 06:55:03 UTC 2025,Update profile data,sayantankuila@gmail.com,,172.22.34.6,SUCCESS,
+Thu Nov 20 06:54:55 UTC 2025,Signup,hzvO54bDVdeYYNLSeaUl@fitbit-identity.goog,,,SUCCESS,

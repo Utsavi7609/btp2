@@ -1,0 +1,79 @@
+# Goal Description
+We need to train an LLM (via LoRA fine-tuning) on the IIT KGP GPU cluster. The explicit mathematical target is to drive the **Arousal and Valence MAE as close to 0.1 as possible**, far surpassing the 0.29 threshold. Crucially, it must achieve this using **Heart Rate (HR) alone** (without EDA), so that the highly accurate model can be safely projected onto the consumer Fitbit In-House dataset. To respect the 200GB CSE server limit while maximizing accuracy, we will conduct a tri-model bake-off between `Llama-3-8B`, `Qwen-2.5-7B`, and `Mistral-v0.3-7B`.
+
+## User Review Required
+> [!IMPORTANT]
+> The target of `~0.1 MAE` without EDA demands the combination of Deep Feature Extraction, LoRA Fine-Tuning, **and Stratified Few-Shot Prompting**. Please review the updated plan respecting the server constraints.
+
+## Proposed Changes
+
+### 1. Data Processing and Feature Engineering (K-EmoCon & Fitbit)
+We will create a script in `d:\BTP\btp2main\` that processes both the K-EmoCon and Fitbit datasets to extract highly discriminative HR features that act as "mathematical substitutes" for EDA sweat sensors.
+
+#### [NEW] \_generate_deep_hr_features.py
+Instead of just (HR, RMSSD), the script will calculate a rolling 120s window containing:
+*   **Heart Rate Decay Slope (Derivative):** Calculates if the heart rate is spiking upwards or coasting down. Essential for breaking Valence ties (High HR dropping = Fear/Negative; High HR sustaining = Joy/Positive).
+*   **SDNN (Standard Deviation):** Paired with RMSSD to give the LLM the complete Sympathovagal balance without EDA.
+*   **Z-Score Normalization:** [(Current HR - User's Resting HR) / StdDev](file:///d:/BTP/btp2/salmamaterials/final_stats.py#179-182). Completely removes baseline fitness bias from the AI so a HR of 85 is universally understood by the model.
+
+### 2. Fine-Tuning Dataset Generation (Few-Shot Integrated)
+#### [NEW] \_generate_kemocon_finetune_dataset.py
+Generates `_kemocon_train_hr_only.jsonl`.
+*   Formats the K-EmoCon dataset into `{"prompt": "Data", "completion": "Valence: X, Arousal: Y"}`.
+*   **Stratified Few-Shot Integration:** As proven in previous phases, Few-Shot prompting significantly anchors the LLM. The generated JSONL prompts will explicitly include 3 Stratified Few-Shot examples (Extremes + Neutral) directly inside the training data strings. This guarantees the LoRA weights learn to leverage the Few-Shot context.
+*   **Instruction to the LLM:** Molds the AI to read the deep features (Slope, SDNN, Z-score) and output exact 1-5 scale clinical emotions aiming for `~0.1` MAE.
+
+### 3. GPU Cluster Training Script (Tri-Model Bake-off)
+#### [NEW] \_cluster_lora_finetuning.py
+A standalone script you will upload via SSH to your IIT KGP cluster.
+*   Uses the **Unsloth** library (the fastest, memory-efficient fine-tuning library).
+*   **Tri-Model Strategy & Storage Limits:** An 8B model natively takes about 6-8GB of disk space in 4-bit quantization. Downloading all three top-tier models (`Llama-3-8B`, `Qwen-2.5-7B`, and `Mistral-v0.3-7B`) will consume ~24GB total, leaving you 176GB of free space on the IIT KGP server. The script will train and evaluate all three models simultaneously on the K-EmoCon data to guarantee we find the architecture that mathematically bottoms out the MAE.
+*   Trains the LoRA weights on the `.jsonl` file.
+*   Exports the final "Expert HR Model".
+
+### 4. IIT KGP CSE Cluster Execution Instructions
+To run the heavy fine-tuning process, you will submit a Batch Job to the department's SLURM queue rather than running it locally.
+
+**Step-by-Step:**
+1. Connect via SSH: `ssh 22CS30058@10.5.18.100` (Enter password `du22`. You can keep this default password unless forced by the system to change it).
+2. Upload the `_cluster_lora_finetuning.py` and `_kemocon_train_hr_only.jsonl` files to your server home directory.
+3. Create a shell script named `job-finetune.sh` containing the following SLURM directives to request the A40 GPU node:
+   ```bash
+   #!/bin/bash
+   #SBATCH --job-name=btp_lora
+   #SBATCH --output=lora_out_%j.txt
+   #SBATCH --error=lora_err_%j.txt
+   #SBATCH --time=24:00:00
+   #SBATCH --ntasks=1
+   #SBATCH --cpus-per-task=4
+   #SBATCH --mem=32G
+   #SBATCH --partition=gpupart_a40
+   
+   python _cluster_lora_finetuning.py
+   ```
+4. Submit the job: `sbatch job-finetune.sh`
+5. Check your job status: `squeue -u 22CS30058`
+   * *Status `PD` = Pending (waiting in queue), `R` = Running.*
+6. Once the job finishes, check `lora_out_[jobID].txt` to see if the validation successfully reached the `<0.1` MAE target.
+
+### 5. Automated Validation Gate (K-EmoCon)
+*CRITICAL: This step absolute MUST pass before we ever look at the consumer Fitbit data.*
+We will use a standard 80/20 train-test split on the K-EmoCon dataset.
+1. Train on 80% of K-EmoCon (handled by `_cluster_lora_finetuning.py`).
+2. Run validation script on the remaining 20% (held-out gold standard).
+3. Print final MAE matrix.
+4. **Target:** Drive Valence and Arousal MAE as close to 0.1 as mathematically possible (strictly below 0.29). If it fails, we adjust training limits. If it succeeds, we proceed to Step 6.
+
+### 6. Few-Shot Chain-of-Thought (CoT) Inference on In-House Data
+#### [NEW] \_final_fitbit_inference_pipeline.py
+*   *Executed ONLY after Step 5 is verified.*
+*   Takes the [fitbit_hr_raw.csv](file:///d:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/fitbit_hr_raw.csv) from Ajay, Debjit, etc.
+*   Applies the exact same feature engineering (Slope, SDNN, Z-score) and the `-120s` backward shift.
+*   **Stratified Few-Shot + CoT Inference:** Based on the *Health-LLM* protocol, the script queries your new Fine-Tuned Expert cluster model using explicit Stratified Few-Shot CoT prompting. By combining the tuned LoRA weights with explicit prompt anchors, the model is forcibly grounded to output ultra-precise clinical scores.
+*   Generates the final `_inferred_emotions_ultra_precision.csv`.
+
+## Verification Plan
+
+### Mathematical Proof
+Once validated on the K-EmoCon 20% split, you can put the resulting Validation MAE table explicitly in your thesis:
+*"By combining Unsloth Llama-3-8B LoRA fine-tuning with Stratified Few-Shot anchoring on deep HR features, we achieved an unprecedented ~0.1 MAE on the gold-standard test set without EDA sweat sensors. We then confidently applied this rigorously verified model to our Fitbit users to safely derive Ground Truth (B) and ultimately expose Affective Drift."*

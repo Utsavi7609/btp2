@@ -1,0 +1,1337 @@
+[
+  {
+    "user_id": 1,
+    "sequence": [
+      {
+        "clip_title": "TheBlindSide_010.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "Gifted_049.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "TheFaultInOurStars_045.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "Gifted_045.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "TheFaultInOurStars_003.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "TheTheoryOfEverything_040.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 2,
+    "sequence": [
+      {
+        "clip_title": "TheFaultInOurStars_001.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "LadyBird_030.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "TheTheoryOfEverything_040.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheFaultInOurStars_006.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "LadyBird_003.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "LadyBird_019.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "TheFaultInOurStars_033.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 3,
+    "sequence": [
+      {
+        "clip_title": "LadyBird_030.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "Gifted_049.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "TheFaultInOurStars_006.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheFaultInOurStars_003.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "TheFaultInOurStars_033.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "TheBlindSide_001.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 4,
+    "sequence": [
+      {
+        "clip_title": "TheBlindSide_010.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "Gifted_049.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "TheFaultInOurStars_003.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheFaultInOurStars_033.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "TheFaultInOurStars_045.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheBlindSide_003.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 5,
+    "sequence": [
+      {
+        "clip_title": "LadyBird_030.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "TheBlindSide_010.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "TheFaultInOurStars_045.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "Gifted_045.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheFaultInOurStars_033.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheBlindSide_001.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 6,
+    "sequence": [
+      {
+        "clip_title": "LadyBird_030.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "TheBlindSide_010.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "LadyBird_003.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "TheBlindSide_001.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "TheFaultInOurStars_033.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "LadyBird_019.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "TheTheoryOfEverything_040.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 7,
+    "sequence": [
+      {
+        "clip_title": "TheBlindSide_010.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "Gifted_049.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "LadyBird_001.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "TheBlindSide_003.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "TheFaultInOurStars_006.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "TheFaultInOurStars_033.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 8,
+    "sequence": [
+      {
+        "clip_title": "TheFaultInOurStars_001.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "Gifted_049.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "TheFaultInOurStars_033.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "TheBlindSide_001.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheBlindSide_005.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "TheFaultInOurStars_006.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 9,
+    "sequence": [
+      {
+        "clip_title": "Gifted_049.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "LadyBird_030.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "TheFaultInOurStars_045.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheTheoryOfEverything_040.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "LadyBird_001.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "Gifted_045.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 10,
+    "sequence": [
+      {
+        "clip_title": "LadyBird_030.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "TheBlindSide_010.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "LadyBird_003.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "Gifted_045.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheBlindSide_003.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "TheTheoryOfEverything_040.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 11,
+    "sequence": [
+      {
+        "clip_title": "Gifted_049.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "TheFaultInOurStars_001.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "TheFaultInOurStars_006.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheFaultInOurStars_033.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "TheBlindSide_001.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "Gifted_045.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 12,
+    "sequence": [
+      {
+        "clip_title": "Gifted_049.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "TheFaultInOurStars_001.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "TheTheoryOfEverything_040.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheFaultInOurStars_033.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "Gifted_045.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheBlindSide_001.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "TheBlindSide_003.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 13,
+    "sequence": [
+      {
+        "clip_title": "TheBlindSide_010.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "TheFaultInOurStars_001.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "TheFaultInOurStars_045.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "TheTheoryOfEverything_040.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "TheFaultInOurStars_006.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "LadyBird_003.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 14,
+    "sequence": [
+      {
+        "clip_title": "TheBlindSide_010.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "Gifted_049.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "TheTheoryOfEverything_040.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "LadyBird_056.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "TheFaultInOurStars_006.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "Gifted_045.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "LadyBird_019.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  },
+  {
+    "user_id": 15,
+    "sequence": [
+      {
+        "clip_title": "TheBlindSide_010.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 1
+      },
+      {
+        "clip_title": "Gifted_049.mp4",
+        "block_type": "Filler",
+        "expected_role": "Baseline_Buffer",
+        "position": 2
+      },
+      {
+        "clip_title": "Wonder_120.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 3
+      },
+      {
+        "clip_title": "AboutTime_000.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 4
+      },
+      {
+        "clip_title": "Gifted_045.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 5
+      },
+      {
+        "clip_title": "TheBlindSide_009.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 6
+      },
+      {
+        "clip_title": "Gifted_041.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 7
+      },
+      {
+        "clip_title": "LadyBird_017.mp4",
+        "block_type": "Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 8
+      },
+      {
+        "clip_title": "TheBlindSide_003.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 9
+      },
+      {
+        "clip_title": "TheFaultInOurStars_000.mp4",
+        "block_type": "Drift_Block",
+        "expected_role": "Clip2_Target",
+        "position": 10
+      },
+      {
+        "clip_title": "TheFaultInOurStars_033.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 11
+      },
+      {
+        "clip_title": "TheBlindSide_012.mp4",
+        "block_type": "Hyp9_Maintenance_Block",
+        "expected_role": "Clip2_Target",
+        "position": 12
+      },
+      {
+        "clip_title": "TheBlindSide_001.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip1_Stimulus",
+        "position": 13
+      },
+      {
+        "clip_title": "TheTheoryOfEverything_040.mp4",
+        "block_type": "Hyp9_Transition_Block",
+        "expected_role": "Clip2_Target",
+        "position": 14
+      }
+    ]
+  }
+]

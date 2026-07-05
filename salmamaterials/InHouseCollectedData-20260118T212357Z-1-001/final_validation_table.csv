@@ -1,0 +1,6 @@
+Model,Dataset,N,Valence_MAE,Arousal_MAE,Valence_Pearson_r,Arousal_Pearson_r,Valence_Acc_±1,Arousal_Acc_±1
+Qwen3-32B,In-House (Fitbit),1493,1.056,1.031,-0.071,0.000,70.2%,72.6%
+Llama-4-Scout-17B,In-House (Fitbit),1493,1.054,1.104,-0.112,-0.008,72.8%,70.2%
+Llama-3.3-70B-Versatile,K-EmoCon (E4),28,0.763,1.113,-0.183,0.235,75.0%,39.3%
+Llama-3.1-8B-Instant (Fallback),K-EmoCon (E4),26,1.013,1.154,N/A,0.215,65.4%,46.2%
+Llama-3.3-70B-FewShot,K-EmoCon (E4),28,0.177,0.548,0.980,0.850,100.0%,85.7%

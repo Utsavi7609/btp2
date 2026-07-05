@@ -1,0 +1,57 @@
+hyp_id,tau,modality,t_stat,p_value,significant,sigma_switching,n_switching,sigma_nonswitching,n_nonswitching,effect_direction_matches,notes
+Hyp-1,025,VIDEO,,,False,,0,0.0,1638,,n_too_small
+Hyp-2,025,VIDEO,,,False,,0,0.0,1638,,n_too_small
+Hyp-3_relaxed,025,VIDEO,,,False,,0,1.0,6,,n_too_small
+Hyp-4_chaos_vs_baseline,025,VIDEO,,,False,0.0,1126,,0,,n_too_small
+Hyp-5_B4,025,VIDEO,,,False,,0,0.014652014652014652,1638,,n_too_small
+Hyp-5_B9,025,VIDEO,,,False,,0,0.0,1638,,n_too_small; same_as_Hyp-7_if_sig
+Hyp-6,025,VIDEO,,,False,,0,,0,,n_too_small
+Hyp-6_B9,025,VIDEO,,,False,,0,,0,,n_too_small
+Hyp-7,025,VIDEO,,,False,,0,0.0,1638,,n_too_small
+Hyp-8_full,025,VIDEO,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-8_aro,025,VIDEO,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-9,025,VIDEO,,,False,,0,,0,,n_too_small; n_b2_neutral=6
+Hyp-10,025,VIDEO,,,False,2.9797287066246056,1585,,0,,n_too_small
+Maintenance_vs_Drift,025,VIDEO,,,False,,0,,0,,n_too_small
+Hyp-1,050,VIDEO,,,False,,0,0.08669108669108669,1638,,n_too_small
+Hyp-2,050,VIDEO,,,False,,0,0.0,1638,,n_too_small
+Hyp-3_relaxed,050,VIDEO,,,False,,0,1.0,6,,n_too_small
+Hyp-4_chaos_vs_baseline,050,VIDEO,,,False,0.08095238095238096,210,,0,,n_too_small
+Hyp-5_B4,050,VIDEO,,,False,,0,0.014652014652014652,1638,,n_too_small
+Hyp-5_B9,050,VIDEO,,,False,,0,0.0,1638,,n_too_small; same_as_Hyp-7_if_sig
+Hyp-6,050,VIDEO,,,False,,0,,0,,n_too_small
+Hyp-6_B9,050,VIDEO,,,False,,0,,0,,n_too_small
+Hyp-7,050,VIDEO,,,False,,0,0.0,1638,,n_too_small
+Hyp-8_full,050,VIDEO,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-8_aro,050,VIDEO,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-9,050,VIDEO,,,False,,0,,0,,n_too_small; n_b2_neutral=6
+Hyp-10,050,VIDEO,,,False,2.981736716891356,1261,,0,,n_too_small
+Maintenance_vs_Drift,050,VIDEO,,,False,,0,0.3837887323943662,142,,n_too_small
+Hyp-1,075,VIDEO,,,False,,0,0.2326007326007326,1638,,n_too_small
+Hyp-2,075,VIDEO,,,False,,0,0.0,1638,,n_too_small
+Hyp-3_relaxed,075,VIDEO,,,False,,0,1.0,6,,n_too_small
+Hyp-4_chaos_vs_baseline,075,VIDEO,1.4934145553000961,0.14317550827357609,False,0.3,30,0.08333333333333333,12,False,
+Hyp-5_B4,075,VIDEO,,,False,,0,0.0,1638,,n_too_small
+Hyp-5_B9,075,VIDEO,,,False,,0,0.003663003663003663,1638,,n_too_small; same_as_Hyp-7_if_sig
+Hyp-6,075,VIDEO,,,False,,0,,0,,n_too_small
+Hyp-6_B9,075,VIDEO,,,False,,0,,0,,n_too_small
+Hyp-7,075,VIDEO,,,False,,0,0.003663003663003663,1638,,n_too_small
+Hyp-8_full,075,VIDEO,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-8_aro,075,VIDEO,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-9,075,VIDEO,,,False,,0,,0,,n_too_small; n_b2_neutral=6
+Hyp-10,075,VIDEO,-0.39523430763143,0.6927694920097505,False,2.9764038231780168,837,3.0,12,True,
+Maintenance_vs_Drift,075,VIDEO,,,False,,0,0.41467716535433075,381,,n_too_small
+Hyp-1,100,VIDEO,,,False,,0,0.4554334554334554,1638,,n_too_small
+Hyp-2,100,VIDEO,,,False,,0,0.0,1638,,n_too_small
+Hyp-3_relaxed,100,VIDEO,,,False,,0,0.0,6,,n_too_small
+Hyp-4_chaos_vs_baseline,100,VIDEO,,,False,,0,0.46017699115044247,113,,n_too_small
+Hyp-5_B4,100,VIDEO,,,False,,0,0.0,1638,,n_too_small
+Hyp-5_B9,100,VIDEO,,,False,,0,0.018315018315018316,1638,,n_too_small; same_as_Hyp-7_if_sig
+Hyp-6,100,VIDEO,,,False,,0,,0,,n_too_small
+Hyp-6_B9,100,VIDEO,,,False,,0,,0,,n_too_small
+Hyp-7,100,VIDEO,,,False,,0,0.018315018315018316,1638,,n_too_small
+Hyp-8_full,100,VIDEO,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-8_aro,100,VIDEO,,,False,,0,,0,,n_too_small; no_switching_data
+Hyp-9,100,VIDEO,,,False,,0,,0,,n_too_small; n_b2_neutral=0
+Hyp-10,100,VIDEO,-2.453670824110644,0.014507276108223987,True,2.9815580736543903,353,3.037345132743363,113,True,
+Maintenance_vs_Drift,100,VIDEO,,,False,,0,0.35632841823056305,746,,n_too_small

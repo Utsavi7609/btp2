@@ -1,0 +1,33 @@
+[{
+  "dateTime" : "12/23/25 13:36:12",
+  "value" : {
+    "lapDurationSec" : 14,
+    "strokeCount" : 7,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "12/23/25 13:36:32",
+  "value" : {
+    "lapDurationSec" : 15,
+    "strokeCount" : 6,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "12/23/25 13:39:14",
+  "value" : {
+    "lapDurationSec" : 14,
+    "strokeCount" : 5,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "12/23/25 14:21:29",
+  "value" : {
+    "lapDurationSec" : 10,
+    "strokeCount" : 5,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+}]

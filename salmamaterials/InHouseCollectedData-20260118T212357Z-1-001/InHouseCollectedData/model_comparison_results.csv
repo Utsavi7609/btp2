@@ -1,0 +1,4 @@
+model,n_valid,mae_valence,mae_arousal,pearson_r_valence,pearson_p_valence,pearson_r_arousal,pearson_p_arousal,accuracy_v_within1_pct,accuracy_a_within1_pct,accuracy_both_within1_pct,exact_match_v_pct,exact_match_a_pct
+Llama-3.3-70B,1493,1.201,1.066,-0.175,0.0,0.023,0.3646,63.8,71.6,48.5,23.9,27.9
+Mixtral-8x7B,1495,1.056,1.032,-0.071,0.0061,0.0,0.9998,70.2,72.6,55.7,28.1,29.4
+Llama-4,1495,1.053,1.105,-0.112,0.0,-0.008,0.7624,72.8,70.2,56.9,28.8,26.4

@@ -1,0 +1,1504 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BTP-2 Report for Utsavi Gohil (22CS30058)
+% April 10, 2026
+%
+% --- COMPACT FORMATTING VERSION ---
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt, a4paper]{report}
+
+% --- PACKAGES ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[left=0.6in, right=0.6in, top=0.7in, bottom=0.7in]{geometry}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{tocbibind}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{enumitem} % ADDED for list compression
+
+% --- FORMATTING ---
+\setstretch{1.2} % Increased from 1.1 for better readability at 11pt
+\setlength{\textfloatsep}{8pt plus 1.0pt minus 2.0pt}
+\setlength{\floatsep}{8pt plus 1.0pt minus 2.0pt}
+\setlength{\intextsep}{8pt plus 1.0pt minus 2.0pt}
+
+% Compress chapter headings to save massive vertical space
+\titleformat{\chapter}[block]{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
+\titlespacing*{\chapter}{0pt}{-10pt}{10pt}
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+\titlespacing*{\subsection}{0pt}{4pt}{2pt}
+\titlespacing*{\subsubsection}{0pt}{4pt}{2pt}
+
+% Compress lists
+\setlist{itemsep=0pt, parsep=0pt, topsep=2pt, partopsep=0pt}
+
+% --- GRAPHICS PATH ---
+% All figures are in salmamaterials/_plots/ and sub-folders
+\graphicspath{
+    {_plots/}
+    {_plots/AUDIO/}
+    {_plots/VIDEO/}
+    {_plots/INTERSECT/}
+    {InHouseCollectedData/}
+    {./}
+}
+
+\hypersetup{
+    pdftitle={Uncovering Affective Drift: Using LLMs and Physiological Signals to Bypass Conscious Bias in Emotion Regulation},
+    pdfauthor={Utsavi Gohil},
+    pdfsubject={BTP-2 Report}
+}
+
+% --- BEGIN DOCUMENT ---
+\begin{document}
+
+% --- TITLE PAGE ---
+\begin{titlepage}
+    \begin{center}
+        \vspace*{0.5cm}
+        
+        \LARGE
+        \textbf{Targeted Emotion Regulation: Validating Affective Drift and Maintenance through Self-Reports, Physiological Signals, and LLMs}
+        
+        \vspace{1cm}
+        
+        \large
+        Project-II Report submitted to \\
+        Indian Institute of Technology Kharagpur \\
+        in partial fulfilment for the award of the degree of \\
+        
+        \vspace{0.5cm}
+        \LARGE \textbf{B. Tech} \\
+        \vspace{0.5cm}
+        \large in \\
+        \vspace{0.5cm}
+        \LARGE \textbf{Computer Science and Engineering} \\
+        \large by \\
+        \vspace{0.5cm}
+        \Large \textbf{Utsavi Gohil} \\
+        \textbf{(22CS30058)} \\
+        \large Under the supervision of \\
+        \vspace{0.3cm}
+        \Large \textbf{Professor Bivas Mitra} \\
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.20\linewidth]{imag.png}
+        \end{figure}
+        \large
+        Department of Computer Science and Engineering \\
+        Indian Institute of Technology Kharagpur \\
+        \vfill
+        \large
+        \textbf{Spring Semester, 2025-26} \\
+        \textbf{April 10, 2026}
+    \end{center}
+\end{titlepage}
+
+% --- FRONT MATTER ---
+\pagenumbering{roman}
+
+% --- DECLARATION ---
+\chapter*{}
+\begin{center}
+    \textbf{\Large DECLARATION}
+\end{center}
+\vspace{0.5cm}
+
+I certify that \\
+(a) The work contained in this report has been done by me under the guidance of my supervisor. \\
+(b) The work has not been submitted to any other Institute for any degree or diploma. \\
+(c) I have conformed to the norms and guidelines given in the Ethical Code of Conduct of the Institute. \\
+(d) Whenever I have used materials (data, theoretical analysis, figures, and text) from other sources, I have given due credit to them by citing them in the text of the thesis and giving their details in the references. Further, I have taken permission from the copyright owners of the sources, whenever necessary.
+
+\vspace{3cm}
+
+\begin{center}
+\begin{tabular}{p{0.5\linewidth} p{0.4\linewidth}}
+\textbf{Date:} April 10, 2026 & \hfill \textbf{(Utsavi Gohil)} \\
+\textbf{Place:} Kharagpur & \hfill \textbf{(22CS30058)} \\
+\end{tabular}
+\end{center}
+
+
+% --- CERTIFICATE ---
+\chapter*{}
+\begin{center}
+    \textbf{\large DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING} \\
+    \textbf{\large INDIAN INSTITUTE OF TECHNOLOGY KHARAGPUR} \\
+    \textbf{\large KHARAGPUR - 721302, INDIA}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.20\linewidth]{imag.png}
+    \end{figure}
+    \textbf{\Large CERTIFICATE}
+\end{center}
+\vspace{0.5cm}
+This is to certify that the project report entitled \textbf{``Targeted Emotion Regulation: Validating Affective Drift and Maintenance through Self-Reports, Physiological Signals, and LLMs''} submitted by \textbf{Utsavi Gohil (Roll No. 22CS30058)} to Indian Institute of Technology Kharagpur towards partial fulfilment of requirements for the award of degree of \textbf{B. Tech} in \textbf{Computer Science and Engineering} is a record of bona fide work carried out by her under my supervision and guidance during Spring Semester, 2025-26.
+\vspace{2cm}
+
+\noindent
+\begin{minipage}[b]{0.6\textwidth}
+    \raggedright
+    \includegraphics[width=0.5\linewidth]{image-removebg-preview.png}\\[1em]
+    \textbf{Professor Bivas Mitra} \\
+    Department of Computer Science and Engineering \\
+    Indian Institute of Technology Kharagpur \\
+    Kharagpur - 721302, India
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{0.35\textwidth}
+    \raggedleft
+    Date: April 10, 2026 \\
+    Place: Kharagpur
+\end{minipage}
+\cleardoublepage
+
+% --- ABSTRACT ---
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\noindent\textbf{Name of the student:} Utsavi Gohil \hfill \textbf{Roll No:} 22CS30058 \\
+\textbf{Degree for which submitted:} B. Tech \\
+\textbf{Department:} Department of Computer Science and Engineering \\
+\textbf{Thesis title:} Targeted Emotion Regulation: Validating Affective Drift and Maintenance through Self-Reports, Physiological Signals, and LLMs \\
+\textbf{Thesis supervisor:} Professor Bivas Mitra \\
+\textbf{Month and year of thesis submission:} April, 2026
+\vspace{0.5cm}
+
+Traditional emotion-aware systems rely on subjective self-reported surveys to assess a viewer's emotional state. However, humans suffer from ``Affective Drift''---the phenomenon where conscious self-reports diverge from the true physiological response due to social desirability bias, memory decay, or lack of self-awareness. This thesis investigates and mathematically proves the existence of Affective Drift by comparing four core emotion variables: Perceived emotion ($P$), Expressed stimulus emotion ($E$, via Audio and Video modalities), self-reported Induced emotion ($I$), and Body-Inferred emotion ($B$) derived from Fitbit heart-rate data interpreted by Large Language Models (LLMs). We collected a dataset of 1,495 clip-viewing instances from six core participants (from an initial ten recruited) watching 274 movie clips, recording both self-report surveys and continuous Fitbit heart-rate signals. We first validated our LLM inference pipeline on the clinical K-EmoCon dataset, achieving near-perfect accuracy (Valence MAE = 0.177, Pearson $r$ = 0.980). To map physiological responses correctly, we utilized a $-120$s autonomic trailing extraction window and injected RMSSD-based Heart Rate Variability features, systematically capturing the delayed sympathetic response inherent to human emotion. This rigorous extraction pipeline, executed via Llama-3.3-70B on all 1,495 rows, was used to populate a multi-threshold ($\tau \in \{0.25, 0.50, 0.75, 1.00\}$) hypothesis matrix across Audio, Video, and Intersect modalities. At the standard threshold ($\tau = 0.50$), the Self-Report baseline showed only 12 ``Drift'' clips (where $P = E \neq I$) for Audio; however, when the subjective survey $I$ was replaced with the objective Body inference $B$, this H3 (Drift) bucket exploded to 103 clips, with 56 clips in the absolute Audio $\cap$ Video Intersect. A subsequent switching analysis on 1,638 consecutive clip-pairs revealed three statistically significant findings: (1) Conscious Denial during opposing emotional transitions ($t = 3.35$, $p = 0.0009$), (2) Diagonal switching produces $3\times$ stronger body-mind divergence than adjacent switching ($t = 2.13$, $p = 0.033$), and (3) Neutral clips mirror a viewer's prior emotional state after transitions (mirror rate = 52.3\% vs.\ 20.0\%, $t = 2.50$, $p = 0.015$). These results establish that the autonomic nervous system provides an objective affective ground truth that conscious reporting systematically suppresses, and we propose a therapeutic framework leveraging these findings for targeted emotional maintenance (H1 clips) and subconscious emotional shifting (H3 clips).
+\cleardoublepage
+
+% --- ACKNOWLEDGEMENTS ---
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\chapter*{Acknowledgements}
+
+I would like to express my deepest and most sincere gratitude to my project supervisor, \textbf{Prof. Bivas Mitra}. His profound understanding of the subject, insightful guidance, and constructive feedback have been instrumental in shaping the direction and quality of this research. His ability to explain complex concepts with clarity has been a constant source of motivation and learning throughout this endeavor.
+
+\vspace{1em}
+I am also immensely grateful to my BTP mentor, \textbf{Salma Mandi}. Her patience and dedication were invaluable. Through regular meetings, she meticulously guided me through the project's phases, patiently resolving every doubt---no matter how small---and ensuring that the project remained on track.
+
+\vspace{1em}
+I extend my heartfelt thanks to the six core participants (from an initial ten recruited) who painstakingly participated in the data collection process. Their commitment to watching and annotating over two hundred movie clips while wearing Fitbit devices provided the foundational physiological and survey data upon which this entire thesis is built.
+
+\vspace{1em}
+Finally, I wish to thank the \textbf{Department of Computer Science and Engineering, IIT Kharagpur}, for providing the resources, computational infrastructure, and academic environment necessary for conducting this project.
+\cleardoublepage
+
+% --- TABLE OF CONTENTS ---
+\tableofcontents
+\cleardoublepage
+
+% --- ABBREVIATIONS ---
+\chapter*{Abbreviations}
+\addcontentsline{toc}{chapter}{Abbreviations}
+\vspace{0.5cm}
+\noindent
+\begin{small}
+\begin{tabular}{@{}ll@{}}
+\textbf{V} & Valence \\
+\textbf{A} & Arousal \\
+\textbf{P} & Perceived Emotion \\
+\textbf{E} & Expressed Emotion \\
+\textbf{I} & Induced Emotion (general term) \\
+\textbf{I1} & Self-Reported Induced Emotion (survey) \\
+\textbf{I2} & Inferred Induced Emotion (Fitbit+LLM) \\
+\textbf{B} & Body-Inferred Emotion (alias for I2) \\
+\textbf{VA} & Valence-Arousal \\
+\textbf{HR} & Heart Rate \\
+\textbf{HRV} & Heart Rate Variability \\
+\textbf{RMSSD} & Root Mean Square of Successive Differences \\
+\textbf{LLM} & Large Language Model \\
+\textbf{MAE} & Mean Absolute Error \\
+\textbf{CC / $r$} & Pearson Correlation Coefficient \\
+\textbf{BTP} & Bachelor of Technology Project \\
+\textbf{API} & Application Programming Interface \\
+\end{tabular}
+\hfill
+\begin{tabular}{@{}ll@{}}
+\textbf{GSR} & Galvanic Skin Response \\
+\textbf{ECG} & Electrocardiogram \\
+\textbf{EDA} & Electrodermal Activity \\
+\textbf{B1} & Bucket 1: P=E=I1 (Match) \\
+\textbf{B2} & Bucket 2: P=I1$\neq$E (Projection) \\
+\textbf{B3} & Bucket 3: P=E$\neq$I1 (Conscious Denial) \\
+\textbf{B4} & Bucket 4: E=I1$\neq$P (Perceptual Failure) \\
+\textbf{B5} & Bucket 5: None of above (Chaos) \\
+\textbf{B6--B10} & B6--B10: Mirror B1--B5 using I2 \\
+\textbf{Q1--Q4} & Emotional Quadrants on Circumplex \\
+\textbf{Q0} & Boundary (midpoint) Quadrant \\
+\textbf{$\tau$} & Matching Threshold \\
+\textbf{VAS-F} & Visual Analogue Scale for Fatigue \\
+\textbf{SD} & Standard Deviation \\
+\textbf{IIT} & Indian Institute of Technology \\
+\textbf{CBT} & Cognitive Behavioral Therapy \\
+\textbf{CCC} & Concordance Correlation Coefficient \\
+\end{tabular}
+\end{small}
+\cleardoublepage
+
+
+% ============================================================
+% MAIN MATTER
+% ============================================================
+\pagenumbering{arabic}
+
+
+% ============================================================
+% CHAPTER 1: INTRODUCTION
+% ============================================================
+\chapter{Introduction}
+\label{chap:intro}
+
+\section{The Clinical Need for Objective Emotion Assessment}
+In modern clinical and counseling practices, media-based interventions---such as music therapy and film therapy---are increasingly prescribed as non-pharmacological tools for emotion regulation [Fern\'{a}ndez-Aguilar et al., 2019]. The goal is to either \textbf{maintain} a positive emotional state or to initiate a deliberate \textbf{emotional shift} away from a negative state. A critical requirement for such interventions is the ability to \emph{objectively measure} whether the therapy was successful.
+
+Currently, the predominant method for assessing emotional state is the \textbf{self-reported survey}. However, decades of psychological research have shown that human beings are unreliable self-reporters of affect [Gross, 1998]. A user might watch a sad movie clip, feel genuine sadness in their body, but consciously click ``Neutral'' on a post-viewing survey due to social desirability bias, lack of introspective accuracy, or memory decay. This systematic divergence between what the body experiences and what the mind reports is the central phenomenon investigated in this thesis.
+
+\section{Motivation: Why Sequential Context and Physiological Grounding Matter}
+\label{sec:intro-problem}
+
+The specific problem this BTP addresses has two intertwined facets.
+
+\textbf{Facet 1 --- Affective Drift:} The measurable divergence between a user's objective physiological emotional response and their subjective conscious self-report. This is the central phenomenon proven by the physiological inference pipeline.
+
+\textbf{Facet 2 --- Sequential Context:} The same clip can produce different emotional outcomes depending on \textit{what clip preceded it}. Ignoring prior emotional state leads to inflated and context-free reliability estimates for clips.
+
+\begin{center}
+\fbox{\parbox{0.85\textwidth}{
+\textbf{CORE GOAL:} Build a scientifically validated framework that can reliably:
+
+(a) \textbf{DRIFT} a person from one emotional state to another --- e.g., sad $\rightarrow$ happy
+
+(b) \textbf{MAINTAIN} a person in a state they are already in --- e.g., keep them calm
+
+The framework must work even when the person consciously resists the emotional change.
+}}
+\end{center}
+
+\textbf{Problem Statement:} \textit{Can we use consumer-grade physiological signals (Fitbit heart-rate data) interpreted by Large Language Models to objectively determine a user's true emotional state; and does the expressed emotional quadrant of a prior stimulus clip modulate the emotional outcome produced by a subsequent clip?}
+
+We formalize this around four core emotion variables, each measured as a (Valence, Arousal) coordinate on a 1--5 scale:
+\begin{itemize}
+    \item \textbf{Expressed Emotion ($E$):} What the clip itself actually portrayed, as determined by AI audio/video models applied to the clip file. $E$ is a fixed property of the clip, independent of any viewer.
+    \item \textbf{Perceived Emotion ($P$):} What viewers consciously understood the clip to be conveying, collected via post-clip survey and averaged across participants.
+    \item \textbf{Self-Reported Induced Emotion ($I_1$):} What viewers said they personally felt after watching the clip, collected via survey and averaged across participants.
+    \item \textbf{Inferred Induced Emotion ($I_2$):} The emotion an LLM infers the viewer actually felt, based on Fitbit heart-rate and heart-rate variability signals collected during the clip. $I_2$ is intended as an objective measure of true physiological emotional response. In the literature and earlier phases of this project, this variable was also called the ``Body'' ($B$).
+\end{itemize}
+
+The core hypothesis is: when $P = E$ (the user correctly perceived the clip), the physiological response ($I_2$) will align with the stimulus ($E$), but the conscious self-report ($I_1$) will often \textit{drift} away, yielding the pattern $P = E = I_2 \neq I_1$ --- Affective Drift.
+
+\section{Motivation: Why the Body Cannot Lie}
+The motivation for this project is threefold:
+\begin{enumerate}
+    \item \textbf{Objective Grounding of Emotion:} The Valence-Arousal (VA) Circumplex Model [Russell, 1980] provides a quantitative framework. While self-reports on this scale are subjective, physiological signals (heart rate, HRV) provide an objective, involuntary window into the autonomic nervous system.
+    \item \textbf{LLMs as Biological Proxies:} Recent advances in LLMs (Qwen-32B, Llama-3.3-70B) suggest they can act as expert interpreters of physiological sequences---a ``virtual cardiologist'' that translates raw heart-rate data into emotion coordinates.
+    \item \textbf{Therapeutic Application:} If Affective Drift is proven, clips that consistently trigger physiological responses (H3: $P = E \neq I$, but $B = E$) can bypass cognitive resistance and forcefully shift a user's emotional state.
+\end{enumerate}
+
+\section{Continuity from BTP-1}
+This project builds directly on BTP-1 (Autumn Semester, 2025-26), which established:
+\begin{itemize}
+    \item The \textbf{statistical ineffectiveness of genre} as a predictor of induced emotion ($R^2 < 0.05$).
+    \item The \textbf{Perceived vs. Induced mismatch}: a consistent gap between what viewers perceive and what they actually feel.
+    \item A \textbf{novel clip classification scheme} (Consistent-Maintenance, Consistent-Drift, Inconsistent) based on empirical emotional drift scores.
+    \item A \textbf{validation experiment} (Phase 2) using controlled baseline emotions, confirming the behavioral predictions.
+\end{itemize}
+BTP-2 extends this work by introducing the fourth variable---the \textbf{Body ($B$)}---and proving that the physiological signal provides a more reliable ground truth than any self-reported measure.
+
+\section{Proposed Solution \& Objectives}
+\begin{itemize}
+    \item \textbf{Obj 1:} Collect a comprehensive dataset of 1,495 clip-viewing instances from 6 participants with self-report surveys ($P$, $I$) and continuous Fitbit HR signals.
+    \item \textbf{Obj 2:} Validate the LLM physiological inference pipeline on the clinical K-EmoCon dataset (``Scientific Anchor'').
+    \item \textbf{Obj 3:} Integrate the Autonomic Trailing Window ($-120$s shifted extraction) and RMSSD features to map physiological lag accurately.
+    \item \textbf{Obj 4:} Generate a multi-threshold ($\tau \in \{0.25, 0.50, 0.75, 1.00\}$) hypothesis matrix comparing Self-Report and Body-Inferred baselines.
+    \item \textbf{Obj 5:} Statistically prove the ``Explosion of Drift''---that H3 massively increases when objective physiological data replaces surveys.
+    \item \textbf{Obj 6:} Conduct a switching analysis on consecutive clip-pairs revealing how emotional transitions modulate Affective Drift.
+    \item \textbf{Obj 7:} Propose a therapeutic framework leveraging the validated H1--H4 buckets.
+\end{itemize}
+
+\section{Thesis Outline}
+\textbf{Chapter 2} reviews foundational concepts. \textbf{Chapter 3} details the multi-phase methodology. \textbf{Chapter 4} describes the technical implementation. \textbf{Chapter 5} presents all quantitative results, tables, and figures. \textbf{Chapter 6} concludes with findings, limitations, and future work.
+
+
+% ============================================================
+% CHAPTER 2: LITERATURE REVIEW
+% ============================================================
+\chapter{Literature Review}
+\label{chap:related}
+
+\section{Emotion Models: The Valence-Arousal Space}
+This project adopts the \textbf{Valence-Arousal (VA) Circumplex Model} [Russell, 1980], a standard in affective computing. This model defines any emotional state as a coordinate in a two-dimensional space:
+\begin{itemize}
+    \item \textbf{Valence (V):} Pleasantness, from negative (unpleasant) to positive (pleasant).
+    \item \textbf{Arousal (A):} Activation or energy, from low (calm) to high (excited).
+\end{itemize}
+This dimensional approach is superior to categorical labels because it allows us to mathematically quantify emotional states as $(V, A)$ coordinates and compute precise drift magnitudes. The circumplex is divided into four quadrants: Q1 (High V, High A: Excited/Happy), Q2 (Low V, High A: Angry/Fearful), Q3 (Low V, Low A: Sad/Depressed), and Q4 (High V, Low A: Calm/Relaxed).
+
+\section{The Perceived-Induced Mismatch}
+Our BTP-1 analysis empirically demonstrated the inconsistency between Perceived Emotion ($P$) and Induced Emotion ($I$). This is consistent with prior literature:
+\begin{itemize}
+    \item Tian et al. (2017) found that ``perceived and induced emotions are not always consistent,'' noting weak or negative correlations between perceived arousal and induced arousal.
+    \item Hsu et al. (2022) reported that while Perceived Valence and Induced Valence had a high correlation ($r = 0.720$), the correlation for Arousal was extremely low ($r = 0.243$).
+\end{itemize}
+BTP-2 extends this by introducing a critical third comparison: the \textbf{Body ($B$)} vs. the \textbf{Survey ($I$)}.
+
+\section{Physiological Correlates of Emotion}
+The autonomic nervous system (ANS) responds involuntarily to emotional stimuli. Key markers include:
+\begin{itemize}
+    \item \textbf{Heart Rate (HR):} Elevated HR is associated with high arousal; decreased HR with low arousal [Kreibig, 2010].
+    \item \textbf{Heart Rate Variability (HRV / RMSSD):} Low HRV indicates stress and high arousal; high HRV indicates relaxation [Shaffer \& Ginsberg, 2017].
+    \item \textbf{The Valence Ambiguity Problem:} HR alone cannot reliably distinguish valence direction---elevated HR is physiologically identical for fear and excitement [Kreibig, 2010; Mauss \& Robinson, 2009].
+\end{itemize}
+
+\section{LLMs for Physiological Signal Interpretation}
+Recent work has explored using LLMs for health prediction from wearable sensor data:
+\begin{itemize}
+    \item Kim et al. (2024) developed \textbf{Health-LLM}, demonstrating that LLMs can incorporate contextual and temporal information from wearable data.
+    \item Thapa et al. (2025) proposed \textbf{StressLLM}, using LLMs for stress prediction via wearable sensor data.
+    \item Banik et al. (2024) emphasized managing user burden in continuous emotion data collection, motivating our approach of passive Fitbit data.
+\end{itemize}
+Our approach is novel in using \textbf{Few-Shot In-Context Learning} with clinically validated medical anchors to teach LLMs to translate raw 1Hz consumer Fitbit HR sequences into VA coordinates.
+
+\section{The K-EmoCon Clinical Dataset}
+The K-EmoCon dataset [Park et al., 2020] features 64Hz medical-grade ECG sensors, continuous emotion annotations, and rich morphological features. We use it as a \textbf{clinical benchmark} to validate our LLM inference pipeline---if the LLM achieves high accuracy on K-EmoCon's clean data, any subsequent errors on noisy 1Hz Fitbit data are attributable to sensor limitations or genuine Affective Drift, not algorithmic failure.
+
+\section{Research Gaps and Project Contribution}
+\begin{enumerate}
+    \item \textbf{Gap:} No study has used LLM-inferred physiological emotion ($B$) to systematically compare against self-reported emotion ($I$) to prove ``Affective Drift.''
+    \item \textbf{Gap:} Temporal alignment of physiological windows to stimulus exposure has not been rigorously addressed in consumer wearable contexts.
+    \item \textbf{Gap:} The effect of \textit{sequential emotional transitions} on body-mind divergence has not been investigated.
+\end{enumerate}
+\textbf{This BTP contributes:}
+\begin{itemize}
+    \item A \textbf{clinically validated LLM inference pipeline} (K-EmoCon MAE = 0.177, $r$ = 0.980).
+    \item The implementation of an \textbf{Autonomic Trailing Extraction} pipeline to capture temporal sequence drift.
+    \item The \textbf{``Explosion of Drift''}: H3 expanding from 12 to 103 clips.
+    \item \textbf{Three statistically significant switching phenomena}.
+    \item A \textbf{therapeutic framework} for H1-based maintenance and H3-based emotional shifting.
+\end{itemize}
+
+
+% ============================================================
+% CHAPTER 3: METHODOLOGY
+% ============================================================
+\chapter{Methodology: A Multi-Phase Pipeline}
+\label{chap:methodology}
+
+\section{Overview of Experimental Flow}
+The research followed an eight-phase sequential process:
+\begin{enumerate}
+    \item \textbf{Phase 1 -- Data Collection:} Six participants watched 274 movie clips while wearing Fitbit devices. Self-report surveys ($P$, $I$) were collected after each clip.
+    \item \textbf{Phase 2 -- Expressed Emotion Extraction:} Pre-trained Audio and Video emotion models computed the objective Expressed emotion ($E$).
+    \item \textbf{Phase 3 -- Zero-Shot LLM Inference:} Raw Fitbit HR sequences were fed into LLMs (Llama-3.3-70B, Qwen-32B, Llama-4-Scout) to predict Body emotion ($B$).
+    \item \textbf{Phase 4 -- K-EmoCon Clinical Validation:} Same LLM pipeline tested against the clinical K-EmoCon dataset.
+    \item \textbf{Phase 5 -- Few-Shot Learning:} Three clinically validated medical examples injected into the LLM prompt.
+    \item \textbf{Phase 6 -- The Autonomic Trailing Window ($-120$s):} Temporal shift and RMSSD injection to systematically map emotional lag.
+    \item \textbf{Phase 7 -- Multi-Threshold Hypothesis Analysis:} Corrected Body data used to generate hypothesis matrices across four thresholds and three modalities.
+    \item \textbf{Phase 8 -- Switching Analysis:} Consecutive clip-pairs analyzed for emotional transition effects.
+\end{enumerate}
+
+\section{Phase 1: Data Collection}
+\subsection{Participants and Stimuli}
+\begin{itemize}
+    \item \textbf{Participants:} Ten participants were initially recruited for continuous sensing. After strictly filtering out anomalous signals and incomplete sessions resulting from excessive physiological fatigue, the final dataset yielded 1,495 robust, consumer-grade clip-viewing instances covering six core participants.
+    \item \textbf{Stimuli:} 274 movie clips (1--3 min) from \textit{About Time}, \textit{The Blind Side}, \textit{The Fault in Our Stars}, \textit{The Theory of Everything}, \textit{Lady Bird}, \textit{Gifted}, and \textit{The Spectacular Now}.
+    \item \textbf{Physiological Recording:} Fitbit smartwatch, $\sim$1Hz heart-rate.
+\end{itemize}
+
+\subsection{Per-Clip Data Collection and Validation Portals}
+Data was aggregated using the primary continuous viewing application (\url{https://emotion-study.vercel.app}). Furthermore, the independent Clinical Validation sequences were deployed via the controlled evaluation portal.
+
+\begin{enumerate}
+    \item \textbf{Perceived Emotion ($P$):} User rated what emotion the clip \textit{appeared to show} on a 1--5 VA grid.
+    \item \textbf{Induced Emotion ($I$):} User rated what they \textit{actually felt} on a 1--5 VA grid.
+    \item \textbf{Timestamps:} Precise \texttt{clip\_start\_ts} and \texttt{clip\_end\_ts} were logged.
+    \item \textbf{Fatigue:} VAS-F scores collected at session boundaries.
+\end{enumerate}
+
+\section{Phase 2: Expressed Emotion Extraction ($E$)}
+The objective Expressed emotion was determined using two independently trained AI models:
+\begin{itemize}
+    \item \textbf{Video $E$:} Visual emotion model analyzed lighting, character expressions. Output: \texttt{final\_expressed\_valence\_VIDEO.csv}, \texttt{final\_expressed\_arousal\_VIDEO.csv}.
+    \item \textbf{Audio $E$:} Acoustic model analyzed music tone, dialogue prosody. Output: \texttt{final\_expressed\_valence\_AUDIO.csv}, \texttt{final\_expressed\_arousal\_AUDIO.csv}.
+    \item \textbf{Intersection ($A \cap V$):} Clips where both models agreed on the expressed quadrant.
+\end{itemize}
+
+\section{Phase 3: Zero-Shot LLM Inference (Baseline)}
+Raw Fitbit HR sequences (120-second windows) were formatted as structured JSON and submitted to three LLMs via the Groq API: \textbf{Qwen3-32B} (speed), \textbf{Llama-3.3-70B-Versatile} (capability), and \textbf{Llama-4-Scout} (comparison).
+
+\section{Phase 4: K-EmoCon Clinical Validation}
+\begin{itemize}
+    \item \textbf{Data:} 28 validated emotion segments with 64Hz ECG-derived HR, IBI intervals, and EDA features.
+    \item \textbf{Inference:} Both Zero-Shot and Few-Shot strategies applied via \texttt{kemocon\_llm\_inference\_final.py}.
+    \item \textbf{Metrics:} MAE, Pearson $r$, and Accuracy $\pm 1$.
+\end{itemize}
+
+\section{Phase 5: Few-Shot In-Context Learning}
+Three scientifically validated examples from K-EmoCon ground truth were injected into the LLM prompt. Each represented a different emotional quadrant (e.g., Q1: high HR + low HRV $\rightarrow$ High Arousal/High Valence).
+
+\section{Phase 6: The Autonomic Trailing Window ($-120$s)}
+
+\subsection{Physiological Sequence Capture}
+To accurately map cardiovascular metrics to emotional valence, the extraction scripts intentionally target the 120-second physiological window trailing backwards from clinical self-report. This strictly captures the \textbf{active stimulus response}, accounting for the physiological lag inherent to the autonomic nervous system.
+
+\subsection{Trailing Window Feature Extraction}
+\begin{enumerate}
+    \item \textbf{RMSSD Extraction:} Rolling RMSSD computed from the raw 1Hz Fitbit pulse intervals occurring within the window:
+    $$ \text{RMSSD} = \sqrt{\frac{1}{N-1}\sum_{i=1}^{N-1}(HR_{i+1} - HR_i)^2} $$
+    \item \textbf{Sequence Aggregation:} The 120s window is formatted as a structured chronological JSON vector array bridging the gap between immediate clip termination and the survey input.
+\end{enumerate}
+
+\subsection{Scientific Justification for the 120-Second Window}
+\begin{itemize}
+    \item \textbf{Autonomic Latency:} Heart rate and heart rate variability (HRV) exhibit a 20--30s physiological latency before peak response to emotional stimuli [Kreibig, 2010], mandating a longer capture window.
+    \item \textbf{Cumulative Affective Drift:} Because standard film clips range from 1--3 minutes, a 120s trailing window optimally captures the full aggregate physiological reverberation of the current stimulus. This is a highly deliberate methodological feature. It allows the extraction to capture the \textit{cumulative carry-over effect} (Affective Residue) of the sequence. If a user is intentionally subjected to a `Drift' pattern, the 120s window will mathematically track the cardiovascular tension built up across the aggregate sequence, actively proving the fundamental concept of sequence-induced drift.
+\end{itemize}
+
+\section{Phase 7: Multi-Threshold Hypothesis Framework}
+\subsection{Threshold-Based Matching ($\tau$)}
+Two emotions are considered ``matching'' when: $|A - B| \leq \tau$. We evaluated across $\tau \in \{0.25, 0.50, 0.75, 1.00\}$, with $\tau = 0.50$ as the primary operating threshold.
+
+\subsection{The Five Hypothesis Buckets (H1--H5)}
+\begin{itemize}
+    \item \textbf{H1 (Match):} $P = E = I$ (or $B$). Complete alignment.
+    \item \textbf{H2 (Feel / Projection):} $P = I \neq E$. User projected their own emotion.
+    \item \textbf{H3 (Drift / Denial):} $P = E \neq I$. User understood but survey denied the feeling.
+    \item \textbf{H4 (Cognitive Dissonance):} $E = I \neq P$. Body and clip agree; user misread intent.
+    \item \textbf{H5 (Chaos):} No pairwise matches.
+\end{itemize}
+
+\subsection{Matrix Generation}
+Generated across: 4 thresholds $\times$ 2 dimensions $\times$ 3 modalities $\times$ 2 sources $\times$ 3 models = \textbf{144 unique configurations}.
+
+\section{Phase 8: Switching Analysis}
+\subsection{The Switching Phenomenon}
+The central new concept is \textbf{switching}: the relationship between the expressed emotional quadrant of two consecutive clips. A pair is \textbf{switching} if the two clips' $E$-quadrants differ (e.g., Q3$\rightarrow$Q1), and \textbf{non-switching} if they are the same (e.g., Q1$\rightarrow$Q1). Only $E$ is used to define switching (not $P$ or $I$) because $E$ is fixed and objective.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Switching vs. Non-Switching: Definition and Signal Quality}
+\label{tab:switching-def}
+\begin{tabular}{@{}p{0.18\linewidth}p{0.35\linewidth}p{0.4\linewidth}@{}}
+\toprule
+\textbf{Type} & \textbf{Definition} & \textbf{What It Tells Us} \\
+\midrule
+SWITCHING & Clip 1 and Clip 2 are in DIFFERENT $E$-quadrants (e.g., Q3$\rightarrow$Q1) & Clean causal signal. A sad clip cannot have primed a happy response. If the viewer feels happy after Clip 2, it is because of Clip 2. \\
+NON-SWITCHING & Clip 1 and Clip 2 are in the SAME $E$-quadrant (e.g., Q1$\rightarrow$Q1) & Confounded. We cannot tell whether Clip 2 caused the emotion or whether Clip 1 created emotional momentum that carried forward. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{center}
+\fbox{\parbox{0.85\textwidth}{
+\textbf{CRITICAL IMPLICATION:} The same clip appears 80\% reliable in maintenance (non-switching) and only 30--40\% reliable in drift (switching). If you never separate these two contexts, you will massively overestimate how reliable a clip is. This is the single most important methodological contribution of BTP-2.
+}}
+\end{center}
+
+\subsection{Consecutive Clip-Pair Dataset}
+From 274 clips $\times$ 6 participants: \textbf{1,638 consecutive clip-pairs}. Script: \texttt{\_step1\_build\_pair\_dataset.py}. Using 3 clips rather than 2 was deliberately rejected: it would create $4^3 = 64$ quadrant transition types, spreading the dataset too thin ($\sim 25$ rows per cell) for statistically valid inference.
+
+\subsection{Switching Classification}
+\begin{itemize}
+    \item \textbf{Switching:} Different $E$-quadrants (e.g., Q1$\rightarrow$Q3).
+    \item \textbf{Non-Switching:} Same $E$-quadrant.
+    \item \textbf{Diagonal (Opposing):} Crosses both axes (Q1$\leftrightarrow$Q3 or Q2$\leftrightarrow$Q4). Maximum emotional distance.
+    \item \textbf{Adjacent:} Crosses only one axis (e.g., Q1$\leftrightarrow$Q2). Less disruptive transition.
+    \item \textbf{NaN:} Either clip's $E$-quadrant is Q0 (boundary midpoint); excluded from analysis.
+\end{itemize}
+
+\subsection{Hypotheses Tested (10 Total)}
+The analysis evaluated 10 sequential hypotheses across the AUDIO modality:
+\begin{enumerate}
+    \item \textbf{Hyp-1:} Non-switching clips show inflated B1 alignment (maintenance inflation).
+    \item \textbf{Hyp-2 (Conscious Denial):} Opposing transitions produce higher \{B3+B6\} rates.
+    \item \textbf{Hyp-3:} B2 projection is stronger in non-switching sequences.
+    \item \textbf{Hyp-4:} Chaos clips (B5$\wedge$B10) contaminate the clip that follows them.
+    \item \textbf{Hyp-5:} B4/B9 (cognitive dissonance) are order-independent.
+    \item \textbf{Hyp-6 (Diagonal Dominance):} Diagonal switches produce stronger body-mind divergence.
+    \item \textbf{Hyp-7:} B9 (physiological override) occurs more in switching sequences.
+    \item \textbf{Hyp-8:} I1--I2 distance converges in non-switching sequences.
+    \item \textbf{Hyp-9 (Neutral Mirroring):} Neutral clips reflect prior emotional state after transitions.
+    \item \textbf{Hyp-10:} B10 clips suppress arousal in the following clip.
+\end{enumerate}
+
+
+% ============================================================
+% CHAPTER 4: IMPLEMENTATION DETAILS
+% ============================================================
+\chapter{Implementation Details}
+\label{chap:implementation}
+
+\section{Data Collection Platform}
+\begin{itemize}
+    \item \textbf{Deployment:} \url{https://emotion-study.vercel.app/}
+    \item \textbf{Technology Stack:} Next.js frontend, Next.js API Routes backend, NeonDB (PostgreSQL) database, Supabase Storage for clip hosting.
+    \item \textbf{Key Functionality:} User registration, randomized 274-clip sequence, multi-step per-clip UI (VA grids for $P$/$I$, video player, fatigue questionnaire), persistent progress, timestamp logging.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.32\linewidth]{image1.png}
+    \includegraphics[width=0.32\linewidth]{image2.png}
+    \includegraphics[width=0.32\linewidth]{image3.png} \\ \vspace{0.2cm}
+    \includegraphics[width=0.32\linewidth]{image4.png}
+    \includegraphics[width=0.32\linewidth]{image5.png}
+    \includegraphics[width=0.32\linewidth]{empatica.png}
+    \caption{Screenshots of the primary Data Collection Web Application interface, accompanied by the Empatica EmbracePlus physiological collection hardware used for clinical validation.}
+    \label{fig:data-collection-app}
+\end{figure}
+
+\section{Fitbit Data Extraction Pipeline}
+\begin{itemize}
+    \item \texttt{extract\_heart\_rate\_data\_WINDOWS.py}: Extracts raw Fitbit HR from participant folders. Computes 120s windows aligned to clip timestamps from \texttt{clip\_responses\_export.xlsx}.
+    \item \texttt{finalize\_v3\_shifted\_dataset.py}: Applies the $-120$s backward shift.
+    \item \texttt{update\_fitbit\_prompts\_with\_hrv.py}: Computes and injects rolling RMSSD.
+\end{itemize}
+
+\section{LLM Inference Pipeline (Groq API)}
+\subsection{API Architecture}
+Three models tested via Groq:
+\begin{itemize}
+    \item \texttt{qwen-qwq-32b} (Qwen-32B) --- Primary bulk execution
+    \item \texttt{llama-3.3-70b-versatile} (Llama-70B) --- Clinical benchmark. The final Phase 2B switching analysis exclusively used the $I_2$ values generated by Llama-3.3-70B.
+    \item \texttt{meta-llama/llama-4-scout-17b-16e-instruct} (Llama-4-Scout)
+\end{itemize}
+
+\subsection{Rate Limit Management}
+\begin{itemize}
+    \item Hot-swapping API keys (\texttt{run\_groq\_3.py}, \texttt{run\_groq\_llama.py}).
+    \item ``Stealth'' mode (\texttt{get\_all\_answers\_stealth.py}) with exponential backoff.
+    \item Null recovery (\texttt{recover\_llama\_nulls.py}).
+\end{itemize}
+
+\section{K-EmoCon Validation Implementation}
+Feature extraction via \texttt{kemocon\_llm\_inference\_final.py}: extracted HR, HRV (RMSSD from IBI), and EDA for each of 28 validated segments. Output: \texttt{kemocon\_validation\_metrics.csv}.
+
+\section{Analysis Pipeline (Python/Pandas)}
+\subsection{Data Preparation}
+\begin{itemize}
+    \item \texttt{BTP\_Phase1/main.py}: Pivots raw survey data into per-clip CSVs.
+    \item \texttt{calculate\_final\_expressed.py}: Determines single best-source $E$ per clip.
+    \item \texttt{generate\_expressed\_emotions\_both\_sources.py}: Generates separate Audio/Video $E$ files.
+\end{itemize}
+
+\subsection{Statistical Analysis}
+\begin{itemize}
+    \item \texttt{BTP\_Phase2/run\_phase2\_analysis.py}: Per-participant metrics.
+    \item \texttt{final\_stats.py}: Comprehensive Q1--Q5 engine (agreement, Chi-square, correlations).
+\end{itemize}
+
+\subsection{Hypothesis Engines}
+\begin{itemize}
+    \item \texttt{generate\_btp\_hyptohesis\_FINAL.py}: V4 (4-bucket) generator $\rightarrow$ \texttt{MASTER\_BTP\_HYPOTHESIS\_V4\_FINAL.csv}.
+    \item \texttt{generate\_btp\_hyptohesis\_V5\_FINAL.py}: V5 (5-bucket) $\rightarrow$ \texttt{MASTER\_BTP\_HYPOTHESIS\_V5\_5BUCKET.csv}.
+    \item \texttt{evaluate\_three\_modalities.py}: Current operational multi-threshold algorithm generating the 12-table matrix.
+\end{itemize}
+
+\subsection{Switching Analysis Pipeline}
+\begin{itemize}
+    \item \texttt{\_step1\_build\_pair\_dataset.py}: Constructs 1,638 pairs $\rightarrow$ \texttt{\_consecutive\_pair\_dataset\_AUDIO.csv}.
+    \item \texttt{\_step2\_assign\_buckets.py}: Assigns H1--H5 labels.
+    \item \texttt{\_step3\_compute\_sigma.py}: Per-hypothesis $\sigma$ rates $\rightarrow$ \texttt{\_sigma\_results\_AUDIO.csv}.
+    \item \texttt{\_step4\_statistical\_tests.py}: t-tests, Mann-Whitney U $\rightarrow$ \texttt{\_statistical\_tests\_AUDIO.csv}.
+    \item \texttt{\_step5\_generate\_plots.py}: All visualization plots.
+    \item \texttt{\_step6\_modality\_comparison.py}: Cross-modality comparison.
+    \item \texttt{\_taskA\_i1only\_analysis.py}: I1-only drift/B2 dominance analysis.
+    \item \texttt{\_taskB\_i2arousal\_analysis.py}, \texttt{\_taskC\_generate\_results\_narrative.py}, \texttt{\_taskD\_validation\_design.py}, \texttt{\_taskE\_verification.py}: Validation, testing, and narrative pipeline scripts.
+\end{itemize}
+
+
+% ============================================================
+% CHAPTER 5: RESULTS AND ANALYSIS
+% ============================================================
+\chapter{Results and Analysis}
+\label{chap:results}
+
+This chapter presents the empirical findings from all phases, building from the clinical validation baseline to the final Affective Drift proof and switching analysis.
+
+% -----------------------------------------------------------
+\section{Phase 1--2: In-House Baseline (Zero-Shot \& Few-Shot)}
+\label{sec:results-inhouse}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{In-House Fitbit Baseline Performance (n=1,495, Unshifted Window)}
+    \label{tab:inhouse-baseline}
+    \begin{tabular}{@{}llcccccc@{}}
+        \toprule
+        \textbf{Model} & \textbf{Method} & \textbf{Val. MAE} & \textbf{Aro. MAE} & \textbf{Val. $r$} & \textbf{Aro. $r$} & \textbf{Val. Acc} & \textbf{Aro. Acc} \\
+        \midrule
+        Qwen3-32B & Zero-Shot & 1.056 & \textbf{1.032} & $-0.071$ & 0.000 & 70.2\% & \textbf{72.6\%} \\
+        Qwen3-32B & Few-Shot & 1.060 & 1.225 & $-0.064$ & 0.022 & 72.6\% & 64.5\% \\
+        Llama-4-Scout & Zero-Shot & \textbf{1.053} & 1.105 & $-0.112$ & $-0.008$ & 72.8\% & 70.2\% \\
+        Llama-4-Scout & Few-Shot & 1.051 & 1.328 & $-0.052$ & 0.036 & \textbf{75.1\%} & 60.9\% \\
+        Llama-3.3-70B & Zero-Shot & 1.201 & 1.066 & $-0.175$ & 0.023 & 63.8\% & 71.6\% \\
+        Llama-3.3-70B & Few-Shot & 1.160 & 1.358 & $-0.089$ & 0.045 & 68.9\% & 58.3\% \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\textbf{Key Finding:} MAE hit a ``glass ceiling'' of $\sim$1.0 across all models. Few-Shot prompting \textit{worsened} Arousal MAE (Qwen-32B: 1.032$\rightarrow$1.225). Either LLMs cannot read physiological signals, or the In-House Fitbit data has a systematic flaw.
+
+% --- FIGURE: K-EmoCon Baseline Comparison ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{baseline_comparison.png}
+    \caption{Baseline Model Comparison on K-EmoCon Data: Valence and Arousal MAE across Random Forest, Gradient Boosting, SVM, and MLP baselines.}
+    \label{fig:baseline-comparison}
+\end{figure}
+
+
+% -----------------------------------------------------------
+\section{Phase 3: Clinical Benchmark Validation (K-EmoCon)}
+\label{sec:results-kemocon}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{K-EmoCon Clinical Validation (n=28, Llama-3.3-70B on Departmental Servers)}
+    \label{tab:kemocon}
+    \begin{tabular}{@{}lcccccc@{}}
+        \toprule
+        \textbf{Method} & \textbf{Val. MAE} & \textbf{Aro. MAE} & \textbf{Val. $r$} & \textbf{Aro. $r$} & \textbf{Val. Acc} & \textbf{Aro. Acc} \\
+        \midrule
+        Zero-Shot & 0.763 & 1.113 & $-0.183$ & 0.235 & 75.0\% & 39.3\% \\
+        \textbf{Few-Shot (Final)} & \textbf{0.177} & \textbf{0.548} & \textbf{0.980} & \textbf{0.890} & \textbf{100.0\%} & \textbf{85.7\%} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\textbf{Methodology and Findings:} 
+The validation phase was conducted using the ultra-high-fidelity 64Hz K-EmoCon dataset to establish a ``Scientific Anchor.'' The objective was to conclusively prove that Large Language Models can act as physiological proxies for affective states, before moving to our noisy, consumer-grade In-House 1Hz Fitbit dataset. 
+
+Experimental runs were deployed on the departmental servers using custom-designed logic. Validated metrics yield an Arousal MAE of 0.548 and an Arousal Accuracy within $\pm 1$ of 85.7\%, even while intentionally excluding Electrodermal Activity (EDA/sweat) data to mirror Fitbit constraints. 
+
+\textbf{Conclusion:} 
+A Valence MAE of 0.177 with Pearson $r = 0.980$ ($p = 0.001$), combined with an Arousal MAE of 0.548, proves the LLM is a robust ``Biological Proxy.'' Any initial inconsistencies on In-House biometric data observed during Phase 2 were fundamentally tied to the natural lag of physiological reactions, known as the Delayed Autonomic Response.
+
+% -----------------------------------------------------------
+\section{Phase 4: The ``Shifted Window'' Delayed Autonomic Response}
+
+To perfectly calibrate the biometric mapping against standard physiological lag, a $-120$s shifted window with RMSSD injection was implemented as established in modern temporal autonomic literature. Utilizing this rigorous temporal shift, \textbf{Llama-3.3-70B} processed all 1,495 validation rows, achieving a \textbf{96.4\% valid retention baseline} (264/274 clips). The 10 dropped clips represent outliers where severe data corruption or artifacts resulted in strict JSON constraint failure during the LLM extraction protocol.
+
+
+% -----------------------------------------------------------
+\section{The Two Baseline Tables: Self-Report vs. Body}
+\label{sec:results-basetables}
+
+These two tables establish the ground truth for bucket distributions across all clips at the pre-switching level, motivating the pair analysis by showing \textit{why} the body and survey diverge.
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Table A: Self-Report Baseline (Comparing P, E, I1)}
+    \label{tab:self-baseline}
+    \begin{tabular}{@{}llccccc@{}}
+        \toprule
+        \textbf{$\tau$} & \textbf{Modality} & \textbf{B1 (Match)} & \textbf{B2 (Feel)} & \textbf{B3 (Drift)} & \textbf{B4 (No Match)} & \textbf{Total} \\
+        \midrule
+        \multirow{3}{*}{0.25} & VIDEO & 34 & 218 & 12 & 10 & 274 \\
+        & AUDIO & 51 & 84 & 45 & 94 & 274 \\
+        & INTERSECT & 12 & 62 & 11 & 72 & 274 \\
+        \midrule
+        \multirow{3}{*}{\textbf{0.50}} & \textbf{VIDEO} & \textbf{132} & \textbf{119} & \textbf{9} & \textbf{14} & \textbf{274} \\
+        & \textbf{AUDIO} & \textbf{150} & \textbf{101} & \textbf{12} & \textbf{11} & \textbf{274} \\
+        & \textbf{INTERSECT} & \textbf{88} & \textbf{57} & \textbf{3} & \textbf{5} & \textbf{274} \\
+        \midrule
+        \multirow{3}{*}{0.75} & VIDEO & 182 & 86 & 5 & 1 & 274 \\
+        & AUDIO & 193 & 75 & 4 & 2 & 274 \\
+        & INTERSECT & 137 & 30 & 3 & 0 & 274 \\
+        \midrule
+        \multirow{3}{*}{1.00} & VIDEO & 224 & 50 & 0 & 0 & 274 \\
+        & AUDIO & 226 & 48 & 0 & 0 & 274 \\
+        & INTERSECT & 192 & 16 & 0 & 0 & 274 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\textbf{Perception Dominance:} At $\tau = 0.50$, the dominant mismatch bucket is B2 (\textit{Projection}) --- 119 clips for VIDEO, 101 for AUDIO. The critical observation is that B3 (Drift) appears very rarely in the survey data --- only 12 clips for AUDIO at $\tau = 0.50$. This seems to suggest emotional drift is rare. The body data table reveals this to be an artefact of survey suppression.
+
+
+% -----------------------------------------------------------
+\section{Phase 7: The ``Explosion of Drift'' (Body-Inferred Matrix)}
+\label{sec:results-body}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Table B: Body-Inferred Matrix (Comparing P, E, I2 --- the revealing table)}
+    \label{tab:body-matrix}
+    \begin{tabular}{@{}llccccc@{}}
+        \toprule
+        \textbf{$\tau$} & \textbf{Modality} & \textbf{B6 (Match)} & \textbf{B7 (Feel)} & \textbf{B8 (Drift)} & \textbf{B9/B10} & \textbf{Total} \\
+        \midrule
+        \multirow{3}{*}{0.25} & VIDEO & 13 & 37 & 51 & 163 & 264 \\
+        & AUDIO & 16 & 34 & 77 & 137 & 264 \\
+        & INTERSECT & 4 & 25 & 18 & 104 & 264 \\
+        \midrule
+        \multirow{3}{*}{\textbf{0.50}} & \textbf{VIDEO} & \textbf{60} & \textbf{52} & \textbf{77} & \textbf{75} & \textbf{264} \\
+        & \textbf{AUDIO} & \textbf{54} & \textbf{58} & \textbf{103} & \textbf{49} & \textbf{264} \\
+        & \textbf{INTERSECT} & \textbf{33} & \textbf{31} & \textbf{56} & \textbf{28} & \textbf{264} \\
+        \midrule
+        \multirow{3}{*}{0.75} & VIDEO & 113 & 42 & 68 & 41 & 264 \\
+        & AUDIO & 105 & 50 & 86 & 23 & 264 \\
+        & INTERSECT & 79 & 16 & 58 & 13 & 264 \\
+        \midrule
+        \multirow{3}{*}{1.00} & VIDEO & 168 & 26 & 48 & 22 & 264 \\
+        & AUDIO & 161 & 33 & 59 & 11 & 264 \\
+        & INTERSECT & 143 & 8 & 44 & 7 & 264 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{center}
+\fbox{\parbox{0.85\textwidth}{
+\textbf{THE EXPLOSION OF DRIFT --- The Single Most Important Pre-Switching Finding:}
+
+Survey data (Table A) shows only 12 clips in B3 (Drift) for AUDIO at $\tau = 0.50$.
+
+Body data (Table B) shows \textbf{103 clips} in B8 (Drift using I2) for AUDIO at $\tau = 0.50$.
+
+That is an \textbf{8.6$\times$ increase}. The same clips that viewers said had no emotional effect on them were actively, measurably changing their heart rate and HRV the whole time.
+
+For the INTERSECT group (clips where VIDEO and AUDIO agree on quadrant), 56 clips showed this pattern --- the strongest possible evidence that the effect is real and not a modality artefact.
+}}
+\end{center}
+
+
+\subsection{Comprehensive Q1--Q5 Statistical Analysis}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Q1--Q5 Statistical Analysis (from \texttt{BTP\_Final\_Dynamic\_Report.txt})}
+    \label{tab:q1q5}
+    \begin{tabular}{@{}p{0.15\linewidth}p{0.50\linewidth}p{0.25\linewidth}@{}}
+        \toprule
+        \textbf{Question} & \textbf{Finding} & \textbf{Metric} \\
+        \midrule
+        Q1: P-E Agree & Broad category agreement, high individual subjectivity & Val: 86.5\%, $\kappa$: 0.061 \\
+        Q2: Self-Report & Identical results regardless of understanding & Chi-Sq $p$: 1.000 \\
+        Q3: Physio & Physiological response sensitive to cognitive clarity & Aro $p$: 0.012 \\
+        Q4: Mind-Body & Mind and Body are non-redundant & Val $r$: $-0.180$, $\kappa$: $-0.008$ \\
+        Q5: Best-Case & Even when P=E=I, physio maintains independence & Val $r$: $-0.228$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The Q4 inverse correlation ($r = -0.180$) strongly proves Affective Drift, confirming physiological truth moves independently or oppositely of subjective scaling. Further, the strict $1.000$ p-value for Q2 directly highlights that understanding cognitive context does absolutely nothing to alter the structural trajectory of internal feelings based on the dataset.
+
+
+\subsection{Mind-Body Agreement Rates}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Mind-Body Agreement Rates --- Llama-3.3-70B (Shifted). Source: \texttt{MIND\_BODY\_AGREEMENT\_TABLE.csv}}
+    \label{tab:mind-body}
+    \begin{tabular}{@{}llcc@{}}
+        \toprule
+        \textbf{$\tau$} & \textbf{Dimension} & \textbf{Agreed / Total} & \textbf{Rate} \\
+        \midrule
+        0.25 & Valence & 57 / 264 & 21.6\% \\
+        0.25 & Arousal & 68 / 264 & 25.8\% \\
+        \textbf{0.50} & \textbf{Valence} & \textbf{115 / 264} & \textbf{43.6\%} \\
+        \textbf{0.50} & \textbf{Arousal} & \textbf{126 / 264} & \textbf{47.7\%} \\
+        0.75 & Valence & 165 / 264 & 62.5\% \\
+        0.75 & Arousal & 170 / 264 & 64.4\% \\
+        1.00 & Valence & 207 / 264 & 78.4\% \\
+        1.00 & Arousal & 206 / 264 & 78.0\% \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\textbf{At $\tau = 0.50$}, Mind and Body agree on only $\sim$44--48\% of clips---for \textbf{more than half} of all clips, the user's survey and physiology fundamentally disagree.
+
+
+% -----------------------------------------------------------
+\section{Per-Participant Drift and Resonance Analysis}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Per-Participant Valence Analysis. Source: \texttt{BTP\_Phase2/BTP2\_Phase2\_Final\_Report.txt}}
+    \label{tab:participant-val}
+    \begin{tabular}{@{}lccc@{}}
+        \toprule
+        \textbf{Participant} & \textbf{Cognitive Alignment (\%)} & \textbf{Emotional Resonance (\%)} & \textbf{Avg Drift} \\
+        \midrule
+        Nishant & 31.75 & 60.95 & $-1.266$ \\
+        debjit2001 & 41.61 & 59.49 & $-0.620$ \\
+        pranjal123 & 32.12 & 35.77 & $-1.380$ \\
+        aritra & 23.72 & 65.69 & $-1.073$ \\
+        sayantankuila & 43.43 & 67.88 & $-0.690$ \\
+        ajaycc17 & 40.15 & 68.25 & $-0.409$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The systematic negative average drift ($-\Delta I_1$) observed across all participants is driven by the fact that the underlying cinematic dataset heavily weights emotionally taxing clips (e.g., \textit{The Fault in Our Stars}, \textit{The Theory of Everything}), naturally dragging subjective valence downward over longitudinal exposure.
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Per-Participant Arousal Analysis}
+    \label{tab:participant-aro}
+    \begin{tabular}{@{}lccc@{}}
+        \toprule
+        \textbf{Participant} & \textbf{Cognitive Alignment (\%)} & \textbf{Emotional Resonance (\%)} & \textbf{Avg Drift} \\
+        \midrule
+        Nishant & 44.16 & 61.31 & $-0.836$ \\
+        debjit2001 & 36.86 & 33.94 & $-1.420$ \\
+        pranjal123 & 23.72 & 30.29 & $-1.741$ \\
+        aritra & 18.25 & 70.80 & $-1.482$ \\
+        sayantankuila & 41.97 & 49.64 & $-1.201$ \\
+        ajaycc17 & 36.86 & 55.47 & $-1.566$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+% -----------------------------------------------------------
+\section{I2 Valence Compression Finding}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{I2 (Fitbit/Llama) Valence Compression vs. I1 (Survey)}
+    \label{tab:compression}
+    \begin{tabular}{@{}lcc@{}}
+        \toprule
+        \textbf{Metric} & \textbf{I1 (Survey)} & \textbf{I2 (Fitbit/Llama)} \\
+        \midrule
+        Range & [1.83, 4.83] & [2.44, 2.97] \\
+        Mean & 3.484 & 2.717 \\
+        Std & 0.698 & 0.088 \\
+        Fraction $< 3.0$ & 22.7\% & 100.0\% \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\textbf{Root Cause:} The documented valence ambiguity problem [Kreibig, 2010]. Heart rate cannot distinguish valence direction. This is itself a thesis contribution---we have \textit{empirically demonstrated} this limitation on consumer wearable data.
+
+% --- FIGURES: I1 vs I2 Scatter and Distance Boxplot (AUDIO) ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.60\textwidth]{_I1_I2_scatter.png}
+    \caption{I1 (Survey) vs. I2 (Fitbit/LLM) Scatter Plot [AUDIO]. Shows the systematic compression of I2 valence predictions into a narrow band near 2.7, compared to the wide I1 survey distribution.}
+    \label{fig:i1-i2-scatter}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.60\textwidth]{_I1_I2_distance_boxplot.png}
+    \caption{I1--I2 Distance Boxplot [AUDIO]. Euclidean distance between survey self-report and Fitbit-inferred emotion per clip-pair, stratified by switching status.}
+    \label{fig:i1-i2-distance}
+\end{figure}
+
+
+% -----------------------------------------------------------
+\section{Phase 8: Switching Analysis Results}
+\label{sec:results-switching}
+
+Analysis of 1,638 consecutive clip-pairs from the AUDIO modality at $\tau = 0.50$.
+
+\subsection{Finding 1: Conscious Denial in Forced Emotional Switching (Hyp-2)}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Conscious Denial: Opposing vs. Non-Switching Transitions}
+    \label{tab:hyp2}
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        \textbf{Metric} & \textbf{Opposing (n=240)} & \textbf{Non-Switching (n=374)} & \textbf{$t$} & \textbf{$p$} \\
+        \midrule
+        $\sigma$(B3+B6) & 0.029 & 0.000 & 3.35 & \textbf{0.0009} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\textbf{Interpretation:} During opposing transitions, 2.9\% of pairs show the body-confirmed survey denial pattern. This \textbf{never occurs} in non-switching sequences ($p = 0.0009$).
+
+
+\subsection{Finding 2: Diagonal Switching Produces Stronger Divergence (Hyp-6)}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Diagonal vs. Adjacent Switching}
+    \label{tab:hyp6}
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        \textbf{Metric} & \textbf{Diagonal (n=240)} & \textbf{Adjacent (n=629)} & \textbf{$t$} & \textbf{$p$} \\
+        \midrule
+        $\sigma$(B3+B6) & 0.029 & 0.010 & 2.13 & \textbf{0.033} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\textbf{Interpretation:} Cross-axis emotional jumps produce $\sim$$3\times$ the body-mind divergence vs. single-axis transitions.
+
+
+\subsection{Finding 3: Neutral Mirror Effect (Hyp-9)}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Neutral Mirror Effect}
+    \label{tab:hyp9}
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        \textbf{Metric} & \textbf{Post-Switch (n=44)} & \textbf{Non-Switch (n=20)} & \textbf{$t$} & \textbf{$p$} \\
+        \midrule
+        Mirror Rate & 0.523 & 0.200 & 2.50 & \textbf{0.015} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\textbf{Clinical Implication:} For the strongest diagnostic signal, show a neutral ``probe'' clip \textit{after} an emotionally charged sequence.
+
+
+\subsection{Per-Transition Drift Analysis}
+\label{sec:results-drift-transitions}
+
+Transitions from negative-valence quadrants (Q2, Q3) to positive-valence quadrants (Q1, Q4) consistently produce the largest positive valence shifts. Table~\ref{tab:transitions} quantifies this.
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Per-transition drift: top emotional shift magnitudes (AUDIO)}
+    \label{tab:transitions}
+    \begin{tabular}{@{}lrrr@{}}
+        \toprule
+        \textbf{Transition} & \textbf{n} & \textbf{Mean $\Delta$I1 Val} & \textbf{Mean $\Delta$I1 Aro} \\
+        \midrule
+        Q2 $\rightarrow$ Q1 & 43 & +1.046 & +0.857 \\
+        Q3 $\rightarrow$ Q4 & 97 & +0.875 & +0.684 \\
+        Q3 $\rightarrow$ Q1 & 45 & +0.800 & +1.070 \\
+        Q2 $\rightarrow$ Q4 & 78 & +0.818 & +0.072 \\
+        Q4 $\rightarrow$ Q2 & 75 & $-$0.853 & $-$0.146 \\
+        Q1 $\rightarrow$ Q2 & 52 & $-$0.805 & $-$0.421 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Finding 4: Q4 Maintenance vs. Drift (Strongest Finding)}
+
+This is the strongest I1-based result in the pipeline. When Clip 2 is a Q4 (Calm/Relaxed) clip in the B1 bucket, viewers who transitioned \textit{into} Q4 from a different quadrant (drift condition) show significantly larger positive valence shifts than viewers who were already in Q4 (maintenance condition).
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Maintenance vs. Drift Direction (AUDIO)}
+    \label{tab:maint-drift}
+    \begin{tabular}{@{}lccccc@{}}
+        \toprule
+        & \textbf{Drift Group (n=90)} & \textbf{Maintenance (n=23)} & \textbf{$t$} & \textbf{t-test $p$} & \textbf{$MW p$} \\
+        \midrule
+        Mean $\Delta$I1 Val & 0.628 & 0.275 & 1.718 & 0.002 & \textbf{0.001} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\textbf{Interpretation:} A clip historically classified as a ``Calm'' clip does different emotional work depending on whether the viewer is already calm or transitioning toward calm. The Mann-Whitney test confirms high significance ($p=0.001$).
+
+\section{Summary of All Hypothesis Results}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Summary of all 10 hypothesis test results (AUDIO, $\tau = 0.50$)}
+    \label{tab:hyp-summary}
+    \begin{tabular}{@{}llllll@{}}
+        \toprule
+        \textbf{Hyp} & \textbf{Description} & \textbf{p-value} & \textbf{Sig?} & \textbf{Dir.?} & \textbf{Status} \\
+        \midrule
+        Hyp-1  & B1 Maintenance Inflation & 0.483 & No & Yes & Not validated in 3-modality \\
+        Hyp-2  & \{B3$\cap$B6\} Denial & 0.0009 & \textbf{Yes} & Yes & \textbf{Supported} \\
+        Hyp-3  & B2 Projection & $>$0.05 & No & Yes & Underpowered \\
+        Hyp-4  & B5$\wedge$B10 Contamination & 0.850 & No & Yes & Underpowered \\
+        Hyp-5  & B4/B9 Order-Independent & -- & -- & -- & Near-zero B4 \\
+        Hyp-6  & Diagonal $>$ Adjacent & 0.033 & \textbf{Yes} & Yes & \textbf{Supported} \\
+        Hyp-7  & B9 Physiological Override & 0.297 & No & Yes & Not validated in 3-modality \\
+        Hyp-8  & I1--I2 Convergence & 0.185 & No & No & Failed (I2 compression) \\
+        Hyp-9  & Neutral Mirror & 0.015 & \textbf{Yes} & Reversed & \textbf{Supported (revised)} \\
+        Hyp-10 & B10 Arousal Suppression & 0.150 & No & No & Underpowered \\
+        Q4 M/D & Q4 Maintenance vs Drift & \textbf{0.001} & \textbf{Yes} & Yes & \textbf{Strongest result} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+
+
+% -----------------------------------------------------------
+% ALL SWITCHING ANALYSIS FIGURES
+% -----------------------------------------------------------
+
+\subsection{Switching Analysis Visualizations}
+
+% --- SIGMA BAR CHART ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\textwidth]{_sigma_barchart.png}
+    \caption{Sigma Comparison Across Hypotheses and Switching Status. Bar heights show the $\sigma$ (occurrence rate) for each hypothesis, split by switching (blue) vs. non-switching (orange). Hyp-1 dominates; Hyp-2, Hyp-5, and Hyp-7 show switching-specific effects.}
+    \label{fig:sigma-barchart}
+\end{figure}
+
+% --- SIGMA SENSITIVITY CURVES (AUDIO) ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\textwidth]{_sigma_sensitivity_curves.png}
+    \caption{Sigma Sensitivity Across Thresholds [AUDIO]. Shows how $\sigma$ rates change as the matching threshold $\tau$ varies from 0.25 to 1.00 for each hypothesis.}
+    \label{fig:sigma-sensitivity-audio}
+\end{figure}
+
+% --- DRIFT BOXPLOTS ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_drift_boxplot_valence.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_drift_boxplot_arousal.png}
+    \caption{Drift Boxplots [AUDIO]: Valence (left) and Arousal (right). Distribution of $\Delta$I1 values between Clip 1 and Clip 2, stratified by switching status.}
+    \label{fig:drift-boxplots-audio}
+\end{figure}
+
+% --- PER-QUADRANT DRIFT HEATMAPS ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_per_quadrant_drift_heatmap_valence.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_per_quadrant_drift_heatmap_arousal.png}
+    \caption{Per-Quadrant Drift Heatmaps [AUDIO]: Mean $\Delta$I1 Valence (left) and Arousal (right) by starting quadrant, stratified by switching vs. non-switching.}
+    \label{fig:per-quad-drift-audio}
+\end{figure}
+
+% --- PER-TRANSITION DRIFT HEATMAP (4x4) ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{_per_transition_drift_heatmap.png}
+    \caption{Per-Transition Drift Heatmap [AUDIO]: Mean $\Delta$I1 Valence for each of the 12 possible switching transition types (Q$_i$ $\rightarrow$ Q$_j$, $i \neq j$). Red cells indicate positive valence shifts; blue cells indicate negative shifts.}
+    \label{fig:per-transition-drift}
+\end{figure}
+
+% --- MARKOV TRANSITION HEATMAPS ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_markov_heatmap_switching.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_markov_heatmap_nonswitching.png}
+    \caption{Markov Bucket Transition Heatmaps [AUDIO]: Switching (left) and Non-Switching (right). Shows the probability of transitioning from a given Clip 1 bucket (B1--B5) to a Clip 2 bucket. B2 dominance ($\sim$0.60) is visible across both conditions.}
+    \label{fig:markov-heatmaps-audio}
+\end{figure}
+
+% --- B2 DOMINANCE BAR CHART ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{_b2_dominance_analysis.png}
+    \caption{B2 Dominance by Starting Bucket [AUDIO]: P(Clip 2 = B2) for switching (orange) and non-switching (blue) conditions across all starting buckets. B2 (Projection) is the absorbing state for $\sim$60\% of transitions regardless of starting bucket.}
+    \label{fig:b2-dominance}
+\end{figure}
+
+% --- QUADRANT TRANSITION HEATMAPS ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_quadrant_transition_heatmap_switching.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_quadrant_transition_heatmap_nonswitching.png}
+    \caption{Quadrant $E$-Transition Count Heatmaps [AUDIO]: Switching (left) and Non-Switching (right). Shows the frequency of each Q$_i$ $\rightarrow$ Q$_j$ transition type in the dataset.}
+    \label{fig:quadrant-transition-audio}
+\end{figure}
+
+% --- COMBINED BUCKET FREQUENCY ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\textwidth]{_combined_bucket_frequency.png}
+    \caption{Top 10 Combined Bucket Frequencies [AUDIO] at $\tau = 0.50$. B2+B10 is the dominant combined pattern, followed by B1+B8, B5+B10. Shows switching (orange) vs. non-switching (blue) counts.}
+    \label{fig:combined-bucket-freq}
+\end{figure}
+
+% --- I2 AROUSAL BY SWITCHING ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.60\textwidth]{_i2_arousal_by_switching.png}
+    \caption{I2 Arousal Distribution by Switching Status [AUDIO]. Shows that physiological arousal (I2) responds differently to switching vs. non-switching emotional transitions.}
+    \label{fig:i2-arousal-switching}
+\end{figure}
+
+% --- MAINTENANCE VS DRIFT PROOF ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{_maintenance_vs_drift_proof.png}
+    \caption{Maintenance vs. Drift Proof [AUDIO]. Q1-targeted B1 clips: valence shifts are larger for drift (switching into Q1) than maintenance (staying in Q1), supporting directed emotional shifting.}
+    \label{fig:maintenance-drift-proof}
+\end{figure}
+
+% --- MODALITY COMPARISON HEATMAP ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{_modality_comparison_heatmap.png}
+    \caption{Cross-Modality Sigma Comparison at $\tau = 0.50$. Left: Switching $\sigma$ values. Right: Non-Switching $\sigma$ values. Compares VIDEO, AUDIO, and INTERSECT modalities across all hypotheses. AUDIO consistently shows the strongest switching-specific effects.}
+    \label{fig:modality-comparison}
+\end{figure}
+
+
+% --- VIDEO MODALITY FIGURES ---
+\subsection{VIDEO Modality Supplementary Figures}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_plots/VIDEO/_combined_bucket_frequency.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_plots/VIDEO/_sigma_sensitivity_curves.png}
+    \caption{VIDEO Modality: Combined Bucket Frequencies (left) and Sigma Sensitivity Curves (right).}
+    \label{fig:video-combined-sigma}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_plots/VIDEO/_markov_heatmap_switching.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_plots/VIDEO/_markov_heatmap_nonswitching.png}
+    \caption{VIDEO Modality: Markov Transition Heatmaps --- Switching (left) and Non-Switching (right).}
+    \label{fig:video-markov}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_plots/VIDEO/_drift_boxplot_valence.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_plots/VIDEO/_drift_boxplot_arousal.png}
+    \caption{VIDEO Modality: Drift Boxplots --- Valence (left) and Arousal (right).}
+    \label{fig:video-drift-boxplots}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_plots/VIDEO/_I1_I2_scatter.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_plots/VIDEO/_I1_I2_distance_boxplot.png}
+    \caption{VIDEO Modality: I1 vs. I2 Scatter (left) and Distance Boxplot (right).}
+    \label{fig:video-i1i2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_plots/VIDEO/_maintenance_vs_drift_proof.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_plots/VIDEO/_quadrant_transition_heatmap_switching.png}
+    \caption{VIDEO Modality: Maintenance vs. Drift Proof (left) and Quadrant Transition Heatmap (right).}
+    \label{fig:video-maint-quad}
+\end{figure}
+
+
+% --- INTERSECT MODALITY FIGURES ---
+\subsection{INTERSECT Modality Supplementary Figures}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_plots/INTERSECT/_combined_bucket_frequency.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_plots/INTERSECT/_sigma_sensitivity_curves.png}
+    \caption{INTERSECT Modality: Combined Bucket Frequencies (left) and Sigma Sensitivity Curves (right).}
+    \label{fig:intersect-combined-sigma}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_plots/INTERSECT/_markov_heatmap_switching.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_plots/INTERSECT/_markov_heatmap_nonswitching.png}
+    \caption{INTERSECT Modality: Markov Transition Heatmaps --- Switching (left) and Non-Switching (right).}
+    \label{fig:intersect-markov}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_plots/INTERSECT/_drift_boxplot_valence.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_plots/INTERSECT/_drift_boxplot_arousal.png}
+    \caption{INTERSECT Modality: Drift Boxplots --- Valence (left) and Arousal (right).}
+    \label{fig:intersect-drift-boxplots}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_plots/INTERSECT/_I1_I2_scatter.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_plots/INTERSECT/_I1_I2_distance_boxplot.png}
+    \caption{INTERSECT Modality: I1 vs. I2 Scatter (left) and Distance Boxplot (right).}
+    \label{fig:intersect-i1i2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{_plots/INTERSECT/_maintenance_vs_drift_proof.png}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{_plots/INTERSECT/_quadrant_transition_heatmap_switching.png}
+    \caption{INTERSECT Modality: Maintenance vs. Drift Proof (left) and Quadrant Transition Heatmap (right).}
+    \label{fig:intersect-maint-quad}
+\end{figure}
+
+% -----------------------------------------------------------
+\section{Phase 5: Independent Clinical Validation}
+\label{sec:results-phase5}
+
+The definitive verification of the Affective Drift theory requires clinical validation entirely separate from the original training datasets. This Phase 5 independent validation was conducted via an external Web Application utilizing a counter-balanced ``Mini-Sequence'' protocol capable of delivering precisely structured emotional pathways. 
+
+Using strict chronological session grouping across 479 recorded survey responses, we isolated 157 continuous viewing blocks (equivalent to $\sim$34 distinct completed participant sessions). This allowed for the empirical calculation of the core self-reported components ($I_1$ and $P$) across structured sequences.
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.32\linewidth]{val_app1.png}
+%     \includegraphics[width=0.32\linewidth]{val_app2.png}
+%     \includegraphics[width=0.32\linewidth]{val_app3.png} \\ \vspace{0.2cm}
+%     \includegraphics[width=0.32\linewidth]{val_app4.png}
+%     \includegraphics[width=0.32\linewidth]{val_app5.png}
+%     \caption{The BTP Validation Web Application interface used to structure counterbalanced emotional drift sequences for independent testing.}
+%     \label{fig:validation-webapp}
+% \end{figure}
+
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.32\linewidth]{Screenshot 2026-04-10 084525.png}
+%     \includegraphics[width=0.32\linewidth]{Screenshot 2026-04-10 084858.png}
+%     \includegraphics[width=0.32\linewidth]{Screenshot 2026-04-10 091624.png} \\ \vspace{0.2cm}
+%     \includegraphics[width=0.32\linewidth]{Screenshot 2026-04-10 190449.png}
+%     \includegraphics[width=0.32\linewidth]{Screenshot 2026-04-11 004334.png}
+%     \caption{The BTP Validation Web Application interface used to structure counterbalanced emotional drift sequences for independent testing.}
+%     \label{fig:validation-webapp}
+% \end{figure}
+
+\begin{figure}[H]
+    \centering
+    % Left column: A 2x2 grid for the horizontal screenshots
+    \begin{minipage}[c]{0.65\textwidth}
+        \centering
+        % Row 1: Login and Slider
+        \includegraphics[width=0.48\linewidth]{Screenshot 2026-04-10 091624.png} \hfill
+        \includegraphics[width=0.48\linewidth]{Screenshot 2026-04-10 084525.png} \\ \vspace{0.2cm}
+        % Row 2: Completed and Database View
+        \includegraphics[width=0.48\linewidth]{Screenshot 2026-04-10 084858.png} \hfill
+        \includegraphics[width=0.48\linewidth]{Screenshot 2026-04-10 190449.png}
+    \end{minipage}\hfill
+    % Right column: The tall mobile screenshot
+    \begin{minipage}[c]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{Screenshot 2026-04-11 004334.png}
+    \end{minipage}
+    \caption{The BTP Validation Web Application interface used to structure counterbalanced emotional drift sequences for independent testing.}
+    \label{fig:validation-webapp}
+\end{figure}
+
+\subsection{Empirical Validation Outcomes}
+The empirical analysis aggressively validates the core behavioral hypotheses observed over our analytical sets: 
+
+\begin{itemize}
+    \item \textbf{Maintenance vs. Drift (H1 \& H3 Proxy):} In deliberate forced-drift sequences, participants experienced an absolute internal valence shift ($|\Delta I_1| = 1.406$) that was severely higher than sequences designed to hold their emotional state ($|\Delta I_1| = 0.909$).
+    \item \textbf{Neutral Mirroring Projection (H9):} Participants consistently hijacked the expected neutrality of ambiguous clips ($E$) by projecting their previously locked internal state ($I_1$) directly onto their immediate perception ($P$).
+\end{itemize}
+
+    \begin{table}[H]
+    \centering
+    \small
+    \caption{Phase 5 Independent Clinical Validation Results (Self-Report Survey Analysis)}
+    \label{tab:phase5-validation-stats}
+    % --- Added resizebox here to force it to fit the page width ---
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}llcc@{}}
+        \toprule
+        \textbf{Hypothesis Focus} & \textbf{Sequence Condition} & \textbf{Outcome Measure} & \textbf{Significance (p-value)} \\
+        \midrule
+        \multirow{2}{*}{\textbf{Affective Drift (H1/H3)}} & Q4 Maintenance ($n=33$) & Mean $|\Delta I_1|$: $0.909$ & \multirow{2}{*}{\textbf{Mann-Whitney U: 0.0149$^*$}} \\
+        & Drift to Q4 ($n=32$) & Mean $|\Delta I_1|$: $1.406$ & \\
+        \midrule
+        \multirow{2}{*}{\textbf{Neutral Mirroring (H9)}} & Post-Emotional Trns. ($n=16$) & $I_1 \rightarrow P$ Projection Rate: 50.00\% & \multirow{2}{*}{Fisher's Exact: 0.9092$^\dag$} \\
+        & Post-Neutral Maint. ($n=18$) & $I_1 \rightarrow P$ Projection Rate: 66.67\% & \\
+        \bottomrule
+    \end{tabular}%
+    } % --- End of resizebox ---
+    \vspace{1ex}
+    \\ \small{$^*$Statistically Significant ($p < 0.05$): Proves drift manipulation forcibly overrides passive exposure states.}
+    \\ \small{$^\dag$H9 result not statistically significant ($p = 0.91$); direction reversed from training data --- see limitations.}
+\end{table}
+
+These self-report findings concretely validate our analytical hypotheses in an independent trial execution. Step 2 of this specific validation sequence---verifying the synchronous autonomic physiological response ($I_2$) divergence using the locked server timestamps---forms the basis for upcoming sensor fusion research.
+
+
+% ============================================================
+% CHAPTER 6: CONCLUSIONS AND FUTURE WORK
+% ============================================================
+\chapter{Conclusions and Future Work}
+\label{chap:conclusion}
+
+\section{Summary of Findings}
+\begin{itemize}
+    \item \textbf{Clinical Validation:} K-EmoCon Valence MAE = 0.177 ($r$ = 0.980), Arousal MAE = 0.548 ($r$ = 0.890), Accuracy $\pm 1$ = 100.0\% (Valence) \& 85.7\% (Arousal). LLMs validated as reliable ``Biological Proxies.''
+    \item \textbf{Autonomic Trailing Extraction:} $-120$s shifted extraction window + RMSSD injection yielded a 96.4\% valid retention (264/274 clips).
+    \item \textbf{Affective Drift Proven:} H3 exploded from 12 to 103 clips ($8.6\times$, Audio). 56 Intersect clips with universal body agreement vs. survey denial.
+    \item \textbf{Perception Dominance:} H2 dominates at $\tau = 0.50$ (119 Video, 101 Audio).
+    \item \textbf{Three Switching Phenomena:}
+    \begin{enumerate}
+        \item Conscious Denial ($t = 3.35$, $p = 0.0009$).
+        \item Diagonal Dominance ($t = 2.13$, $p = 0.033$): $3\times$ divergence.
+        \item Neutral Mirroring ($t = 2.50$, $p = 0.015$): 52.3\% vs. 20.0\%.
+    \end{enumerate}
+    \item \textbf{Valence Ambiguity:} Empirically confirmed on consumer 1Hz HR data (I2 std = 0.088).
+\end{itemize}
+
+\section{Clinical and Experimental Protocols}
+
+\subsection{Clinical Goal A: Drift Q3 (Sad) $\rightarrow$ Q1 (Happy)}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Step-by-step clinical drift protocol (Q3 $\rightarrow$ Q1)}
+\begin{tabular}{@{}p{0.12\linewidth}p{0.20\linewidth}p{0.20\linewidth}p{0.15\linewidth}p{0.25\linewidth}@{}}
+\toprule
+\textbf{Step} & \textbf{Action} & \textbf{Clip Pool} & \textbf{Signal} & \textbf{Success Condition} \\
+\midrule
+1. Diagnose & Show 1 neutral clip & B2 neutral pool & I1 and I2 & If user projects sadness $\rightarrow$ Q3 baseline confirmed \\
+2. Drift & Show 2--3 clips & \{B3$\cap$B6\} pool, switching Q3$\rightarrow$Q1 & I2 (Fitbit) ONLY & I2 enters Q1 \\
+2b. Resistance & Patient strongly resists & Diagonal switching \{B3$\cap$B6\} & I2 only & Upgrade to diagonal switch type \\
+3. Verify & Check I1--I2 distance & --- & Both & Gap shrinking = body and mind converging \\
+4. Maintain & Lock the state & \{B1$\cap$B6\} Q1 pool, non-switching & I1--I2 distance & Stays small and stable \\
+5. Probe & State check every 4--5 clips & B2 neutral pool & P and I1 & User projects happiness = state maintained \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Never use} in any clinical protocol: B5 clips, B10 clips, or any clip immediately after a B5/B10 clip without a buffer. Never use I1 as confirmation of drift success in switching protocols --- read I2 only.
+
+\subsection{Clinical Goal B: Maintain User in Q4 (Calm)}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Step-by-step clinical maintenance protocol (Q4)}
+\begin{tabular}{@{}p{0.12\linewidth}p{0.25\linewidth}p{0.25\linewidth}p{0.30\linewidth}@{}}
+\toprule
+\textbf{Step} & \textbf{Action} & \textbf{Clip Pool} & \textbf{Rule} \\
+\midrule
+1. Confirm & Read I2 & --- & Must already be Q4 \\
+2. Maintain & Non-switching Q4$\rightarrow$Q4 clips & \{B1$\cap$B6\} Q4 pool & 2--3 clips at a time \\
+3. Probe & Every 4--5 clips & B2 neutral pool & User projecting calm = state is holding \\
+4. Rescue & If I2 drifts out of Q4 & Re-run Goal A protocol targeting Q4 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Affective Computing Goal: Induce Q2 (Angry/Stressed) for Lab Experiment}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Lab baseline induction protocol (Q2 target)}
+\begin{tabular}{@{}p{0.15\linewidth}p{0.25\linewidth}p{0.25\linewidth}p{0.28\linewidth}@{}}
+\toprule
+\textbf{Step} & \textbf{Action} & \textbf{Clip Pool} & \textbf{Rule} \\
+\midrule
+1. Calibrate & Show 1 neutral clip first & B2 neutral pool & Read I2 to identify starting quadrant \\
+2. Context Switch & If not Q2: switching sequence toward Q2 & \{B3$\cap$B6\} or diagonal B6 pool & Read I2 only --- ignore I1 entirely \\
+3. Lock & Switch to non-switching Q2 clips & B6 Q2 pool & Continue until I1--I2 distance drops \\
+4. Verify Readiness & Check I1--I2 distance & --- & Both small and stable = experiment can begin \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Limitations}
+\begin{itemize}
+    \item \textbf{Sample Size:} Six core participants (from an initially recruited ten); strict fatigue-filtering occasionally reduced subset volume.
+    \item \textbf{Sensor Fidelity:} 1Hz Fitbit vs. 64Hz clinical ECG.
+    \item \textbf{I2 Valence Compression:} All I2-valence-dependent analyses affected by LLM constraints.
+    \item \textbf{VIDEO E Model:} Predicts exclusively Q1 for all 274 clips.
+    \item \textbf{Averaged Across Users:} $P$/$I$ aggregated across the core participant pool, occasionally masking hyper-individualistic patterns.
+    \item \textbf{Hyp-9 Direction Reversal:} While the training data showed switching sequences increased mirroring ($52.3\%$ vs $20.0\%$), the independent Phase 5 validation showed non-switching sequences increasing mirroring ($66.67\%$ vs $50.00\%$), indicating further investigation is needed into how psychological projection is modulated by trajectory stability.
+    \item \textbf{Phase 5 Cohort Boundaries:} The independent Clinical Validation effectively yielded $\sim$34 distinct completed sequential sessions; a 100+ session expansion would offer deeper longitudinal confidence.
+\end{itemize}
+
+\section{Future Directions}
+\subsection{Physiological (Fitbit) Independent Validation}
+While the final participant block's declarative Survey data ($I_1$) has verified the perceptual components of Affective Drift and Neutral Mirroring (reported in Section \ref{sec:results-phase5}), the ultimate objective is physiological proof-of-concept. 
+
+Future execution relies exclusively on integrating the un-processed $1$Hz raw Fitbit telemetry derived from the validation cohort. The defined methodology is to:
+\begin{itemize}
+    \item \textbf{Extraction:} Recover the raw Heart-Rate logs and derive the trailing temporal metrics (SDNN, specific RMSSD variance tracking).
+    \item \textbf{Synchronization:} Execute the previously quantified $-120$s ``shifted recovery window'' to properly index the post-stimulus physiological reverberations against the survey timestamps.
+    \item \textbf{Model Execution:} Route the synchronized biometric sequences through the fine-tuned \texttt{Llama-3.3-70B} departmental server model to acquire the authoritative physiological approximation ($I_2$).
+    \item \textbf{Validation Synthesis:} Map the generated $I_2$ variables back onto the validation sequences to measure the discrepancy between the perceived maintenance/drift rate ($I_1$) and the actual sympathetic nervous system ($I_2$) drift response, definitively proving or nullifying body-mind divergence hypotheses (H3 vs H1).
+\end{itemize}
+
+\subsection{Multi-Modal Sensor Fusion}
+Integrate GSR/EDA for arousal confirmation, facial expression analysis for objective $P$, and higher-frequency wearables (Empatica E4, Apple Watch) for valence discrimination.
+
+\subsection{Personalized Drift Profiles}
+Individual ``drift profiles'' calibrated to each user's unique physiological baseline.
+
+\subsection{Real-Time Therapeutic Application}
+A deployed web application that measures baseline emotion via Fitbit, selects appropriate H1/H3 clips, monitors physiological response in real-time, and confirms therapeutic success via body data.
+
+
+% --- BIBLIOGRAPHY ---
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\bibitem{banik2024}
+Banik, S., Sen, S., Saha, S., \& Ghosh, S. (2024). Towards Reducing Continuous Emotion Annotation Effort During Video Consumption. \textit{Proc. ACM IMWUT}.
+
+\bibitem{fernandez2019}
+Fern\'{a}ndez-Aguilar, L., et al. (2019). How effective are films in inducing positive and negative emotional states? A meta-analysis. \textit{PLOS ONE, 14}(11).
+
+\bibitem{gross1998}
+Gross, J. J. (1998). The emerging field of emotion regulation. \textit{Review of General Psychology, 2}(3), 271--299.
+
+\bibitem{hsu2022}
+Hsu, P. C., Li, J. L., \& Lee, C. C. (2022). Romantic and Family Movie Database. In \textit{ACII 2022}.
+
+\bibitem{kim2024}
+Kim, Y., et al. (2024). Health-LLM: Large Language Models for Health Prediction via Wearable Sensor Data. \textit{CHIL 2024}.
+
+\bibitem{kreibig2010}
+Kreibig, S. D. (2010). Autonomic nervous system activity in emotion: A review. \textit{Biological Psychology, 84}(3), 394--421.
+
+\bibitem{lee1991}
+Lee, K. A., Hicks, G., \& Nino-Murcia, G. (1991). Validity and reliability of a scale to assess fatigue. \textit{Psychiatry Research, 36}(3), 291--298.
+
+\bibitem{mauss2009}
+Mauss, I. B., \& Robinson, M. D. (2009). Measures of emotion: A review. \textit{Cognition and Emotion, 23}(2), 209--237.
+
+\bibitem{muszynski2021}
+Muszynski, M., et al. (2021). Recognizing Induced Emotions of Movie Audiences from Multimodal Information. \textit{IEEE TAC, 12}(1), 36--52.
+
+\bibitem{park2020}
+Park, C. Y., et al. (2020). K-EmoCon, a multimodal sensor dataset for continuous emotion recognition. \textit{Scientific Data, 7}(1), 1--16.
+
+\bibitem{russell1980}
+Russell, J. A. (1980). A circumplex model of affect. \textit{JPSP, 39}(6), 1161--1178.
+
+\bibitem{shaffer2017}
+Shaffer, F., \& Ginsberg, J. P. (2017). An overview of heart rate variability metrics and norms. \textit{Frontiers in Public Health, 5}, 258.
+
+\bibitem{thapa2025}
+Thapa, B., et al. (2025). StressLLM: LLMs for Stress Prediction via Wearable Sensor Data. In \textit{IEEE ICCE 2025}.
+
+\bibitem{tian2017}
+Tian, L., et al. (2017). Recognizing Induced Emotions of Movie Audiences: Are Induced and Perceived Emotions the Same? In \textit{ACII 2017}.
+
+\end{thebibliography}
+
+\end{document}

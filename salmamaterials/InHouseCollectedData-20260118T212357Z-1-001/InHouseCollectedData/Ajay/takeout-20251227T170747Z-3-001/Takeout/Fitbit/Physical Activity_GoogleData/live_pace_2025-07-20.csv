@@ -1,0 +1,8 @@
+timestamp,steps,distance millimeters,altitude gain millimeters,data source
+2025-07-20T13:49:45Z,2,0,0,Sense
+2025-07-20T13:49:46Z,3,80,0,Sense
+2025-07-20T13:49:47Z,2,190,-304,Sense
+2025-07-20T13:49:48Z,2,330,609,Sense
+2025-07-20T13:49:49Z,3,540,-609,Sense
+2025-07-20T13:49:50Z,2,740,0,Sense
+2025-07-20T13:49:51Z,2,870,-609,Sense

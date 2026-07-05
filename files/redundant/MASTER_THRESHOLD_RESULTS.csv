@@ -1,0 +1,9 @@
+Dimension,Threshold,Self_Match,Body_Match,Self_Feel,Body_Feel,Self_Drift,Body_Drift,Self_None,Body_None
+Valence,0.25,38,14,54,36,33,57,67,85
+Arousal,0.25,12,2,74,41,12,22,94,127
+Valence,0.5,105,46,69,29,12,71,6,46
+Arousal,0.5,47,23,115,66,12,36,18,67
+Valence,0.75,133,75,54,30,5,63,0,24
+Arousal,0.75,69,38,108,79,9,40,6,35
+Valence,1.0,166,110,26,19,0,56,0,7
+Arousal,1.0,104,70,88,74,0,34,0,14

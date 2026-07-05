@@ -1,0 +1,89 @@
+participant,clip_title,clip_order,timestamp,hr_sequence_llama,avg_bpm_llama,hr_std_llama,hr_min_llama,hr_max_llama,bpm_drift_llama,hr_count_llama,hrv_rmssd_llama,self_reported_valence_llama,self_reported_arousal_llama,participant_valence_llama,participant_arousal_llama,llm_question_llama,inferred_valence_llama,inferred_arousal_llama,raw_response_llama,hr_sequence_mistral,avg_bpm_mistral,hr_std_mistral,hr_min_mistral,hr_max_mistral,bpm_drift_mistral,hr_count_mistral,hrv_rmssd_mistral,self_reported_valence_mistral,self_reported_arousal_mistral,participant_valence_mistral,participant_arousal_mistral,llm_question_mistral,inferred_valence_mistral,inferred_arousal_mistral,raw_response_mistral,hr_sequence,avg_bpm,hr_std,hr_min,hr_max,bpm_drift,hr_count,hrv_rmssd,self_reported_valence,self_reported_arousal,participant_valence,participant_arousal,llm_question,inferred_valence_llama4,inferred_arousal_llama4,raw_response
+sayantankuila,TheTheoryOfEverything_001.mp4,249,2025-11-21 12:26:06.730,"[102.0, 101.0, 102.0, 100.0, 100.0, 98.0, 101.0, 100.0, 100.0, 100.0, 101.0, 102.0, 101.0, 102.0, 103.0, 102.0, 106.0, 106.0, 107.0, 104.0, 96.0, 72.0, 86.0, 88.0, 89.0, 90.0, 91.0, 92.0, 93.0, 94.0, 94.0, 95.0, 99.0, 100.0, 100.0, 97.0, 98.0, 99.0, 99.0, 100.0, 99.0, 97.0, 96.0, 97.0, 98.0, 98.0, 97.0, 98.0, 97.0, 96.0]",97.66,5.74,72.0,107.0,-6.0,50,37.27,4,4,5,5,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence represents emotional positivity or negativity on a 1–5 scale: 1 = very negative (sad, unpleasant), 2 = negative, 3 = neutral, 4 = positive, 5 = very positive (happy, pleasant). Arousal represents physiological activation on a 1–5 scale: 1 = very calm / relaxed, 2 = calm, 3 = moderate activation, 4 = excited / alert, 5 = very excited / highly activated. Heart rate typically increases with higher arousal states. Heart rate variability (RMSSD) tends to decrease under stress or negative emotional states. Heart rate drift across the viewing window reflects emotional engagement.
+
+### User Profile: The user is a 24-year-old male with height 173.0 cm and weight 75.0 kg.
+
+### Activity: The user is watching a short video clip titled 'TheTheoryOfEverything_001.mp4'.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [102.0, 101.0, 102.0, 100.0, 100.0, 98.0, 101.0, 100.0, 100.0, 100.0, 101.0, 102.0, 101.0, 102.0, 103.0, 102.0, 106.0, 106.0, 107.0, 104.0, 96.0, 72.0, 86.0, 88.0, 89.0, 90.0, 91.0, 92.0, 93.0, 94.0, 94.0, 95.0, 99.0, 100.0, 100.0, 97.0, 98.0, 99.0, 99.0, 100.0, 99.0, 97.0, 96.0, 97.0, 98.0, 98.0, 97.0, 98.0, 97.0, 96.0]. [Statistical Summary]: Mean = 97.66 BPM, Std = 5.74 BPM, Min = 72.0 BPM, Max = 107.0 BPM, Drift (last − first) = -6.0 BPM, HRV RMSSD = 37.27 ms.
+
+### Question: Based on the physiological data above, predict the INDUCED Valence and Arousal scores that the user experienced while watching the clip. Use a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object with no explanation: {""valence"": X, ""arousal"": Y}",,,ERROR after retries: Connection error.,"[102.0, 101.0, 102.0, 100.0, 100.0, 98.0, 101.0, 100.0, 100.0, 100.0, 101.0, 102.0, 101.0, 102.0, 103.0, 102.0, 106.0, 106.0, 107.0, 104.0, 96.0, 72.0, 86.0, 88.0, 89.0, 90.0, 91.0, 92.0, 93.0, 94.0, 94.0, 95.0, 99.0, 100.0, 100.0, 97.0, 98.0, 99.0, 99.0, 100.0, 99.0, 97.0, 96.0, 97.0, 98.0, 98.0, 97.0, 98.0, 97.0, 96.0]",97.66,5.74,72.0,107.0,-6.0,50,37.27,4,4,5,5,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence represents emotional positivity or negativity on a 1–5 scale: 1 = very negative (sad, unpleasant), 2 = negative, 3 = neutral, 4 = positive, 5 = very positive (happy, pleasant). Arousal represents physiological activation on a 1–5 scale: 1 = very calm / relaxed, 2 = calm, 3 = moderate activation, 4 = excited / alert, 5 = very excited / highly activated. Heart rate typically increases with higher arousal states. Heart rate variability (RMSSD) tends to decrease under stress or negative emotional states. Heart rate drift across the viewing window reflects emotional engagement.
+
+### User Profile: The user is a 24-year-old male with height 173.0 cm and weight 75.0 kg.
+
+### Activity: The user is watching a short video clip titled 'TheTheoryOfEverything_001.mp4'.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [102.0, 101.0, 102.0, 100.0, 100.0, 98.0, 101.0, 100.0, 100.0, 100.0, 101.0, 102.0, 101.0, 102.0, 103.0, 102.0, 106.0, 106.0, 107.0, 104.0, 96.0, 72.0, 86.0, 88.0, 89.0, 90.0, 91.0, 92.0, 93.0, 94.0, 94.0, 95.0, 99.0, 100.0, 100.0, 97.0, 98.0, 99.0, 99.0, 100.0, 99.0, 97.0, 96.0, 97.0, 98.0, 98.0, 97.0, 98.0, 97.0, 96.0]. [Statistical Summary]: Mean = 97.66 BPM, Std = 5.74 BPM, Min = 72.0 BPM, Max = 107.0 BPM, Drift (last − first) = -6.0 BPM, HRV RMSSD = 37.27 ms.
+
+### Question: Based on the physiological data above, predict the INDUCED Valence and Arousal scores that the user experienced while watching the clip. Use a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object with no explanation: {""valence"": X, ""arousal"": Y}",3,3,"<think>
+
+</think>
+
+{""valence"": 3, ""arousal"": 3}","[102.0, 101.0, 102.0, 100.0, 100.0, 98.0, 101.0, 100.0, 100.0, 100.0, 101.0, 102.0, 101.0, 102.0, 103.0, 102.0, 106.0, 106.0, 107.0, 104.0, 96.0, 72.0, 86.0, 88.0, 89.0, 90.0, 91.0, 92.0, 93.0, 94.0, 94.0, 95.0, 99.0, 100.0, 100.0, 97.0, 98.0, 99.0, 99.0, 100.0, 99.0, 97.0, 96.0, 97.0, 98.0, 98.0, 97.0, 98.0, 97.0, 96.0]",97.66,5.74,72.0,107.0,-6.0,50,37.27,4,4,5,5,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence represents emotional positivity or negativity on a 1–5 scale: 1 = very negative (sad, unpleasant), 2 = negative, 3 = neutral, 4 = positive, 5 = very positive (happy, pleasant). Arousal represents physiological activation on a 1–5 scale: 1 = very calm / relaxed, 2 = calm, 3 = moderate activation, 4 = excited / alert, 5 = very excited / highly activated. Heart rate typically increases with higher arousal states. Heart rate variability (RMSSD) tends to decrease under stress or negative emotional states. Heart rate drift across the viewing window reflects emotional engagement.
+
+### User Profile: The user is a 24-year-old male with height 173.0 cm and weight 75.0 kg.
+
+### Activity: The user is watching a short video clip titled 'TheTheoryOfEverything_001.mp4'.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [102.0, 101.0, 102.0, 100.0, 100.0, 98.0, 101.0, 100.0, 100.0, 100.0, 101.0, 102.0, 101.0, 102.0, 103.0, 102.0, 106.0, 106.0, 107.0, 104.0, 96.0, 72.0, 86.0, 88.0, 89.0, 90.0, 91.0, 92.0, 93.0, 94.0, 94.0, 95.0, 99.0, 100.0, 100.0, 97.0, 98.0, 99.0, 99.0, 100.0, 99.0, 97.0, 96.0, 97.0, 98.0, 98.0, 97.0, 98.0, 97.0, 96.0]. [Statistical Summary]: Mean = 97.66 BPM, Std = 5.74 BPM, Min = 72.0 BPM, Max = 107.0 BPM, Drift (last − first) = -6.0 BPM, HRV RMSSD = 37.27 ms.
+
+### Question: Based on the physiological data above, predict the INDUCED Valence and Arousal scores that the user experienced while watching the clip. Use a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object with no explanation: {""valence"": X, ""arousal"": Y}",3,3,"{
+""valence"": 3,
+  ""arousal"": 3
+}"
+debjit2001,TheTheoryOfEverything_030.mp4,259,2025-10-15 17:27:30.886,"[62.0, 62.0, 63.0, 65.0, 67.0, 66.0, 66.0, 68.0, 69.0, 68.0, 66.0, 67.0, 68.0, 69.0, 70.0, 72.0, 71.0, 68.0, 66.0, 66.0, 66.0, 67.0, 65.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 67.0, 66.0, 64.0, 66.0, 65.0, 66.0, 65.0, 66.0, 67.0, 65.0, 64.0, 65.0, 67.0, 69.0, 71.0, 72.0, 73.0, 70.0, 64.0, 62.0]",66.67,2.49,62.0,73.0,0.0,49,22.11,4,1,5,5,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence represents emotional positivity or negativity on a 1–5 scale: 1 = very negative (sad, unpleasant), 2 = negative, 3 = neutral, 4 = positive, 5 = very positive (happy, pleasant). Arousal represents physiological activation on a 1–5 scale: 1 = very calm / relaxed, 2 = calm, 3 = moderate activation, 4 = excited / alert, 5 = very excited / highly activated. Heart rate typically increases with higher arousal states. Heart rate variability (RMSSD) tends to decrease under stress or negative emotional states. Heart rate drift across the viewing window reflects emotional engagement.
+
+### User Profile: The user is a 25-year-old male with height 165.0 cm and weight 57.0 kg.
+
+### Activity: The user is watching a short video clip titled 'TheTheoryOfEverything_030.mp4'.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [62.0, 62.0, 63.0, 65.0, 67.0, 66.0, 66.0, 68.0, 69.0, 68.0, 66.0, 67.0, 68.0, 69.0, 70.0, 72.0, 71.0, 68.0, 66.0, 66.0, 66.0, 67.0, 65.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 67.0, 66.0, 64.0, 66.0, 65.0, 66.0, 65.0, 66.0, 67.0, 65.0, 64.0, 65.0, 67.0, 69.0, 71.0, 72.0, 73.0, 70.0, 64.0, 62.0]. [Statistical Summary]: Mean = 66.67 BPM, Std = 2.49 BPM, Min = 62.0 BPM, Max = 73.0 BPM, Drift (last − first) = 0.0 BPM, HRV RMSSD = 22.11 ms.
+
+### Question: Based on the physiological data above, predict the INDUCED Valence and Arousal scores that the user experienced while watching the clip. Use a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object with no explanation: {""valence"": X, ""arousal"": Y}",,,ERROR after retries: Connection error.,"[62.0, 62.0, 63.0, 65.0, 67.0, 66.0, 66.0, 68.0, 69.0, 68.0, 66.0, 67.0, 68.0, 69.0, 70.0, 72.0, 71.0, 68.0, 66.0, 66.0, 66.0, 67.0, 65.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 67.0, 66.0, 64.0, 66.0, 65.0, 66.0, 65.0, 66.0, 67.0, 65.0, 64.0, 65.0, 67.0, 69.0, 71.0, 72.0, 73.0, 70.0, 64.0, 62.0]",66.67,2.49,62.0,73.0,0.0,49,22.11,4,1,5,5,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence represents emotional positivity or negativity on a 1–5 scale: 1 = very negative (sad, unpleasant), 2 = negative, 3 = neutral, 4 = positive, 5 = very positive (happy, pleasant). Arousal represents physiological activation on a 1–5 scale: 1 = very calm / relaxed, 2 = calm, 3 = moderate activation, 4 = excited / alert, 5 = very excited / highly activated. Heart rate typically increases with higher arousal states. Heart rate variability (RMSSD) tends to decrease under stress or negative emotional states. Heart rate drift across the viewing window reflects emotional engagement.
+
+### User Profile: The user is a 25-year-old male with height 165.0 cm and weight 57.0 kg.
+
+### Activity: The user is watching a short video clip titled 'TheTheoryOfEverything_030.mp4'.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [62.0, 62.0, 63.0, 65.0, 67.0, 66.0, 66.0, 68.0, 69.0, 68.0, 66.0, 67.0, 68.0, 69.0, 70.0, 72.0, 71.0, 68.0, 66.0, 66.0, 66.0, 67.0, 65.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 67.0, 66.0, 64.0, 66.0, 65.0, 66.0, 65.0, 66.0, 67.0, 65.0, 64.0, 65.0, 67.0, 69.0, 71.0, 72.0, 73.0, 70.0, 64.0, 62.0]. [Statistical Summary]: Mean = 66.67 BPM, Std = 2.49 BPM, Min = 62.0 BPM, Max = 73.0 BPM, Drift (last − first) = 0.0 BPM, HRV RMSSD = 22.11 ms.
+
+### Question: Based on the physiological data above, predict the INDUCED Valence and Arousal scores that the user experienced while watching the clip. Use a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object with no explanation: {""valence"": X, ""arousal"": Y}",3,3,"<think>
+
+</think>
+
+{""valence"": 3, ""arousal"": 3}","[62.0, 62.0, 63.0, 65.0, 67.0, 66.0, 66.0, 68.0, 69.0, 68.0, 66.0, 67.0, 68.0, 69.0, 70.0, 72.0, 71.0, 68.0, 66.0, 66.0, 66.0, 67.0, 65.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 67.0, 66.0, 64.0, 66.0, 65.0, 66.0, 65.0, 66.0, 67.0, 65.0, 64.0, 65.0, 67.0, 69.0, 71.0, 72.0, 73.0, 70.0, 64.0, 62.0]",66.67,2.49,62.0,73.0,0.0,49,22.11,4,1,5,5,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence represents emotional positivity or negativity on a 1–5 scale: 1 = very negative (sad, unpleasant), 2 = negative, 3 = neutral, 4 = positive, 5 = very positive (happy, pleasant). Arousal represents physiological activation on a 1–5 scale: 1 = very calm / relaxed, 2 = calm, 3 = moderate activation, 4 = excited / alert, 5 = very excited / highly activated. Heart rate typically increases with higher arousal states. Heart rate variability (RMSSD) tends to decrease under stress or negative emotional states. Heart rate drift across the viewing window reflects emotional engagement.
+
+### User Profile: The user is a 25-year-old male with height 165.0 cm and weight 57.0 kg.
+
+### Activity: The user is watching a short video clip titled 'TheTheoryOfEverything_030.mp4'.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [62.0, 62.0, 63.0, 65.0, 67.0, 66.0, 66.0, 68.0, 69.0, 68.0, 66.0, 67.0, 68.0, 69.0, 70.0, 72.0, 71.0, 68.0, 66.0, 66.0, 66.0, 67.0, 65.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 67.0, 66.0, 64.0, 66.0, 65.0, 66.0, 65.0, 66.0, 67.0, 65.0, 64.0, 65.0, 67.0, 69.0, 71.0, 72.0, 73.0, 70.0, 64.0, 62.0]. [Statistical Summary]: Mean = 66.67 BPM, Std = 2.49 BPM, Min = 62.0 BPM, Max = 73.0 BPM, Drift (last − first) = 0.0 BPM, HRV RMSSD = 22.11 ms.
+
+### Question: Based on the physiological data above, predict the INDUCED Valence and Arousal scores that the user experienced while watching the clip. Use a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object with no explanation: {""valence"": X, ""arousal"": Y}",4,3,"{
+""valence"": 4,
+  ""arousal"": 3
+}"

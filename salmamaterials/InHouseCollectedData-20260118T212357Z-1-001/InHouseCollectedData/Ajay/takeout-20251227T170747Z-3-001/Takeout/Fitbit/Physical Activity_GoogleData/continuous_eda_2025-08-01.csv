@@ -1,0 +1,2 @@
+timestamp,eda level real micro siemens,eda slope real micro siemens per minute,scr detection count,leads contact count,minimum i ohms,maximum i ohms,median i ohms,minimum q ohms,maximum q ohms,median q ohms,data source
+2025-08-01T07:57:00Z,0.08,0.0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,Fitbit App

@@ -1,0 +1,22 @@
+# BTP Thesis: 60-Minute 'Shifted Window' Plan
+
+## Goal
+Fix the heart rate windowing logic (Stimulus vs. Recovery) and deliver high-precision results for the BTP thesis within 1 hour.
+
+## Step 1: Shifted HR Extraction (15 Minutes)
+- **Script:** [extract_hr_signals.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/InHouseCollectedData/extract_hr_signals.py).
+- **Change:** Modify line 98 to: `start_dt_actual = start_dt - timedelta(seconds=120)`.
+- **Reason:** This captures the **Watching Period** instead of the **Post-Response Period**.
+- **Output:** `fitbit_v3_shifted.csv`.
+
+## Step 2: Rapid Qwen Inference (40 Minutes)
+- **Model:** **Qwen-3-32B**.
+- **Speed:** 500+ tokens/sec on Groq. It will complete the 1,495 rows significantly faster than Llama-70B.
+- **Precision:** With the correctly timed HR window and RMSSD, Qwen will align with your Drift hypothesis logic.
+
+## Step 3: Hypothesis Finalization (5 Minutes)
+- **Script:** [generate_btp_hyptohesis_FINAL.py](file:///D:/BTP/btp2/salmamaterials/generate_btp_hyptohesis_FINAL.py).
+- **Action:** Update the 12-table matrix for the thesis document.
+
+---
+*Ready to execute. Estimated finish time: 1 hour from approval.*

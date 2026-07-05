@@ -1,0 +1,8 @@
+,inferred_valence,inferred_valence,inferred_valence,inferred_valence,inferred_arousal,inferred_arousal,inferred_arousal,inferred_arousal,hr_mean,hrv_rmssd
+,mean,std,min,max,mean,std,min,max,mean,mean
+user_id,,,,,,,,,,
+Ajay,2.8,0.48,2.0,4.0,3.46,0.86,2.0,4.0,95.65,22.13
+Debjit,3.0,0.63,2.0,4.0,3.0,1.1,2.0,4.0,83.66,24.0
+Nishant,2.91,0.29,2.0,3.0,3.23,0.92,2.0,4.0,90.67,24.08
+pranjal,3.1,0.74,2.0,4.0,2.4,0.84,2.0,4.0,81.42,24.75
+sayantan,3.25,0.5,3.0,4.0,3.0,1.15,2.0,4.0,82.59,27.84

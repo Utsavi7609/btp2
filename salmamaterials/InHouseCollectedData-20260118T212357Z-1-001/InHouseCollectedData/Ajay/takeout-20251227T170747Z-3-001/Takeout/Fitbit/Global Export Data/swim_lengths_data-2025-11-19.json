@@ -1,0 +1,9 @@
+[{
+  "dateTime" : "12/09/25 15:02:23",
+  "value" : {
+    "lapDurationSec" : 14,
+    "strokeCount" : 5,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+}]

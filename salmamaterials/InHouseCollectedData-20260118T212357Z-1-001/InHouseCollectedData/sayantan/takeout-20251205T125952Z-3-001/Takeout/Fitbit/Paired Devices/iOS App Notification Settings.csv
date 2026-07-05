@@ -1,0 +1,3 @@
+user_id,tracker_id,mobile_app_name,is_app_enabled,show_partial_message,is_default_message_app,created_on,modified_on
+202455491,2969634438,com.fitbit.FitbitMobile,false,false,false,2025-11-21T13:46:07.000Z,2025-11-21T13:46:07.000Z
+202455491,2969634438,net.whatsapp.WhatsApp,false,false,false,2025-11-20T07:58:32.000Z,2025-11-20T07:58:32.000Z

@@ -1,0 +1,996 @@
+21,21,69.62,5.08,58.0,84.0,10.03,75358.65,"[58.0, 83.5, 84.0, 75.25, 71.2, 73.5, 73.0, 72.75, 72.33, 71.9, 71.36, 70.83, 70.31, 69.86, 69.33, '...', 69.63, 69.57, 69.47, 69.33, 69.22, 69.08, 68.97, 68.85, 68.72, 68.6, 68.48, 68.37, 68.23, 68.12, 68.03]",957,3.0,2.016,122,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [58.0, 83.5, 84.0, 75.25, 71.2, 73.5, 73.0, 72.75, 72.33, 71.9, 71.36, 70.83, 70.31, 69.86, 69.33, '...', 69.63, 69.57, 69.47, 69.33, 69.22, 69.08, 68.97, 68.85, 68.72, 68.6, 68.48, 68.37, 68.23, 68.12, 68.03]. [Statistical Summary]: Mean = 69.62 BPM, Std = 5.08 BPM, Min = 58.0 BPM, Max = 84.0 BPM, Drift (last − first) = 10.03 BPM, HRV RMSSD = 75358.65 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+22,22,70.92,5.74,59.72,110.14,-17.22,68110.9,"[83.0, 84.0, 77.33, 74.0, 72.0, 95.33, 110.14, 104.62, 100.33, 97.0, 94.27, 92.0, 90.08, 88.36, 86.8, '...', 62.78, 62.98, 63.15, 63.35, 63.62, 63.88, 64.12, 64.35, 64.55, 64.73, 64.92, 65.1, 65.3, 65.53, 65.78]",879,3.0,1.852,122,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 84.0, 77.33, 74.0, 72.0, 95.33, 110.14, 104.62, 100.33, 97.0, 94.27, 92.0, 90.08, 88.36, 86.8, '...', 62.78, 62.98, 63.15, 63.35, 63.62, 63.88, 64.12, 64.35, 64.55, 64.73, 64.92, 65.1, 65.3, 65.53, 65.78]. [Statistical Summary]: Mean = 70.92 BPM, Std = 5.74 BPM, Min = 59.72 BPM, Max = 110.14 BPM, Drift (last − first) = -17.22 BPM, HRV RMSSD = 68110.9 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+4,4,78.09,7.25,58.85,109.0,-21.33,40122.51,"[109.0, 97.0, 85.0, 76.75, 71.8, 68.5, 66.86, 66.75, 66.89, 67.0, 67.18, 67.67, 68.08, 68.5, 68.87, '...', 88.35, 88.12, 87.9, 87.55, 87.43, 87.27, 87.13, 87.0, 86.87, 86.7, 86.85, 87.07, 87.25, 87.45, 87.67]",975,3.014,2.557,140,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]. [Statistical Summary]: Mean = 80.71 BPM, Std = 9.8 BPM, Min = 56.68 BPM, Max = 103.03 BPM, Drift (last - first) = 7.77 BPM, HRV RMSSD = 74079.47 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.823, ""arousal"": 2.702}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [109.0, 97.0, 85.0, 76.75, 71.8, 68.5, 66.86, 66.75, 66.89, 67.0, 67.18, 67.67, 68.08, 68.5, 68.87, '...', 88.35, 88.12, 87.9, 87.55, 87.43, 87.27, 87.13, 87.0, 86.87, 86.7, 86.85, 87.07, 87.25, 87.45, 87.67]. [Statistical Summary]: Mean = 78.09 BPM, Std = 7.25 BPM, Min = 58.85 BPM, Max = 109.0 BPM, Drift (last - first) = -21.33 BPM, HRV RMSSD = 40122.51 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.5,2.0,"{
+  ""valence"": 2.5,
+   ""arousal"": 2.0
+}"
+5,5,83.93,8.34,61.98,99.83,-5.05,63662.61,"[72.0, 62.0, 65.0, 69.5, 75.2, 72.5, 70.71, 72.0, 72.89, 73.5, 73.91, 74.0, 74.23, 74.29, 74.33, '...', 69.97, 69.68, 69.33, 68.97, 68.63, 68.3, 68.08, 67.85, 67.62, 67.38, 67.28, 67.23, 67.22, 67.08, 66.95]",1551,3.008,2.992,127,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]. [Statistical Summary]: Mean = 80.71 BPM, Std = 9.8 BPM, Min = 56.68 BPM, Max = 103.03 BPM, Drift (last - first) = 7.77 BPM, HRV RMSSD = 74079.47 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.823, ""arousal"": 2.702}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [72.0, 62.0, 65.0, 69.5, 75.2, 72.5, 70.71, 72.0, 72.89, 73.5, 73.91, 74.0, 74.23, 74.29, 74.33, '...', 69.97, 69.68, 69.33, 68.97, 68.63, 68.3, 68.08, 67.85, 67.62, 67.38, 67.28, 67.23, 67.22, 67.08, 66.95]. [Statistical Summary]: Mean = 83.93 BPM, Std = 8.34 BPM, Min = 61.98 BPM, Max = 99.83 BPM, Drift (last - first) = -5.05 BPM, HRV RMSSD = 63662.61 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.5,2.1,"{
+  ""valence"": 2.5,
+   ""arousal"": 2.1
+}"
+8,8,84.22,4.33,60.8,93.4,21.93,57314.56,"[61.0, 63.0, 63.0, 63.75, 60.8, 62.5, 63.29, 63.75, 63.78, 63.7, 64.09, 64.75, 65.23, 65.64, 66.27, '...', 83.6, 83.57, 83.53, 83.52, 83.47, 83.4, 83.33, 83.27, 83.2, 83.15, 83.08, 83.02, 82.97, 82.93, 82.93]",1270,2.935,2.065,124,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]. [Statistical Summary]: Mean = 80.71 BPM, Std = 9.8 BPM, Min = 56.68 BPM, Max = 103.03 BPM, Drift (last - first) = 7.77 BPM, HRV RMSSD = 74079.47 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.823, ""arousal"": 2.702}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [61.0, 63.0, 63.0, 63.75, 60.8, 62.5, 63.29, 63.75, 63.78, 63.7, 64.09, 64.75, 65.23, 65.64, 66.27, '...', 83.6, 83.57, 83.53, 83.52, 83.47, 83.4, 83.33, 83.27, 83.2, 83.15, 83.08, 83.02, 82.97, 82.93, 82.93]. [Statistical Summary]: Mean = 84.22 BPM, Std = 4.33 BPM, Min = 60.8 BPM, Max = 93.4 BPM, Drift (last - first) = 21.93 BPM, HRV RMSSD = 57314.56 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",3.0,2.0,"{
+  ""valence"": 3.0,
+   ""arousal"": 2.0
+}"
+9,9,81.42,12.44,63.38,122.08,0.13,73796.72,"[83.0, 83.0, 78.67, 72.0, 69.8, 70.83, 70.57, 70.12, 69.89, 69.7, 69.45, 69.25, 69.0, 68.86, 68.73, '...', 82.97, 82.95, 82.97, 82.98, 83.02, 83.03, 83.03, 83.05, 83.07, 83.08, 83.1, 83.13, 83.15, 83.17, 83.13]",1479,3.169,2.081,124,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]. [Statistical Summary]: Mean = 80.71 BPM, Std = 9.8 BPM, Min = 56.68 BPM, Max = 103.03 BPM, Drift (last - first) = 7.77 BPM, HRV RMSSD = 74079.47 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.823, ""arousal"": 2.702}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 83.0, 78.67, 72.0, 69.8, 70.83, 70.57, 70.12, 69.89, 69.7, 69.45, 69.25, 69.0, 68.86, 68.73, '...', 82.97, 82.95, 82.97, 82.98, 83.02, 83.03, 83.03, 83.05, 83.07, 83.08, 83.1, 83.13, 83.15, 83.17, 83.13]. [Statistical Summary]: Mean = 81.42 BPM, Std = 12.44 BPM, Min = 63.38 BPM, Max = 122.08 BPM, Drift (last - first) = 0.13 BPM, HRV RMSSD = 73796.72 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.823,2.702,"{
+  ""valence"": 2.823,
+   ""arousal"": 2.702
+}"
+10,10,79.44,9.19,59.42,127.5,-61.57,79789.13,"[127.0, 127.5, 117.67, 107.5, 101.2, 108.67, 114.0, 114.38, 114.78, 115.2, 115.45, 115.75, 115.0, 114.29, 113.8, '...', 61.48, 61.93, 62.32, 62.75, 63.18, 63.45, 63.55, 63.72, 63.95, 64.2, 64.43, 64.7, 64.97, 65.15, 65.43]",1494,2.871,2.113,124,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]. [Statistical Summary]: Mean = 80.71 BPM, Std = 9.8 BPM, Min = 56.68 BPM, Max = 103.03 BPM, Drift (last - first) = 7.77 BPM, HRV RMSSD = 74079.47 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.823, ""arousal"": 2.702}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [127.0, 127.5, 117.67, 107.5, 101.2, 108.67, 114.0, 114.38, 114.78, 115.2, 115.45, 115.75, 115.0, 114.29, 113.8, '...', 61.48, 61.93, 62.32, 62.75, 63.18, 63.45, 63.55, 63.72, 63.95, 64.2, 64.43, 64.7, 64.97, 65.15, 65.43]. [Statistical Summary]: Mean = 79.44 BPM, Std = 9.19 BPM, Min = 59.42 BPM, Max = 127.5 BPM, Drift (last - first) = -61.57 BPM, HRV RMSSD = 79789.13 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.0,2.0,"{
+  ""valence"": 2.0,
+   ""arousal"": 2.0
+}"
+11,11,87.6,7.16,48.0,106.72,36.63,60657.59,"[48.0, 65.5, 76.33, 79.25, 75.6, 74.67, 74.43, 74.25, 74.11, 74.4, 74.82, 75.5, 76.23, 76.79, 77.27, '...', 84.45, 84.5, 84.57, 84.6, 84.65, 84.7, 84.75, 84.78, 84.85, 84.93, 84.9, 84.85, 84.78, 84.67, 84.63]",1218,2.976,2.421,126,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]. [Statistical Summary]: Mean = 80.71 BPM, Std = 9.8 BPM, Min = 56.68 BPM, Max = 103.03 BPM, Drift (last - first) = 7.77 BPM, HRV RMSSD = 74079.47 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.823, ""arousal"": 2.702}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [48.0, 65.5, 76.33, 79.25, 75.6, 74.67, 74.43, 74.25, 74.11, 74.4, 74.82, 75.5, 76.23, 76.79, 77.27, '...', 84.45, 84.5, 84.57, 84.6, 84.65, 84.7, 84.75, 84.78, 84.85, 84.93, 84.9, 84.85, 84.78, 84.67, 84.63]. [Statistical Summary]: Mean = 87.6 BPM, Std = 7.16 BPM, Min = 48.0 BPM, Max = 106.72 BPM, Drift (last - first) = 36.63 BPM, HRV RMSSD = 60657.59 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.5,2.1,"{
+  ""valence"": 2.5,
+   ""arousal"": 2.1
+}"
+12,12,89.31,12.46,58.0,128.38,20.35,72418.71,"[70.0, 61.0, 58.0, 58.25, 68.4, 70.83, 72.57, 73.88, 74.89, 75.8, 76.64, 77.42, 78.15, 78.79, 79.33, '...', 91.65, 91.43, 91.17, 90.9, 90.82, 90.7, 90.57, 90.4, 90.27, 90.13, 90.02, 89.98, 90.08, 90.18, 90.35]",1210,2.927,3.163,123,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]. [Statistical Summary]: Mean = 80.71 BPM, Std = 9.8 BPM, Min = 56.68 BPM, Max = 103.03 BPM, Drift (last - first) = 7.77 BPM, HRV RMSSD = 74079.47 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.823, ""arousal"": 2.702}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [70.0, 61.0, 58.0, 58.25, 68.4, 70.83, 72.57, 73.88, 74.89, 75.8, 76.64, 77.42, 78.15, 78.79, 79.33, '...', 91.65, 91.43, 91.17, 90.9, 90.82, 90.7, 90.57, 90.4, 90.27, 90.13, 90.02, 89.98, 90.08, 90.18, 90.35]. [Statistical Summary]: Mean = 89.31 BPM, Std = 12.46 BPM, Min = 58.0 BPM, Max = 128.38 BPM, Drift (last - first) = 20.35 BPM, HRV RMSSD = 72418.71 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.5,2.8,"{
+  ""valence"": 2.5,
+   ""arousal"": 2.8
+}"
+13,13,109.43,7.11,71.0,141.64,40.42,42915.6,"[71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]",1099,2.992,2.52,123,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]. [Statistical Summary]: Mean = 80.71 BPM, Std = 9.8 BPM, Min = 56.68 BPM, Max = 103.03 BPM, Drift (last - first) = 7.77 BPM, HRV RMSSD = 74079.47 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.823, ""arousal"": 2.702}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.0,3.0,"{
+  ""valence"": 2.0,
+   ""arousal"": 3.0
+}"
+14,14,95.35,13.95,57.12,119.93,38.03,64934.19,"[67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]",1096,3.0,2.537,123,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]. [Statistical Summary]: Mean = 80.71 BPM, Std = 9.8 BPM, Min = 56.68 BPM, Max = 103.03 BPM, Drift (last - first) = 7.77 BPM, HRV RMSSD = 74079.47 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.823, ""arousal"": 2.702}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.83,2.93,"{
+  ""valence"": 2.83,
+   ""arousal"": 2.93
+}"
+15,15,80.71,9.8,56.68,103.03,7.77,74079.47,"[83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]",1038,2.823,2.702,124,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.0, 77.33, 71.75, 69.6, 68.17, 65.43, 63.75, 62.33, 61.4, 60.45, 59.75, 59.15, 58.71, 58.27, '...', 95.07, 94.73, 94.47, 94.22, 93.95, 93.68, 93.38, 93.08, 92.8, 92.5, 92.2, 91.83, 91.47, 91.13, 90.77]. [Statistical Summary]: Mean = 80.71 BPM, Std = 9.8 BPM, Min = 56.68 BPM, Max = 103.03 BPM, Drift (last - first) = 7.77 BPM, HRV RMSSD = 74079.47 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.68,2.52,"{
+  ""valence"": 2.68,
+   ""arousal"": 2.52
+}"
+23,23,81.04,6.09,68.33,93.53,11.03,101929.11,"[76.0, 79.5, 71.67, 70.5, 69.8, 69.5, 69.14, 68.88, 68.33, 69.3, 70.09, 70.83, 71.69, 72.5, 73.2, '...', 80.23, 80.87, 81.45, 82.02, 82.55, 83.07, 83.57, 84.05, 84.48, 84.93, 85.35, 85.75, 86.12, 86.52, 87.03]",964,3.0,2.431,123,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [76.0, 79.5, 71.67, 70.5, 69.8, 69.5, 69.14, 68.88, 68.33, 69.3, 70.09, 70.83, 71.69, 72.5, 73.2, '...', 80.23, 80.87, 81.45, 82.02, 82.55, 83.07, 83.57, 84.05, 84.48, 84.93, 85.35, 85.75, 86.12, 86.52, 87.03]. [Statistical Summary]: Mean = 81.04 BPM, Std = 6.09 BPM, Min = 68.33 BPM, Max = 93.53 BPM, Drift (last − first) = 11.03 BPM, HRV RMSSD = 101929.11 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+16,16,75.6,6.0,60.0,88.42,20.47,66119.16,"[60.0, 60.5, 61.0, 61.0, 61.4, 62.0, 62.43, 62.75, 63.11, 63.3, 63.45, 63.58, 63.77, 63.86, 63.93, '...', 81.83, 81.6, 81.37, 81.15, 80.95, 80.77, 80.67, 80.55, 80.5, 80.47, 80.47, 80.48, 80.52, 80.5, 80.47]",1020,3.161,3.024,124,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [60.0, 60.5, 61.0, 61.0, 61.4, 62.0, 62.43, 62.75, 63.11, 63.3, 63.45, 63.58, 63.77, 63.86, 63.93, '...', 81.83, 81.6, 81.37, 81.15, 80.95, 80.77, 80.67, 80.55, 80.5, 80.47, 80.47, 80.48, 80.52, 80.5, 80.47]. [Statistical Summary]: Mean = 75.6 BPM, Std = 6.0 BPM, Min = 60.0 BPM, Max = 88.42 BPM, Drift (last - first) = 20.47 BPM, HRV RMSSD = 66119.16 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.92,2.38,"{
+  ""valence"": 2.92,
+   ""arousal"": 2.38
+}"
+17,17,89.48,16.0,61.67,113.67,5.2,77692.13,"[65.0, 65.0, 64.33, 64.25, 64.6, 65.33, 66.0, 66.5, 66.89, 67.1, 67.27, 67.33, 67.23, 67.07, 66.87, '...', 66.32, 66.48, 66.67, 66.87, 67.12, 67.37, 67.63, 67.98, 68.27, 68.55, 68.82, 69.13, 69.5, 69.83, 70.2]",998,3.0,2.558,147,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [65.0, 65.0, 64.33, 64.25, 64.6, 65.33, 66.0, 66.5, 66.89, 67.1, 67.27, 67.33, 67.23, 67.07, 66.87, '...', 66.32, 66.48, 66.67, 66.87, 67.12, 67.37, 67.63, 67.98, 68.27, 68.55, 68.82, 69.13, 69.5, 69.83, 70.2]. [Statistical Summary]: Mean = 89.48 BPM, Std = 16.0 BPM, Min = 61.67 BPM, Max = 113.67 BPM, Drift (last - first) = 5.2 BPM, HRV RMSSD = 77692.13 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.92,2.51,"{
+  ""valence"": 2.92,
+   ""arousal"": 2.51
+}"
+18,18,76.17,16.76,53.78,117.68,9.8,98243.97,"[59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]",1438,3.014,2.408,147,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.68, ""arousal"": 3.216}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.68,2.52,"{
+  ""valence"": 2.68,
+   ""arousal"": 2.52
+}"
+19,19,80.46,9.0,59.38,111.43,1.52,83844.62,"[63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]",1697,2.68,3.216,125,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [63.0, 63.0, 74.67, 74.25, 71.4, 94.83, 111.43, 110.75, 107.67, 105.2, 102.55, 99.92, 96.0, 94.43, 93.07, '...', 60.47, 60.5, 60.48, 60.48, 60.78, 61.15, 61.53, 61.87, 62.25, 62.68, 63.02, 63.38, 63.78, 64.15, 64.52]. [Statistical Summary]: Mean = 80.46 BPM, Std = 9.0 BPM, Min = 59.38 BPM, Max = 111.43 BPM, Drift (last - first) = 1.52 BPM, HRV RMSSD = 83844.62 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.998,2.475,"{
+  ""valence"": 2.998,
+   ""arousal"": 2.475
+}"
+20,20,84.49,10.96,66.2,136.73,20.25,67761.24,"[83.0, 78.5, 77.67, 70.5, 66.2, 84.17, 97.29, 107.12, 114.11, 119.6, 124.18, 128.0, 131.38, 134.21, 136.73, '...', 96.07, 96.83, 97.58, 98.15, 98.58, 99.0, 99.43, 99.87, 100.3, 100.78, 101.25, 101.68, 102.22, 102.82, 103.25]",1673,2.928,3.152,125,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 78.5, 77.67, 70.5, 66.2, 84.17, 97.29, 107.12, 114.11, 119.6, 124.18, 128.0, 131.38, 134.21, 136.73, '...', 96.07, 96.83, 97.58, 98.15, 98.58, 99.0, 99.43, 99.87, 100.3, 100.78, 101.25, 101.68, 102.22, 102.82, 103.25]. [Statistical Summary]: Mean = 84.49 BPM, Std = 10.96 BPM, Min = 66.2 BPM, Max = 136.73 BPM, Drift (last - first) = 20.25 BPM, HRV RMSSD = 67761.24 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.998,2.513,"{
+  ""valence"": 2.998,
+   ""arousal"": 2.513
+}"
+21,21,69.62,5.08,58.0,84.0,10.03,75358.65,"[58.0, 83.5, 84.0, 75.25, 71.2, 73.5, 73.0, 72.75, 72.33, 71.9, 71.36, 70.83, 70.31, 69.86, 69.33, '...', 69.63, 69.57, 69.47, 69.33, 69.22, 69.08, 68.97, 68.85, 68.72, 68.6, 68.48, 68.37, 68.23, 68.12, 68.03]",957,3.0,2.016,122,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [58.0, 83.5, 84.0, 75.25, 71.2, 73.5, 73.0, 72.75, 72.33, 71.9, 71.36, 70.83, 70.31, 69.86, 69.33, '...', 69.63, 69.57, 69.47, 69.33, 69.22, 69.08, 68.97, 68.85, 68.72, 68.6, 68.48, 68.37, 68.23, 68.12, 68.03]. [Statistical Summary]: Mean = 69.62 BPM, Std = 5.08 BPM, Min = 58.0 BPM, Max = 84.0 BPM, Drift (last - first) = 10.03 BPM, HRV RMSSD = 75358.65 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",3.0,2.0,"{
+  ""valence"": 3.0,
+   ""arousal"": 2.0
+}"
+24,24,100.41,13.79,78.35,154.27,-9.05,66259.93,"[109.0, 109.0, 105.33, 120.5, 113.4, 123.5, 131.29, 137.12, 143.56, 148.7, 150.27, 150.75, 151.15, 151.5, 154.27, '...', 103.1, 102.7, 102.33, 102.0, 101.67, 101.3, 100.98, 100.72, 100.42, 100.23, 100.12, 100.05, 100.07, 100.08, 99.95]",933,3.0,2.621,124,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [109.0, 109.0, 105.33, 120.5, 113.4, 123.5, 131.29, 137.12, 143.56, 148.7, 150.27, 150.75, 151.15, 151.5, 154.27, '...', 103.1, 102.7, 102.33, 102.0, 101.67, 101.3, 100.98, 100.72, 100.42, 100.23, 100.12, 100.05, 100.07, 100.08, 99.95]. [Statistical Summary]: Mean = 100.41 BPM, Std = 13.79 BPM, Min = 78.35 BPM, Max = 154.27 BPM, Drift (last − first) = -9.05 BPM, HRV RMSSD = 66259.93 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+22,22,70.92,5.74,59.72,110.14,-17.22,68110.9,"[83.0, 84.0, 77.33, 74.0, 72.0, 95.33, 110.14, 104.62, 100.33, 97.0, 94.27, 92.0, 90.08, 88.36, 86.8, '...', 62.78, 62.98, 63.15, 63.35, 63.62, 63.88, 64.12, 64.35, 64.55, 64.73, 64.92, 65.1, 65.3, 65.53, 65.78]",879,3.0,1.852,122,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 84.0, 77.33, 74.0, 72.0, 95.33, 110.14, 104.62, 100.33, 97.0, 94.27, 92.0, 90.08, 88.36, 86.8, '...', 62.78, 62.98, 63.15, 63.35, 63.62, 63.88, 64.12, 64.35, 64.55, 64.73, 64.92, 65.1, 65.3, 65.53, 65.78]. [Statistical Summary]: Mean = 70.92 BPM, Std = 5.74 BPM, Min = 59.72 BPM, Max = 110.14 BPM, Drift (last - first) = -17.22 BPM, HRV RMSSD = 68110.9 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.5,2.0,"{
+  ""valence"": 2.5,
+   ""arousal"": 2.0
+}"
+23,23,81.04,6.09,68.33,93.53,11.03,101929.11,"[76.0, 79.5, 71.67, 70.5, 69.8, 69.5, 69.14, 68.88, 68.33, 69.3, 70.09, 70.83, 71.69, 72.5, 73.2, '...', 80.23, 80.87, 81.45, 82.02, 82.55, 83.07, 83.57, 84.05, 84.48, 84.93, 85.35, 85.75, 86.12, 86.52, 87.03]",964,3.0,2.431,123,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [76.0, 79.5, 71.67, 70.5, 69.8, 69.5, 69.14, 68.88, 68.33, 69.3, 70.09, 70.83, 71.69, 72.5, 73.2, '...', 80.23, 80.87, 81.45, 82.02, 82.55, 83.07, 83.57, 84.05, 84.48, 84.93, 85.35, 85.75, 86.12, 86.52, 87.03]. [Statistical Summary]: Mean = 81.04 BPM, Std = 6.09 BPM, Min = 68.33 BPM, Max = 93.53 BPM, Drift (last - first) = 11.03 BPM, HRV RMSSD = 101929.11 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",3.0,2.5,"{
+  ""valence"": 3.0,
+   ""arousal"": 2.5
+}"
+24,24,100.41,13.79,78.35,154.27,-9.05,66259.93,"[109.0, 109.0, 105.33, 120.5, 113.4, 123.5, 131.29, 137.12, 143.56, 148.7, 150.27, 150.75, 151.15, 151.5, 154.27, '...', 103.1, 102.7, 102.33, 102.0, 101.67, 101.3, 100.98, 100.72, 100.42, 100.23, 100.12, 100.05, 100.07, 100.08, 99.95]",933,3.0,2.621,124,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [109.0, 109.0, 105.33, 120.5, 113.4, 123.5, 131.29, 137.12, 143.56, 148.7, 150.27, 150.75, 151.15, 151.5, 154.27, '...', 103.1, 102.7, 102.33, 102.0, 101.67, 101.3, 100.98, 100.72, 100.42, 100.23, 100.12, 100.05, 100.07, 100.08, 99.95]. [Statistical Summary]: Mean = 100.41 BPM, Std = 13.79 BPM, Min = 78.35 BPM, Max = 154.27 BPM, Drift (last - first) = -9.05 BPM, HRV RMSSD = 66259.93 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.5,2.8,"{
+  ""valence"": 2.5,
+   ""arousal"": 2.8
+}"
+25,25,82.56,10.61,60.1,102.52,-14.43,67209.86,"[98.0, 98.0, 93.0, 83.0, 82.8, 78.17, 74.86, 72.75, 70.78, 68.8, 67.18, 65.67, 64.54, 63.64, 62.8, '...', 83.72, 83.67, 83.65, 83.65, 83.65, 83.65, 83.62, 83.72, 83.77, 83.82, 83.85, 83.82, 83.8, 83.67, 83.57]",912,3.079,3.206,126,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [98.0, 98.0, 93.0, 83.0, 82.8, 78.17, 74.86, 72.75, 70.78, 68.8, 67.18, 65.67, 64.54, 63.64, 62.8, '...', 83.72, 83.67, 83.65, 83.65, 83.65, 83.65, 83.62, 83.72, 83.77, 83.82, 83.85, 83.82, 83.8, 83.67, 83.57]. [Statistical Summary]: Mean = 82.56 BPM, Std = 10.61 BPM, Min = 60.1 BPM, Max = 102.52 BPM, Drift (last - first) = -14.43 BPM, HRV RMSSD = 67209.86 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.5,2.0,"{
+  ""valence"": 2.5,
+   ""arousal"": 2.0
+}"
+26,26,75.78,7.83,58.35,93.73,22.65,N/A,"[66.0, 66.0, 66.67, 66.5, 64.2, 65.67, 67.0, 67.12, 67.33, 67.3, 67.27, 67.33, 67.23, 67.21, 67.4, '...', 83.67, 83.85, 84.05, 84.28, 84.75, 85.13, 85.45, 85.75, 86.15, 86.57, 87.02, 87.42, 87.8, 88.25, 88.65]",868,3.452,3.357,126,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [66.0, 66.0, 66.67, 66.5, 64.2, 65.67, 67.0, 67.12, 67.33, 67.3, 67.27, 67.33, 67.23, 67.21, 67.4, '...', 83.67, 83.85, 84.05, 84.28, 84.75, 85.13, 85.45, 85.75, 86.15, 86.57, 87.02, 87.42, 87.8, 88.25, 88.65]. [Statistical Summary]: Mean = 75.78 BPM, Std = 7.83 BPM, Min = 58.35 BPM, Max = 93.73 BPM, Drift (last - first) = 22.65 BPM, HRV RMSSD = N/A ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",3.0,2.5,"{
+  ""valence"": 3.0,
+   ""arousal"": 2.5
+}"
+27,27,97.29,14.94,68.0,128.98,29.1,75498.56,"[73.0, 73.0, 68.0, 78.25, 77.8, 75.5, 74.29, 73.62, 73.11, 72.7, 72.45, 72.17, 71.85, 71.43, 71.0, '...', 105.12, 105.07, 104.98, 104.9, 104.8, 104.57, 104.32, 104.05, 103.78, 103.5, 103.22, 102.97, 102.85, 102.53, 102.1]",1278,2.977,2.608,130,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [73.0, 73.0, 68.0, 78.25, 77.8, 75.5, 74.29, 73.62, 73.11, 72.7, 72.45, 72.17, 71.85, 71.43, 71.0, '...', 105.12, 105.07, 104.98, 104.9, 104.8, 104.57, 104.32, 104.05, 103.78, 103.5, 103.22, 102.97, 102.85, 102.53, 102.1]. [Statistical Summary]: Mean = 97.29 BPM, Std = 14.94 BPM, Min = 68.0 BPM, Max = 128.98 BPM, Drift (last - first) = 29.1 BPM, HRV RMSSD = 75498.56 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",3.0,2.5,"{
+  ""valence"": 3.0,
+   ""arousal"": 2.5
+}"
+25,25,82.56,10.61,60.1,102.52,-14.43,67209.86,"[98.0, 98.0, 93.0, 83.0, 82.8, 78.17, 74.86, 72.75, 70.78, 68.8, 67.18, 65.67, 64.54, 63.64, 62.8, '...', 83.72, 83.67, 83.65, 83.65, 83.65, 83.65, 83.62, 83.72, 83.77, 83.82, 83.85, 83.82, 83.8, 83.67, 83.57]",912,3.079,3.206,126,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [98.0, 98.0, 93.0, 83.0, 82.8, 78.17, 74.86, 72.75, 70.78, 68.8, 67.18, 65.67, 64.54, 63.64, 62.8, '...', 83.72, 83.67, 83.65, 83.65, 83.65, 83.65, 83.62, 83.72, 83.77, 83.82, 83.85, 83.82, 83.8, 83.67, 83.57]. [Statistical Summary]: Mean = 82.56 BPM, Std = 10.61 BPM, Min = 60.1 BPM, Max = 102.52 BPM, Drift (last − first) = -14.43 BPM, HRV RMSSD = 67209.86 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+28,28,75.42,11.85,52.0,106.92,52.32,117552.21,"[52.0, 67.5, 70.33, 71.75, 70.8, 72.83, 72.29, 71.88, 71.67, 71.5, 71.55, 71.58, 71.62, 71.64, 71.67, '...', 103.98, 103.97, 103.97, 104.0, 104.05, 104.07, 104.08, 104.08, 104.07, 104.08, 104.1, 104.12, 104.18, 104.22, 104.32]",1288,3.0,2.338,130,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [52.0, 67.5, 70.33, 71.75, 70.8, 72.83, 72.29, 71.88, 71.67, 71.5, 71.55, 71.58, 71.62, 71.64, 71.67, '...', 103.98, 103.97, 103.97, 104.0, 104.05, 104.07, 104.08, 104.08, 104.07, 104.08, 104.1, 104.12, 104.18, 104.22, 104.32]. [Statistical Summary]: Mean = 75.42 BPM, Std = 11.85 BPM, Min = 52.0 BPM, Max = 106.92 BPM, Drift (last - first) = 52.32 BPM, HRV RMSSD = 117552.21 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",3.0,2.5,"{
+  ""valence"": 3.0,
+   ""arousal"": 2.5
+}"
+29,29,96.34,8.86,66.0,111.9,26.52,54604.85,"[68.0, 69.5, 69.67, 70.75, 71.2, 73.0, 74.57, 75.88, 76.89, 66.0, 77.7, 66.5, 78.36, 67.33, 78.92, '...', 95.42, 98.23, 95.23, 98.2, 95.05, 98.2, 94.9, 98.2, 94.78, 98.2, 94.68, 98.18, 94.6, 98.15, 94.52]",2162,3.109,2.907,129,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [68.0, 69.5, 69.67, 70.75, 71.2, 73.0, 74.57, 75.88, 76.89, 66.0, 77.7, 66.5, 78.36, 67.33, 78.92, '...', 95.42, 98.23, 95.23, 98.2, 95.05, 98.2, 94.9, 98.2, 94.78, 98.2, 94.68, 98.18, 94.6, 98.15, 94.52]. [Statistical Summary]: Mean = 96.34 BPM, Std = 8.86 BPM, Min = 66.0 BPM, Max = 111.9 BPM, Drift (last - first) = 26.52 BPM, HRV RMSSD = 54604.85 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",3.0,2.5,"{
+  ""valence"": 3.0,
+   ""arousal"": 2.5
+}"
+30,30,95.12,13.49,65.62,126.47,-2.13,66251.99,"[72.0, 74.0, 74.0, 75.5, 77.2, 79.33, 82.43, 84.75, 87.44, 89.5, 91.09, 92.25, 93.23, 94.0, 94.67, '...', 67.42, 107.33, 67.73, 108.1, 68.12, 108.93, 68.43, 109.52, 68.75, 110.27, 69.1, 110.98, 69.48, 111.12, 69.87]",1963,3.233,3.047,129,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [72.0, 74.0, 74.0, 75.5, 77.2, 79.33, 82.43, 84.75, 87.44, 89.5, 91.09, 92.25, 93.23, 94.0, 94.67, '...', 67.42, 107.33, 67.73, 108.1, 68.12, 108.93, 68.43, 109.52, 68.75, 110.27, 69.1, 110.98, 69.48, 111.12, 69.87]. [Statistical Summary]: Mean = 95.12 BPM, Std = 13.49 BPM, Min = 65.62 BPM, Max = 126.47 BPM, Drift (last - first) = -2.13 BPM, HRV RMSSD = 66251.99 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",3.0,2.5,"{
+  ""valence"": 3.0,
+   ""arousal"": 2.5
+}"
+31,31,85.15,9.41,48.0,108.83,36.37,93368.79,"[48.0, 48.5, 53.67, 56.75, 62.0, 61.83, 61.71, 61.75, 61.89, 62.0, 62.36, 63.25, 63.92, 64.5, 65.0, '...', 82.9, 75.42, 83.08, 75.42, 83.25, 75.42, 83.42, 75.37, 83.57, 75.32, 83.8, 75.25, 84.07, 75.17, 84.37]",2113,2.985,3.173,133,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [48.0, 48.5, 53.67, 56.75, 62.0, 61.83, 61.71, 61.75, 61.89, 62.0, 62.36, 63.25, 63.92, 64.5, 65.0, '...', 82.9, 75.42, 83.08, 75.42, 83.25, 75.42, 83.42, 75.37, 83.57, 75.32, 83.8, 75.25, 84.07, 75.17, 84.37]. [Statistical Summary]: Mean = 85.15 BPM, Std = 9.41 BPM, Min = 48.0 BPM, Max = 108.83 BPM, Drift (last - first) = 36.37 BPM, HRV RMSSD = 93368.79 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",3.0,2.5,"{
+  ""valence"": 3.0,
+   ""arousal"": 2.5
+}"
+32,32,93.22,12.53,49.0,121.9,-12.57,69409.7,"[83.0, 83.0, 71.67, 68.5, 71.4, 73.33, 74.86, 76.12, 77.11, 78.0, 78.82, 79.5, 80.23, 80.86, 81.47, '...', 73.88, 103.45, 73.35, 103.27, 72.83, 103.12, 72.38, 103.0, 71.9, 102.83, 71.42, 102.73, 70.88, 102.58, 70.43]",2208,3.008,2.895,133,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Here are a few reference examples mapping physiological data to true scores:
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [71.0, 71.0, 71.0, 71.5, 73.0, 89.83, 102.14, 111.62, 119.11, 125.2, 130.27, 134.67, 138.38, 141.64, 138.27, '...', 111.63, 111.67, 111.7, 111.73, 111.83, 111.93, 112.03, 111.95, 111.87, 111.77, 111.67, 111.62, 111.55, 111.48, 111.42]. [Statistical Summary]: Mean = 109.43 BPM, Std = 7.11 BPM, Min = 71.0 BPM, Max = 141.64 BPM, Drift (last - first) = 40.42 BPM, HRV RMSSD = 42915.6 ms.
+**Example Expected Output JSON:**
+{""valence"": 2.992, ""arousal"": 2.52}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [59.0, 58.5, 66.67, 71.25, 67.8, 65.5, 63.86, 62.62, 61.67, 60.9, 60.27, 59.75, 59.38, 59.07, 58.87, '...', 78.52, 77.7, 76.83, 76.13, 75.4, 74.68, 73.97, 73.25, 72.53, 71.82, 71.05, 70.27, 69.48, 68.73, 68.8]. [Statistical Summary]: Mean = 76.17 BPM, Std = 16.76 BPM, Min = 53.78 BPM, Max = 117.68 BPM, Drift (last - first) = 9.8 BPM, HRV RMSSD = 98243.97 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.014, ""arousal"": 2.408}
+
+**Example Input:**
+Sensor Readings: [Heart Rate Sequence (BPM)]: [67.0, 68.5, 68.33, 68.5, 68.8, 70.0, 71.29, 71.88, 72.22, 72.4, 72.45, 72.25, 71.92, 71.64, 71.4, '...', 101.4, 101.85, 102.23, 102.62, 102.97, 103.32, 103.67, 103.95, 104.22, 104.48, 104.65, 104.75, 104.83, 104.93, 105.03]. [Statistical Summary]: Mean = 95.35 BPM, Std = 13.95 BPM, Min = 57.12 BPM, Max = 119.93 BPM, Drift (last - first) = 38.03 BPM, HRV RMSSD = 64934.19 ms.
+**Example Expected Output JSON:**
+{""valence"": 3.0, ""arousal"": 2.537}
+
+### CURRENT TARGET PARTICIPANT INFERENCE:
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 83.0, 71.67, 68.5, 71.4, 73.33, 74.86, 76.12, 77.11, 78.0, 78.82, 79.5, 80.23, 80.86, 81.47, '...', 73.88, 103.45, 73.35, 103.27, 72.83, 103.12, 72.38, 103.0, 71.9, 102.83, 71.42, 102.73, 70.88, 102.58, 70.43]. [Statistical Summary]: Mean = 93.22 BPM, Std = 12.53 BPM, Min = 49.0 BPM, Max = 121.9 BPM, Drift (last - first) = -12.57 BPM, HRV RMSSD = 69409.7 ms.
+
+### Question: Based on the physiological data above and using the provided examples to calibrate your predictions, predict the current participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",2.5,2.8,"{
+  ""valence"": 2.5,
+   ""arousal"": 2.8
+}"
+26,26,75.78,7.83,58.35,93.73,22.65,N/A,"[66.0, 66.0, 66.67, 66.5, 64.2, 65.67, 67.0, 67.12, 67.33, 67.3, 67.27, 67.33, 67.23, 67.21, 67.4, '...', 83.67, 83.85, 84.05, 84.28, 84.75, 85.13, 85.45, 85.75, 86.15, 86.57, 87.02, 87.42, 87.8, 88.25, 88.65]",868,3.452,3.357,126,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [66.0, 66.0, 66.67, 66.5, 64.2, 65.67, 67.0, 67.12, 67.33, 67.3, 67.27, 67.33, 67.23, 67.21, 67.4, '...', 83.67, 83.85, 84.05, 84.28, 84.75, 85.13, 85.45, 85.75, 86.15, 86.57, 87.02, 87.42, 87.8, 88.25, 88.65]. [Statistical Summary]: Mean = 75.78 BPM, Std = 7.83 BPM, Min = 58.35 BPM, Max = 93.73 BPM, Drift (last − first) = 22.65 BPM, HRV RMSSD = N/A ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+27,27,97.29,14.94,68.0,128.98,29.1,75498.56,"[73.0, 73.0, 68.0, 78.25, 77.8, 75.5, 74.29, 73.62, 73.11, 72.7, 72.45, 72.17, 71.85, 71.43, 71.0, '...', 105.12, 105.07, 104.98, 104.9, 104.8, 104.57, 104.32, 104.05, 103.78, 103.5, 103.22, 102.97, 102.85, 102.53, 102.1]",1278,2.977,2.608,130,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [73.0, 73.0, 68.0, 78.25, 77.8, 75.5, 74.29, 73.62, 73.11, 72.7, 72.45, 72.17, 71.85, 71.43, 71.0, '...', 105.12, 105.07, 104.98, 104.9, 104.8, 104.57, 104.32, 104.05, 103.78, 103.5, 103.22, 102.97, 102.85, 102.53, 102.1]. [Statistical Summary]: Mean = 97.29 BPM, Std = 14.94 BPM, Min = 68.0 BPM, Max = 128.98 BPM, Drift (last − first) = 29.1 BPM, HRV RMSSD = 75498.56 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+28,28,75.42,11.85,52.0,106.92,52.32,117552.21,"[52.0, 67.5, 70.33, 71.75, 70.8, 72.83, 72.29, 71.88, 71.67, 71.5, 71.55, 71.58, 71.62, 71.64, 71.67, '...', 103.98, 103.97, 103.97, 104.0, 104.05, 104.07, 104.08, 104.08, 104.07, 104.08, 104.1, 104.12, 104.18, 104.22, 104.32]",1288,3.0,2.338,130,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [52.0, 67.5, 70.33, 71.75, 70.8, 72.83, 72.29, 71.88, 71.67, 71.5, 71.55, 71.58, 71.62, 71.64, 71.67, '...', 103.98, 103.97, 103.97, 104.0, 104.05, 104.07, 104.08, 104.08, 104.07, 104.08, 104.1, 104.12, 104.18, 104.22, 104.32]. [Statistical Summary]: Mean = 75.42 BPM, Std = 11.85 BPM, Min = 52.0 BPM, Max = 106.92 BPM, Drift (last − first) = 52.32 BPM, HRV RMSSD = 117552.21 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+29,29,96.34,8.86,66.0,111.9,26.52,54604.85,"[68.0, 69.5, 69.67, 70.75, 71.2, 73.0, 74.57, 75.88, 76.89, 66.0, 77.7, 66.5, 78.36, 67.33, 78.92, '...', 95.42, 98.23, 95.23, 98.2, 95.05, 98.2, 94.9, 98.2, 94.78, 98.2, 94.68, 98.18, 94.6, 98.15, 94.52]",2162,3.109,2.907,129,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [68.0, 69.5, 69.67, 70.75, 71.2, 73.0, 74.57, 75.88, 76.89, 66.0, 77.7, 66.5, 78.36, 67.33, 78.92, '...', 95.42, 98.23, 95.23, 98.2, 95.05, 98.2, 94.9, 98.2, 94.78, 98.2, 94.68, 98.18, 94.6, 98.15, 94.52]. [Statistical Summary]: Mean = 96.34 BPM, Std = 8.86 BPM, Min = 66.0 BPM, Max = 111.9 BPM, Drift (last − first) = 26.52 BPM, HRV RMSSD = 54604.85 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+30,30,95.12,13.49,65.62,126.47,-2.13,66251.99,"[72.0, 74.0, 74.0, 75.5, 77.2, 79.33, 82.43, 84.75, 87.44, 89.5, 91.09, 92.25, 93.23, 94.0, 94.67, '...', 67.42, 107.33, 67.73, 108.1, 68.12, 108.93, 68.43, 109.52, 68.75, 110.27, 69.1, 110.98, 69.48, 111.12, 69.87]",1963,3.233,3.047,129,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [72.0, 74.0, 74.0, 75.5, 77.2, 79.33, 82.43, 84.75, 87.44, 89.5, 91.09, 92.25, 93.23, 94.0, 94.67, '...', 67.42, 107.33, 67.73, 108.1, 68.12, 108.93, 68.43, 109.52, 68.75, 110.27, 69.1, 110.98, 69.48, 111.12, 69.87]. [Statistical Summary]: Mean = 95.12 BPM, Std = 13.49 BPM, Min = 65.62 BPM, Max = 126.47 BPM, Drift (last − first) = -2.13 BPM, HRV RMSSD = 66251.99 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+31,31,85.15,9.41,48.0,108.83,36.37,93368.79,"[48.0, 48.5, 53.67, 56.75, 62.0, 61.83, 61.71, 61.75, 61.89, 62.0, 62.36, 63.25, 63.92, 64.5, 65.0, '...', 82.9, 75.42, 83.08, 75.42, 83.25, 75.42, 83.42, 75.37, 83.57, 75.32, 83.8, 75.25, 84.07, 75.17, 84.37]",2113,2.985,3.173,133,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [48.0, 48.5, 53.67, 56.75, 62.0, 61.83, 61.71, 61.75, 61.89, 62.0, 62.36, 63.25, 63.92, 64.5, 65.0, '...', 82.9, 75.42, 83.08, 75.42, 83.25, 75.42, 83.42, 75.37, 83.57, 75.32, 83.8, 75.25, 84.07, 75.17, 84.37]. [Statistical Summary]: Mean = 85.15 BPM, Std = 9.41 BPM, Min = 48.0 BPM, Max = 108.83 BPM, Drift (last − first) = 36.37 BPM, HRV RMSSD = 93368.79 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+32,32,93.22,12.53,49.0,121.9,-12.57,69409.7,"[83.0, 83.0, 71.67, 68.5, 71.4, 73.33, 74.86, 76.12, 77.11, 78.0, 78.82, 79.5, 80.23, 80.86, 81.47, '...', 73.88, 103.45, 73.35, 103.27, 72.83, 103.12, 72.38, 103.0, 71.9, 102.83, 71.42, 102.73, 70.88, 102.58, 70.43]",2208,3.008,2.895,133,"### Instruction: You are an intelligent healthcare agent specializing in affective computing and physiological signal analysis.
+
+### Health Knowledge: Valence refers to the subjective emotional positivity or negativity, measured from 1 (very negative / sad) to 5 (very positive / happy). Arousal refers to physiological and psychological activation level, measured from 1 (very calm / relaxed) to 5 (very excited / activated). Higher arousal is typically associated with elevated heart rate. Heart rate variability (RMSSD) decreases under emotional stress and negative valence. Heart rate drift over a session reflects cumulative emotional engagement.
+
+### Activity: The participant is watching debate video clips in a controlled laboratory setting.
+
+### Sensor Readings: [Heart Rate Sequence (BPM)]: [83.0, 83.0, 71.67, 68.5, 71.4, 73.33, 74.86, 76.12, 77.11, 78.0, 78.82, 79.5, 80.23, 80.86, 81.47, '...', 73.88, 103.45, 73.35, 103.27, 72.83, 103.12, 72.38, 103.0, 71.9, 102.83, 71.42, 102.73, 70.88, 102.58, 70.43]. [Statistical Summary]: Mean = 93.22 BPM, Std = 12.53 BPM, Min = 49.0 BPM, Max = 121.9 BPM, Drift (last − first) = -12.57 BPM, HRV RMSSD = 69409.7 ms.
+
+### Question: Based on the physiological data above, predict the participant's Valence and Arousal scores on a 1–5 integer scale.
+
+### Response: Return ONLY a JSON object: {""valence"": X, ""arousal"": Y}",,,"ERROR: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"

@@ -1,0 +1,17 @@
+[{
+  "dateTime" : "11/20/25 00:00:00",
+  "value" : {
+    "demographicVO2Max" : 45.84217,
+    "demographicVO2MaxError" : 3.0000000000000004,
+    "filteredDemographicVO2Max" : 45.84217,
+    "filteredDemographicVO2MaxError" : 3.0000000000000004
+  }
+},{
+  "dateTime" : "11/21/25 00:00:00",
+  "value" : {
+    "demographicVO2Max" : 45.84217,
+    "demographicVO2MaxError" : 3.0000000000000004,
+    "filteredDemographicVO2Max" : 45.84217,
+    "filteredDemographicVO2MaxError" : 1.5123900000000001
+  }
+}]

@@ -1,0 +1,28 @@
+# Generate Correct Validation Results (Zero-Shot)
+
+## In-House Data
+- [x] Fix [compare_models.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/InHouseCollectedData/compare_models.py) (move `import os` to top, add llama4)
+- [x] Run [evaluate_models.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/InHouseCollectedData/evaluate_models.py) — got MAE/Pearson r/Acc±1 for all 3 models
+- [x] Run [compare_models.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/InHouseCollectedData/compare_models.py) — per-clip, per-participant breakdown
+
+## K-EmoCon Validation
+- [x] Run [kemocon_llm_inference_final.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/kemocon_llm_inference_final.py) from outer dir
+- [x] Verify outputs: kemocon_features.csv (28 rows), kemocon_llama/mistral_results.csv
+
+## Final Results
+- [x] Create + run [generate_final_results.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/generate_final_results.py) → [final_validation_table.csv](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/final_validation_table.csv)
+  - Ensure correct model names are used (Qwen3-32B instead of Mistral, Llama-4-scout-17B instead of Llama4)
+
+---
+
+# Few-Shot In-Context Learning 
+
+## Phase 1: K-EmoCon Rapid Validation
+- [x] Modify [kemocon_llm_inference_final.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/kemocon_llm_inference_final.py) to inject 3 few-shot examples into the prompt
+- [x] Re-run Llama inference with few-shot
+- [x] Compare Few-Shot metrics vs Zero-Shot baseline (Success!)
+
+## Phase 2: In-House Full Integration
+- [ ] Modify [run_groq_llama.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/InHouseCollectedData/run_groq_llama.py) (or equivalent) for In-House few-shot prompting
+- [ ] Run full 1,493 row inference
+- [ ] Update final deliverables and metrics

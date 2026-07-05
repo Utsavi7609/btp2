@@ -1,0 +1,85 @@
+# BTP-2: Three-Modality Switching Analysis — Walkthrough
+
+## Pipeline Summary
+
+Executed the complete 6-step switching analysis pipeline **three times** (VIDEO, AUDIO, INTERSECT) per the professor's framework.
+
+---
+
+## Step 1: Pair Dataset Construction
+
+| Modality | Total Rows | Switching | Non-Switching | Switching=NaN (Q0) |
+|---|---|---|---|---|
+| **VIDEO** | 1,638 | 0 | 1,638 | 0 |
+| **AUDIO** | 1,638 | 869 | 374 | 395 |
+| **INTERSECT** | 1,638 | 0 | 81 | 1,557 |
+
+> [!IMPORTANT]
+> VIDEO expressed emotions are all high-valence/high-arousal (Q1), resulting in **zero switching pairs**. AUDIO is the only modality with meaningful switching data across all 4 quadrants.
+
+**AUDIO Clip1 Quadrant Distribution:** Q4=629, Q1=365, Q3=221, Q2=215, Q0=208
+
+---
+
+## Step 2: Bucket Distribution (tau=0.50)
+
+| Bucket | VIDEO | AUDIO | INTERSECT |
+|---|---|---|---|
+| B1 | 142 | 352 | 58 |
+| B2 | 1,167 | 957 | 1,251 |
+| B3 | 36 | 96 | 6 |
+| B4 | 24 | 30 | 18 |
+| B5 | 269 | 203 | 305 |
+
+---
+
+## Step 3-4: Statistically Significant Results (AUDIO, tau=0.50)
+
+| Hypothesis | t-stat | p-value | σ_switching | σ_nonswitching | Direction Match |
+|---|---|---|---|---|---|
+| **Hyp-2** (B3+B6 Denial) | 3.35 | **0.0009** | 0.029 | 0.000 | ✅ |
+| **Hyp-6** (Diagonal vs Adj) | 2.13 | **0.033** | 0.029 | 0.010 | ✅ |
+| **Hyp-9** (Mirror Rate) | 2.50 | **0.015** | 0.523 | 0.200 | ❌ |
+
+> [!NOTE]
+> Hyp-9 shows mirror_rate is higher in *switching* (0.52), opposite of expectation. This suggests prior-clip emotion carries over during transitions.
+
+---
+
+## Step 5: Generated 36 Plots
+
+All plots saved to `d:\BTP\btp2\salmamaterials\_plots\{VIDEO,AUDIO,INTERSECT}\`.
+
+Each folder contains 12 plots: Markov heatmaps, quadrant transition heatmaps, sigma bar chart, sensitivity curves, drift boxplots (valence + arousal), combined bucket frequency, I1-I2 scatter, distance boxplot, and maintenance vs drift proof.
+
+---
+
+## Step 6: Cross-Modality Comparison
+
+![Modality Comparison Heatmap](file:///d:/BTP/btp2/salmamaterials/_plots/_modality_comparison_heatmap.png)
+
+Comparison saved to: [_modality_comparison_summary.csv](file:///d:/BTP/btp2/salmamaterials/_modality_comparison_summary.csv)
+
+---
+
+## Output Files
+
+| File | Description |
+|---|---|
+| `_consecutive_pair_dataset_{VIDEO,AUDIO,INTERSECT}.csv` | 1,638-row pair datasets |
+| `_sigma_results_{VIDEO,AUDIO,INTERSECT}.csv` | σ values for all 10 hypotheses × 4 thresholds |
+| `_statistical_tests_{VIDEO,AUDIO,INTERSECT}.csv` | t-test results with direction and significance |
+| `_modality_comparison_summary.csv` | Cross-modality comparison at tau=0.50 |
+| `_plots/{VIDEO,AUDIO,INTERSECT}/` | 12 plots per modality (36 total) |
+| `_plots/_modality_comparison_heatmap.png` | Cross-modality σ heatmap |
+
+## Scripts
+
+| Script | Purpose |
+|---|---|
+| [_step1_build_pair_dataset.py](file:///d:/BTP/btp2/salmamaterials/_step1_build_pair_dataset.py) | Build pair datasets for 3 modalities |
+| [_step2_assign_buckets.py](file:///d:/BTP/btp2/salmamaterials/_step2_assign_buckets.py) | Assign B1-B10 buckets at 4 thresholds |
+| [_step3_compute_sigma.py](file:///d:/BTP/btp2/salmamaterials/_step3_compute_sigma.py) | Compute σ for 10 hypotheses |
+| [_step4_statistical_tests.py](file:///d:/BTP/btp2/salmamaterials/_step4_statistical_tests.py) | Run t-tests with n_too_small safeguard |
+| [_step5_generate_plots.py](file:///d:/BTP/btp2/salmamaterials/_step5_generate_plots.py) | Generate 12 plots per modality |
+| [_step6_modality_comparison.py](file:///d:/BTP/btp2/salmamaterials/_step6_modality_comparison.py) | Cross-modality comparison + heatmap |

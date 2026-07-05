@@ -1,0 +1,25 @@
+[{
+  "dateTime" : "10/27/25 14:41:26",
+  "value" : {
+    "lapDurationSec" : 12,
+    "strokeCount" : 6,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "10/27/25 16:29:50",
+  "value" : {
+    "lapDurationSec" : 13,
+    "strokeCount" : 5,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "10/27/25 17:16:45",
+  "value" : {
+    "lapDurationSec" : 14,
+    "strokeCount" : 5,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+}]

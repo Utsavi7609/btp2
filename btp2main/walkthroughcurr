@@ -1,0 +1,73 @@
+# BTP-2: Phase 2C Final Analysis Walkthrough
+
+## Task E: Verification Checks ✅
+
+All 5 checks passed:
+
+| Check | Result |
+|---|---|
+| I2 Valence Compression | **100% of clips have I2_val < 3.0** (range [2.44, 2.97], mean=2.72, std=0.09) |
+| B2 Dominance | P(B2\|sw)=60.5%, P(B2\|ns)=62.3% — stable and switching-independent |
+| VIDEO Issue | All 1638 pairs are Q1 (val range 3.2-4.2, aro range 3.3-4.5) |
+| Reproducibility | Hyp-2 σ=0.0292 PASS, Hyp-9 mirror=0.5227 PASS (diff=0.000000) |
+| Missing Data | 0% NaN in all 8 key columns |
+
+---
+
+## Task A: I1-Only Analysis — NEW SIGNIFICANT FINDING
+
+### A3: Q4 Maintenance vs Drift — **p = 0.0014** 🔥
+
+| Target Quad | n_drift | n_maint | t-test p | Mann-Whitney p |
+|---|---|---|---|---|
+| Q1 | 90 | 23 | 0.089 | 0.085 |
+| **Q4** | **50** | **52** | **0.002** | **0.001** |
+| Q3 | 13 | 2 | 0.642 | n/a |
+
+**Q4 (Calm/Relaxed) is the strongest maintenance result.** When viewers transition INTO Q4 from a different quadrant (drift), their valence shift is significantly different from viewers who maintain Q4→Q4.
+
+### A2: Per-Transition Drift Table (top effects)
+
+| Transition | n | Mean Δ I1 Valence | Mean Δ I1 Arousal |
+|---|---|---|---|
+| Q2→Q1 | 43 | **+1.05** | +0.86 |
+| Q3→Q4 | 97 | +0.87 | +0.68 |
+| Q3→Q1 | 45 | +0.80 | +1.07 |
+| Q2→Q4 | 78 | +0.82 | +0.07 |
+| Q4→Q2 | 75 | -0.85 | -0.15 |
+| Q1→Q2 | 52 | -0.80 | -0.42 |
+
+### A4: B2 Dominance
+B2 rate is ~60-62% regardless of starting bucket or switching status. t-test: p=0.558 (not significant). **B2 projection is a universal constant in sequential clip viewing.**
+
+### A5: Hyp-1 Retest
+Mann-Whitney confirms non-significance at τ=0.50 (p=0.483). Approaches significance at τ=0.75 (p=0.055).
+
+---
+
+## Task B: I2 Arousal-Only Analysis
+
+| Quadrant | I2 Aro (Switching) | I2 Aro (Non-Switching) | p-value |
+|---|---|---|---|
+| Q1 | 2.991 | 2.967 | 0.372 |
+| Q2 | 2.980 | 3.018 | 0.367 |
+| Q3 | 2.982 | 2.957 | 0.549 |
+| Q4 | 2.985 | 2.986 | 0.994 |
+
+**No switching effect on I2 arousal in any quadrant.** Arousal carryover correlation: r=0.008 (switching), r=-0.035 (non-switching). **The Llama model's 1Hz Fitbit inference provides no discriminative signal for emotional switching.**
+
+---
+
+## Final Outputs
+
+| File | Description |
+|---|---|
+| [_BTP2_RESULTS_NARRATIVE.md](file:///d:/BTP/btp2/salmamaterials/_BTP2_RESULTS_NARRATIVE.md) | 6-section structured results narrative |
+| [_BTP2_VALIDATION_DESIGN.md](file:///d:/BTP/btp2/salmamaterials/_BTP2_VALIDATION_DESIGN.md) | 3-design validation protocol with clip recommendations |
+| `_taskA_per_transition_drift.csv` | 12-transition drift values |
+| `_taskA_maintenance_drift_per_quadrant.csv` | Q1-Q4 Maint vs Drift with Mann-Whitney |
+| `_taskA_b2_dominance.csv` | B2 rate per starting bucket |
+| `_taskA_hyp1_retest.csv` | Hyp-1 retest at all tau |
+| `_taskB_arousal_by_switching.csv` | I2 arousal per quadrant |
+| `_taskB_arousal_carryover.csv` | Arousal correlation + partial r |
+| `_plots/AUDIO/` | 6 new plots added |

@@ -1,0 +1,49 @@
+[{
+  "dateTime" : "11/16/25 13:03:05",
+  "value" : {
+    "lapDurationSec" : 8,
+    "strokeCount" : 8,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "11/16/25 13:03:17",
+  "value" : {
+    "lapDurationSec" : 36,
+    "strokeCount" : 24,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "11/16/25 13:04:33",
+  "value" : {
+    "lapDurationSec" : 9,
+    "strokeCount" : 8,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "11/16/25 13:06:55",
+  "value" : {
+    "lapDurationSec" : 18,
+    "strokeCount" : 10,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "11/16/25 13:08:13",
+  "value" : {
+    "lapDurationSec" : 19,
+    "strokeCount" : 13,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "11/16/25 13:08:35",
+  "value" : {
+    "lapDurationSec" : 14,
+    "strokeCount" : 6,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+}]

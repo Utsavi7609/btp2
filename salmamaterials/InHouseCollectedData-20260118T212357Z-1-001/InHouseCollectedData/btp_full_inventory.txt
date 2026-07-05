@@ -1,0 +1,3860 @@
+/
+    filesbtp2utsavi.zip
+    implementation_plan.md
+    implementation_plan2
+    implementation_plan3
+    inferred_emotions_llm.csv
+    task2
+    walkthrough.md
+    walkthrough2
+    walkthrough3
+    walkthrough4
+    walkthrough5
+    walkthrough6
+files/
+    input_files/
+        clip_responses_export.xlsx
+        Emotion_Analysis_Results_with_matches_video.csv
+        true_music_voice_valence_final.csv
+    output_files/
+        arousal_btp2_chained.csv
+        clip_usefulness_labels.csv
+        final_expressed_arousal.csv
+        final_expressed_valence.csv
+        fitbit_hr_context.csv
+        fitbit_hr_enhanced_context.csv
+        fitbit_ready_for_llm.csv
+        ignored_clips_list.csv
+        induced_arousal_summary.csv
+        induced_valence_summary.csv
+        inferred_arousal_summary.csv
+        inferred_valence_summary.csv
+        llm_results_final2.csv
+        participant_analysis_arousal.csv
+        participant_analysis_valence.csv
+        pei_inferred_match_arousal.csv
+        pei_inferred_match_valence.csv
+        pei_match_arousal.csv
+        pei_match_valence.csv
+        perceived_arousal_summary.csv
+        perceived_valence_summary.csv
+        pe_inferred_match_arousal.csv
+        pe_inferred_match_valence.csv
+        pe_match_arousal.csv
+        pe_match_valence.csv
+        reported_inferred_matching_clips.csv
+        valence_btp2_chained.csv
+    redundant/
+        analyze_pe_inferred_matches.py
+        analyze_pe_i_matches.py
+        btp2statusupdate1.pptx
+        BTP_Final_Dynamic_Report.txt
+        btp_joint_master.py
+        calculate_final_expressed.py
+        chk.py
+        clip_usefulness_labels.csv
+        Emotion_Analysis_Results_with_matches_video.csv
+        example_file.csv
+        final_expressed_arousal.csv
+        final_expressed_valence.csv
+        final_stats.py
+        generate_usefulness_labels.py
+        ignored_clips_list.csv
+        induced_arousal_summary.csv
+        induced_valence_summary.csv
+        inferred_arousal_summary.csv
+        inferred_valence_summary.csv
+        InHouseCollectedData-20260118T212357Z-1-001.zip
+        llm_results_final2.csv
+        MASTER_THRESHOLD_RESULTS.csv
+        meet2sir.pdf
+        pei_inferred_match_arousal.csv
+        pei_inferred_match_valence.csv
+        pei_match_arousal.csv
+        pei_match_valence.csv
+        perceived_arousal_summary.csv
+        perceived_valence_summary.csv
+        permutation_analysis.py
+        pe_inferred_match_arousal.csv
+        pe_inferred_match_valence.csv
+        pe_match_arousal.csv
+        pe_match_valence.csv
+        prediction_analysis.py
+        quick_sanity_check.py
+        run_all_thresholds.py
+        StressLLM_Large_Language_Models_for_Stress_Prediction_via_Wearable_Sensor_Data.pdf
+        true_music_voice_valence_final.csv
+        validate_llm_direction.py
+        inhouse/
+            1extract_hr_signals.py
+            1llm_script.py
+            calculate_accuracy.py
+            check_models.py
+            check_reported_vs_inferred.py
+            clip_responses_export.xlsx
+            compare_models.py
+            enhance_context.py
+            extract_hr_signals.py
+            fitbit_hr_context.csv
+            fitbit_hr_enhanced_context.csv
+            fitbit_ready_for_llm.csv
+            generateinfereredsummaryfiles.py
+            get_all_answers.py
+            get_all_answers_pro.py
+            get_all_answers_stealth.py
+            inferred_arousal_summary.csv
+            inferred_valence_summary.csv
+            kemocon_llm_inference_final.py
+            llm_results_final.csv
+            llm_results_final2.csv
+            llm_script.py
+            participant_analysis_arousal.csv
+            participant_analysis_valence.csv
+            reported_inferred_matching_clips.csv
+            run_groq_final.py
+            run_groq_llama.py
+            run_groq_mistral.py
+salmamaterials/
+    2401.06866v2.pdf
+    analyze_pe_inferred_matches.py
+    analyze_pe_i_matches.py
+    btp2statusupdate1.pptx
+    BTP_Final_Dynamic_Report.txt
+    btp_joint_master.py
+    calculate_final_expressed.py
+    chk.py
+    clip_usefulness_labels.csv
+    COMPARISON_SUMMARY.txt
+    COMPARISON_tau_0.25.csv
+    COMPARISON_tau_0.5.csv
+    COMPARISON_tau_0.75.csv
+    COMPARISON_tau_1.0.csv
+    debug_self_table.py
+    Emotion_Analysis_Results_with_matches_video.csv
+    example_file.csv
+    final_expressed_arousal.csv
+    final_expressed_arousal_AUDIO.csv
+    final_expressed_arousal_VIDEO.csv
+    final_expressed_valence.csv
+    final_expressed_valence_AUDIO.csv
+    final_expressed_valence_VIDEO.csv
+    final_stats.py
+    generate_all_model_btp_tables.py
+    generate_btp_hyptohesis_FINAL.py
+    generate_btp_tables_fewshot.py
+    generate_expressed_emotions_both_sources.py
+    generate_usefulness_labels.py
+    ignored_clips_list.csv
+    induced_arousal_summary.csv
+    induced_valence_summary.csv
+    inferred_arousal_summary.csv
+    inferred_arousal_summary_FS.csv
+    inferred_arousal_summary_llama4_FS.csv
+    inferred_arousal_summary_llama_FS.csv
+    inferred_arousal_summary_NEW.csv
+    inferred_arousal_summary_qwen_FS.csv
+    inferred_valence_summary.csv
+    inferred_valence_summary_FS.csv
+    inferred_valence_summary_llama4_FS.csv
+    inferred_valence_summary_llama_FS.csv
+    inferred_valence_summary_NEW.csv
+    inferred_valence_summary_qwen_FS.csv
+    InHouseCollectedData-20260118T212357Z-1-001.zip
+    llm_results_final2.csv
+    MASTER_BTP_HYPOTHESIS_V4_FINAL.csv
+    MASTER_BTP_MULTIMODEL_RESULTS.csv
+    MASTER_THRESHOLD_RESULTS.csv
+    MASTER_THRESHOLD_RESULTS_AV.csv
+    meet2sir.pdf
+    pei_inferred_match_arousal.csv
+    pei_inferred_match_valence.csv
+    pei_match_arousal.csv
+    pei_match_valence.csv
+    perceived_arousal_summary.csv
+    perceived_valence_summary.csv
+    permutation_analysis.py
+    pe_inferred_match_arousal.csv
+    pe_inferred_match_valence.csv
+    pe_match_arousal.csv
+    pe_match_valence.csv
+    prediction_analysis.py
+    Q1_Q5_VIDEO_vs_AUDIO_results.csv
+    quick_sanity_check.py
+    rebuild_clip_inferred_emotions.py
+    run_all_thresholds.py
+    run_q1_q5_COMPLETE.py
+    run_threshold_analysis_BOTHSOURCES.py
+    StressLLM_Large_Language_Models_for_Stress_Prediction_via_Wearable_Sensor_Data.pdf
+    subtitle_video_bin_pred2.csv
+    THRESHOLD_CATEGORY_RESULTS_BOTH_SOURCES.csv
+    THRESHOLD_SUMMARY_BOTH_SOURCES.csv
+    true_music_voice_valence_final.csv
+    validate_llm_direction.py
+    video_vs_audio_comparison.csv
+    BTP_Phase1/
+        analysis.py
+        arousal_btp2.csv
+        arousal_btp2_chained.csv
+        clip_responses_export.xlsx
+        detailed_matching_arousal.csv
+        detailed_matching_valence.csv
+        fix_emotional_drift.py
+        generate_4_summaries.py
+        generate_conclusions.py
+        induced_arousal_summary.csv
+        induced_valence_summary.csv
+        main.py
+        perceived_arousal_summary.csv
+        perceived_valence_summary.csv
+        valence_btp2.csv
+        valence_btp2_chained.csv
+    BTP_Phase2/
+        arousal_btp2.csv
+        BTP2_Phase2_Final_Report.txt
+        clip_drift_ranking_arousal.csv
+        clip_drift_ranking_valence.csv
+        participant_analysis_arousal.csv
+        participant_analysis_valence.csv
+        run_phase2_analysis.py
+        valence_btp2.csv
+    fitbit_setup/
+        emotionlab/
+            .gitignore
+            clip_responses_export.xlsx
+            db.sqlite3
+            manage.py
+            .git/
+                config
+                description
+                HEAD
+                index
+                packed-refs
+                hooks/
+                    applypatch-msg.sample
+                    commit-msg.sample
+                    fsmonitor-watchman.sample
+                    post-update.sample
+                    pre-applypatch.sample
+                    pre-commit.sample
+                    pre-merge-commit.sample
+                    pre-push.sample
+                    pre-rebase.sample
+                    pre-receive.sample
+                    prepare-commit-msg.sample
+                    push-to-checkout.sample
+                    sendemail-validate.sample
+                    update.sample
+                info/
+                    exclude
+                logs/
+                    HEAD
+                    refs/
+                        heads/
+                            main
+                        remotes/
+                            origin/
+                                HEAD
+                objects/
+                    info/
+                    pack/
+                        pack-3f43167bf01d56ad6e39cc56b2a213dac04524c4.idx
+                        pack-3f43167bf01d56ad6e39cc56b2a213dac04524c4.pack
+                        pack-3f43167bf01d56ad6e39cc56b2a213dac04524c4.rev
+                refs/
+                    heads/
+                        main
+                    remotes/
+                        origin/
+                            HEAD
+                    tags/
+            emotionlab/
+                asgi.py
+                settings.py
+                urls.py
+                wsgi.py
+                __init__.py
+                __pycache__/
+                    settings.cpython-313.pyc
+                    urls.cpython-313.pyc
+                    wsgi.cpython-313.pyc
+                    __init__.cpython-313.pyc
+            media/
+                clips/
+                    AboutTime/
+                        AboutTime_000.mp4
+                        AboutTime_001.mp4
+                        AboutTime_010.mp4
+                        AboutTime_011.mp4
+                        AboutTime_014.mp4
+                        AboutTime_022.mp4
+                        AboutTime_024.mp4
+                        AboutTime_031.mp4
+                        AboutTime_032.mp4
+                        AboutTime_035.mp4
+                        AboutTime_038.mp4
+                        AboutTime_040.mp4
+                        AboutTime_042.mp4
+                        AboutTime_046.mp4
+                        AboutTime_048.mp4
+                        AboutTime_052.mp4
+                        AboutTime_056.mp4
+                        AboutTime_066.mp4
+                        AboutTime_068.mp4
+                        AboutTime_069.mp4
+                        AboutTime_071.mp4
+                        AboutTime_073.mp4
+                        AboutTime_075.mp4
+                        AboutTime_077.mp4
+                        AboutTime_085.mp4
+                        AboutTime_086.mp4
+                        AboutTime_091.mp4
+                        AboutTime_095.mp4
+                        AboutTime_107.mp4
+                        AboutTime_117.mp4
+                        AboutTime_120.mp4
+                        AboutTime_130.mp4
+                        AboutTime_131.mp4
+                        AboutTime_132.mp4
+                        AboutTime_133.mp4
+                        AboutTime_134.mp4
+                        AboutTime_135.mp4
+                        AboutTime_136.mp4
+                    Gifted/
+                        Gifted_007.mp4
+                        Gifted_008.mp4
+                        Gifted_018.mp4
+                        Gifted_019.mp4
+                        Gifted_020.mp4
+                        Gifted_022.mp4
+                        Gifted_025.mp4
+                        Gifted_026.mp4
+                        Gifted_027.mp4
+                        Gifted_028.mp4
+                        Gifted_044.mp4
+                        Gifted_052.mp4
+                        Gifted_053.mp4
+                        Gifted_054.mp4
+                        Gifted_058.mp4
+                        Gifted_059.mp4
+                        Gifted_066.mp4
+                    LadyBird/
+                        LadyBird_003.mp4
+                        LadyBird_004.mp4
+                        LadyBird_005.mp4
+                        LadyBird_006.mp4
+                        LadyBird_019.mp4
+                        LadyBird_031.mp4
+                        LadyBird_034.mp4
+                        LadyBird_035.mp4
+                        LadyBird_036.mp4
+                        LadyBird_040.mp4
+                        LadyBird_048.mp4
+                        LadyBird_051.mp4
+                        LadyBird_066.mp4
+                        LadyBird_067.mp4
+                        LadyBird_070.mp4
+                        LadyBird_071.mp4
+                        LadyBird_074.mp4
+                        LadyBird_079.mp4
+                        LadyBird_080.mp4
+                        LadyBird_081.mp4
+                        LadyBird_082.mp4
+                        LadyBird_091.mp4
+                        LadyBird_092.mp4
+                        LadyBird_098.mp4
+                        LadyBird_101.mp4
+                        LadyBird_102.mp4
+                        LadyBird_103.mp4
+                        LadyBird_108.mp4
+                        LadyBird_113.mp4
+                    TheBlindSide/
+                        TheBlindSide_020.mp4
+                        TheBlindSide_028.mp4
+                        TheBlindSide_033.mp4
+                        TheBlindSide_044.mp4
+                        TheBlindSide_045.mp4
+                        TheBlindSide_056.mp4
+                        TheBlindSide_060.mp4
+                        TheBlindSide_064.mp4
+                        TheBlindSide_075.mp4
+                        TheBlindSide_081.mp4
+                        TheBlindSide_085.mp4
+                        TheBlindSide_093.mp4
+                    TheFaultInOurStars/
+                        TheFaultInOurStars_006.mp4
+                        TheFaultInOurStars_018.mp4
+                        TheFaultInOurStars_019.mp4
+                        TheFaultInOurStars_022.mp4
+                        TheFaultInOurStars_023.mp4
+                        TheFaultInOurStars_030.mp4
+                        TheFaultInOurStars_036.mp4
+                        TheFaultInOurStars_039.mp4
+                        TheFaultInOurStars_041.mp4
+                        TheFaultInOurStars_050.mp4
+                        TheFaultInOurStars_051.mp4
+                        TheFaultInOurStars_058.mp4
+                        TheFaultInOurStars_068.mp4
+                        TheFaultInOurStars_070.mp4
+                    TheJudge/
+                        TheJudge_003.mp4
+                        TheJudge_004.mp4
+                        TheJudge_005.mp4
+                        TheJudge_007.mp4
+                        TheJudge_033.mp4
+                        TheJudge_034.mp4
+                        TheJudge_035.mp4
+                        TheJudge_036.mp4
+                        TheJudge_037.mp4
+                        TheJudge_038.mp4
+                        TheJudge_042.mp4
+                        TheJudge_043.mp4
+                        TheJudge_044.mp4
+                        TheJudge_045.mp4
+                        TheJudge_047.mp4
+                        TheJudge_048.mp4
+                        TheJudge_058.mp4
+                        TheJudge_059.mp4
+                        TheJudge_061.mp4
+                        TheJudge_068.mp4
+                        TheJudge_072.mp4
+                        TheJudge_079.mp4
+                        TheJudge_084.mp4
+                        TheJudge_093.mp4
+                        TheJudge_099.mp4
+                        TheJudge_104.mp4
+                        TheJudge_105.mp4
+                        TheJudge_106.mp4
+                        TheJudge_107.mp4
+                        TheJudge_108.mp4
+                        TheJudge_109.mp4
+                        TheJudge_110.mp4
+                        TheJudge_111.mp4
+                        TheJudge_115.mp4
+                        TheJudge_122.mp4
+                        TheJudge_125.mp4
+                        TheJudge_129.mp4
+                        TheJudge_130.mp4
+                        TheJudge_135.mp4
+                        TheJudge_139.mp4
+                        TheJudge_140.mp4
+                        TheJudge_148.mp4
+                        TheJudge_153.mp4
+                    TheSpectacularNow/
+                        TheSpectacularNow_002.mp4
+                        TheSpectacularNow_030.mp4
+                        TheSpectacularNow_031.mp4
+                        TheSpectacularNow_034.mp4
+                        TheSpectacularNow_035.mp4
+                        TheSpectacularNow_043.mp4
+                        TheSpectacularNow_046.mp4
+                        TheSpectacularNow_047.mp4
+                        TheSpectacularNow_050.mp4
+                        TheSpectacularNow_054.mp4
+                        TheSpectacularNow_069.mp4
+                        TheSpectacularNow_070.mp4
+                        TheSpectacularNow_071.mp4
+                        TheSpectacularNow_077.mp4
+                        TheSpectacularNow_078.mp4
+                    TheTheoryOfEverything/
+                        TheTheoryOfEverything_014.mp4
+                        TheTheoryOfEverything_015.mp4
+                        TheTheoryOfEverything_016.mp4
+                        TheTheoryOfEverything_017.mp4
+                        TheTheoryOfEverything_021.mp4
+                        TheTheoryOfEverything_022.mp4
+                        TheTheoryOfEverything_025.mp4
+                        TheTheoryOfEverything_032.mp4
+                        TheTheoryOfEverything_037.mp4
+                        TheTheoryOfEverything_043.mp4
+                        TheTheoryOfEverything_053.mp4
+                    Wonder/
+                        Wonder_000.mp4
+                        Wonder_006.mp4
+                        Wonder_008.mp4
+                        Wonder_016.mp4
+                        Wonder_026.mp4
+                        Wonder_027.mp4
+                        Wonder_043.mp4
+                        Wonder_050.mp4
+                        Wonder_051.mp4
+                        Wonder_052.mp4
+                        Wonder_059.mp4
+                        Wonder_060.mp4
+                        Wonder_061.mp4
+                        Wonder_089.mp4
+                        Wonder_091.mp4
+                        Wonder_097.mp4
+                        Wonder_099.mp4
+                        Wonder_100.mp4
+                        Wonder_104.mp4
+                        Wonder_107.mp4
+                        Wonder_109.mp4
+                        Wonder_120.mp4
+                        Wonder_123.mp4
+                        Wonder_128.mp4
+                        Wonder_131.mp4
+                        Wonder_133.mp4
+                        Wonder_134.mp4
+                        Wonder_139.mp4
+                        Wonder_140.mp4
+                        Wonder_141.mp4
+                        Wonder_145.mp4
+                        Wonder_152.mp4
+                        Wonder_153.mp4
+                        Wonder_154.mp4
+            study/
+                admin.py
+                apps.py
+                forms.py
+                models.py
+                tests.py
+                urls.py
+                utils.py
+                views.py
+                __init__.py
+                management/
+                    commands/
+                        export_clip_responses.py
+                        export_user_clip_responses.py
+                        ingest_movies.py
+                        intense_clips.csv
+                        __pycache__/
+                            ingest_movies.cpython-313.pyc
+                migrations/
+                    0001_initial.py
+                    __init__.py
+                    __pycache__/
+                        0001_initial.cpython-313.pyc
+                        __init__.cpython-313.pyc
+                __pycache__/
+                    admin.cpython-313.pyc
+                    apps.cpython-313.pyc
+                    forms.cpython-313.pyc
+                    models.cpython-313.pyc
+                    urls.cpython-313.pyc
+                    views.cpython-313.pyc
+                    __init__.cpython-313.pyc
+            templates/
+                registration/
+                    login.html
+                    signup.html
+                study/
+                    break_required.html
+                    clip_player.html
+                    clip_questions.html
+                    dashboard.html
+                    post_emotion.html
+                    pre_session_form.html
+                    start_session.html
+    InHouseCollectedData-20260118T212357Z-1-001/
+        baseline_comparison.png
+        baseline_comparison.py
+        btp_final_comparison.csv
+        comprehensive_validation.py
+        create_summaries.py
+        emotion_statistics.csv
+        evaluate_fewshot_llama.py
+        extract_heart_rate_data_WINDOWS.py
+        extract_user_profiles_WINDOWS.py
+        fewshot_llama_eval.txt
+        final_btp_report.py
+        final_validation_table.csv
+        fitbit_hr_raw.csv
+        fitbit_hr_windows.csv
+        generate_all_fs_summaries.py
+        generate_final_results.py
+        inferred_arousal_summary.csv
+        inferred_arousal_summary_llama4_FS.csv
+        inferred_arousal_summary_llama_FS.csv
+        inferred_arousal_summary_qwen_FS.csv
+        inferred_emotions_llm.csv
+        inferred_valence_summary.csv
+        inferred_valence_summary_llama4_FS.csv
+        inferred_valence_summary_llama_FS.csv
+        inferred_valence_summary_qwen_FS.csv
+        kemocon_complete_data.csv
+        kemocon_features.csv
+        kemocon_fs_run.log
+        kemocon_llama_results.csv
+        kemocon_llm_inference_final.py
+        kemocon_llm_predictions.csv
+        kemocon_llm_validation.py
+        kemocon_mistral_results.csv
+        kemocon_processor.py
+        kemocon_run.log
+        kemocon_run2.log
+        kemocon_validation_complete.py
+        kemocon_validation_metrics.csv
+        llm_emotion_inference_WINDOWS.py
+        mentor_progress_report.py
+        run_pipeline_WINDOWS.ps1
+        user_emotion_summary.csv
+        user_profiles.csv
+        validation_results.csv
+        InHouseCollectedData/
+            1extract_hr_signals.py
+            1llm_script.py
+            btp_hypothesis_analysis.py
+            calculate_accuracy.py
+            check_missing_3models.py
+            check_models.py
+            check_reported_vs_inferred.py
+            clean_dataset.csv
+            clip_responses_export.xlsx
+            compare_models.py
+            enhance_context.py
+            evaluate_models.py
+            extract_hr_signals.py
+            fitbit_hr_context.csv
+            fitbit_hr_enhanced_context.csv
+            fitbit_ready_for_llm.csv
+            fitbit_ready_for_llm_v2.csv
+            generateinfereredsummaryfiles.py
+            generate_fewshot_summaries.py
+            generate_file_inventory.py
+            get_all_answers.py
+            get_all_answers_pro.py
+            get_all_answers_stealth.py
+            inferred_arousal_summary.csv
+            inferred_arousal_summary_FS.csv
+            inferred_valence_summary.csv
+            inferred_valence_summary_FS.csv
+            kemocon_llm_inference_final.py
+            kemocon_run.log
+            llm_results_final.csv
+            llm_results_final2.csv
+            llm_results_llama.csv
+            llm_results_llama4.csv
+            llm_results_llama4_fewshot.csv
+            llm_results_llama_fewshot.csv
+            llm_results_mistral.csv
+            llm_results_mistral_fewshot.csv
+            llm_script.py
+            model_comparison_results.csv
+            participant_analysis_arousal.csv
+            participant_analysis_valence.csv
+            per_clip_comparison.csv
+            recover_llama_nulls.py
+            reported_inferred_matching_clips.csv
+            rows_with_missing.csv
+            run_groq_3.py
+            run_groq_final.py
+            run_groq_llama.py
+            run_groq_mistral.py
+            run_kemocon_full.py
+            update_fitbit_prompts_with_hrv.py
+            Ajay/
+                takeout-20251227T170747Z-3-001.zip
+                takeout-20251227T170747Z-3-001/
+                    Takeout/
+                        Fitbit/
+                            Account Changes/
+                                Account_Management_Events_1.csv
+                            Active Zone Minutes (AZM)/
+                                Active Zone Minutes - 2025-03-25.csv
+                                Active Zone Minutes - 2025-04-01.csv
+                                Active Zone Minutes - 2025-07-01.csv
+                                Active Zone Minutes - 2025-08-01.csv
+                                Active Zone Minutes - 2025-12-01.csv
+                            Activity Goals/
+                                Activity Goals README.txt
+                                Activity Goals.csv
+                            Atrial Fibrillation ECG/
+                                afib_ecg_reading_1742889321528.csv
+                                afib_ecg_reading_1752742430641.csv
+                                afib_ecg_reading_1754211396266.csv
+                                afib_ecg_reading_1754211445283.csv
+                                afib_ecg_readme.txt
+                            Atrial Fibrillation PPG/
+                                afib_ppg_enrollment.csv
+                                afib_ppg_README.txt
+                                afib_ppg_windows_2025-12-23.csv
+                                afib_ppg_windows_2025-12-25.csv
+                            Biometrics/
+                                Biometrics Readme.txt
+                                Glucose 200706.csv
+                                Glucose 200707.csv
+                                Glucose 200708.csv
+                                Glucose 200709.csv
+                                Glucose 200710.csv
+                                Glucose 200711.csv
+                                Glucose 200712.csv
+                                Glucose 200801.csv
+                                Glucose 200802.csv
+                                Glucose 200803.csv
+                                Glucose 200804.csv
+                                Glucose 200805.csv
+                                Glucose 200806.csv
+                                Glucose 200807.csv
+                                Glucose 200808.csv
+                                Glucose 200809.csv
+                                Glucose 200810.csv
+                                Glucose 200811.csv
+                                Glucose 200812.csv
+                                Glucose 200901.csv
+                                Glucose 200902.csv
+                                Glucose 200903.csv
+                                Glucose 200904.csv
+                                Glucose 200905.csv
+                                Glucose 200906.csv
+                                Glucose 200907.csv
+                                Glucose 200908.csv
+                                Glucose 200909.csv
+                                Glucose 200910.csv
+                                Glucose 200911.csv
+                                Glucose 200912.csv
+                                Glucose 201001.csv
+                                Glucose 201002.csv
+                                Glucose 201003.csv
+                                Glucose 201004.csv
+                                Glucose 201005.csv
+                                Glucose 201006.csv
+                                Glucose 201007.csv
+                                Glucose 201008.csv
+                                Glucose 201009.csv
+                                Glucose 201010.csv
+                                Glucose 201011.csv
+                                Glucose 201012.csv
+                                Glucose 201101.csv
+                                Glucose 201102.csv
+                                Glucose 201103.csv
+                                Glucose 201104.csv
+                                Glucose 201105.csv
+                                Glucose 201106.csv
+                                Glucose 201107.csv
+                                Glucose 201108.csv
+                                Glucose 201109.csv
+                                Glucose 201110.csv
+                                Glucose 201111.csv
+                                Glucose 201112.csv
+                                Glucose 201201.csv
+                                Glucose 201202.csv
+                                Glucose 201203.csv
+                                Glucose 201204.csv
+                                Glucose 201205.csv
+                                Glucose 201206.csv
+                                Glucose 201207.csv
+                                Glucose 201208.csv
+                                Glucose 201209.csv
+                                Glucose 201210.csv
+                                Glucose 201211.csv
+                                Glucose 201212.csv
+                                Glucose 201301.csv
+                                Glucose 201302.csv
+                                Glucose 201303.csv
+                                Glucose 201304.csv
+                                Glucose 201305.csv
+                                Glucose 201306.csv
+                                Glucose 201307.csv
+                                Glucose 201308.csv
+                                Glucose 201309.csv
+                                Glucose 201310.csv
+                                Glucose 201311.csv
+                                Glucose 201312.csv
+                                Glucose 201401.csv
+                                Glucose 201402.csv
+                                Glucose 201403.csv
+                                Glucose 201404.csv
+                                Glucose 201405.csv
+                                Glucose 201406.csv
+                                Glucose 201407.csv
+                                Glucose 201408.csv
+                                Glucose 201409.csv
+                                Glucose 201410.csv
+                                Glucose 201411.csv
+                                Glucose 201412.csv
+                                Glucose 201501.csv
+                                Glucose 201502.csv
+                                Glucose 201503.csv
+                                Glucose 201504.csv
+                                Glucose 201505.csv
+                                Glucose 201506.csv
+                                Glucose 201507.csv
+                                Glucose 201508.csv
+                                Glucose 201509.csv
+                                Glucose 201510.csv
+                                Glucose 201511.csv
+                                Glucose 201512.csv
+                                Glucose 201601.csv
+                                Glucose 201602.csv
+                                Glucose 201603.csv
+                                Glucose 201604.csv
+                                Glucose 201605.csv
+                                Glucose 201606.csv
+                                Glucose 201607.csv
+                                Glucose 201608.csv
+                                Glucose 201609.csv
+                                Glucose 201610.csv
+                                Glucose 201611.csv
+                                Glucose 201612.csv
+                                Glucose 201701.csv
+                                Glucose 201702.csv
+                                Glucose 201703.csv
+                                Glucose 201704.csv
+                                Glucose 201705.csv
+                                Glucose 201706.csv
+                                Glucose 201707.csv
+                                Glucose 201708.csv
+                                Glucose 201709.csv
+                                Glucose 201710.csv
+                                Glucose 201711.csv
+                                Glucose 201712.csv
+                                Glucose 201801.csv
+                                Glucose 201802.csv
+                                Glucose 201803.csv
+                                Glucose 201804.csv
+                                Glucose 201805.csv
+                                Glucose 201806.csv
+                                Glucose 201807.csv
+                                Glucose 201808.csv
+                                Glucose 201809.csv
+                                Glucose 201810.csv
+                                Glucose 201811.csv
+                                Glucose 201812.csv
+                                Glucose 201901.csv
+                                Glucose 201902.csv
+                                Glucose 201903.csv
+                                Glucose 201904.csv
+                                Glucose 201905.csv
+                                Glucose 201906.csv
+                                Glucose 201907.csv
+                                Glucose 201908.csv
+                                Glucose 201909.csv
+                                Glucose 201910.csv
+                                Glucose 201911.csv
+                                Glucose 201912.csv
+                                Glucose 202001.csv
+                                Glucose 202002.csv
+                                Glucose 202003.csv
+                                Glucose 202004.csv
+                                Glucose 202005.csv
+                                Glucose 202006.csv
+                                Glucose 202007.csv
+                                Glucose 202008.csv
+                                Glucose 202009.csv
+                                Glucose 202010.csv
+                                Glucose 202011.csv
+                                Glucose 202012.csv
+                                Glucose 202101.csv
+                                Glucose 202102.csv
+                                Glucose 202103.csv
+                                Glucose 202104.csv
+                                Glucose 202105.csv
+                                Glucose 202106.csv
+                                Glucose 202107.csv
+                                Glucose 202108.csv
+                                Glucose 202109.csv
+                                Glucose 202110.csv
+                                Glucose 202111.csv
+                                Glucose 202112.csv
+                                Glucose 202201.csv
+                                Glucose 202202.csv
+                                Glucose 202203.csv
+                                Glucose 202204.csv
+                                Glucose 202205.csv
+                                Glucose 202206.csv
+                                Glucose 202207.csv
+                                Glucose 202208.csv
+                                Glucose 202209.csv
+                                Glucose 202210.csv
+                                Glucose 202211.csv
+                                Glucose 202212.csv
+                                Glucose 202301.csv
+                                Glucose 202302.csv
+                                Glucose 202303.csv
+                                Glucose 202304.csv
+                                Glucose 202305.csv
+                                Glucose 202306.csv
+                                Glucose 202307.csv
+                                Glucose 202308.csv
+                                Glucose 202309.csv
+                                Glucose 202310.csv
+                                Glucose 202311.csv
+                                Glucose 202312.csv
+                                Glucose 202401.csv
+                                Glucose 202402.csv
+                                Glucose 202403.csv
+                                Glucose 202404.csv
+                                Glucose 202405.csv
+                                Glucose 202406.csv
+                                Glucose 202407.csv
+                                Glucose 202408.csv
+                                Glucose 202409.csv
+                                Glucose 202410.csv
+                                Glucose 202411.csv
+                                Glucose 202412.csv
+                                Glucose 202501.csv
+                                Glucose 202502.csv
+                                Glucose 202503.csv
+                                Glucose 202504.csv
+                                Glucose 202505.csv
+                                Glucose 202506.csv
+                                Glucose 202507.csv
+                                Glucose 202508.csv
+                                Glucose 202509.csv
+                                Glucose 202510.csv
+                                Glucose 202511.csv
+                                Glucose 202512.csv
+                            Commerce_GoogleData/
+                                README.txt
+                            Daily Readiness/
+                                Daily Readiness README.txt
+                                Daily Readiness User Properties - 2025-03-25.csv
+                            Discover/
+                                Coach README.txt
+                            Fitbit Premium/
+                                Products Export Readme.txt
+                            Global Export Data/
+                                altitude-2025-03-24.json
+                                altitude-2025-06-22.json
+                                altitude-2025-07-22.json
+                                altitude-2025-10-20.json
+                                altitude-2025-11-19.json
+                                altitude-2025-12-19.json
+                                badge.json
+                                calories-2025-03-24.json
+                                calories-2025-04-23.json
+                                calories-2025-05-23.json
+                                calories-2025-06-22.json
+                                calories-2025-07-22.json
+                                calories-2025-08-21.json
+                                calories-2025-09-20.json
+                                calories-2025-10-20.json
+                                calories-2025-11-19.json
+                                calories-2025-12-19.json
+                                demographic_vo2_max-2025-03-24.json
+                                distance-2025-03-24.json
+                                distance-2025-06-22.json
+                                distance-2025-07-22.json
+                                distance-2025-08-21.json
+                                distance-2025-10-20.json
+                                distance-2025-11-19.json
+                                distance-2025-12-19.json
+                                estimated_oxygen_variation-2025-03-25.csv
+                                estimated_oxygen_variation-2025-03-26.csv
+                                estimated_oxygen_variation-2025-03-27.csv
+                                estimated_oxygen_variation-2025-03-28.csv
+                                estimated_oxygen_variation-2025-03-29.csv
+                                estimated_oxygen_variation-2025-03-30.csv
+                                estimated_oxygen_variation-2025-03-31.csv
+                                estimated_oxygen_variation-2025-04-01.csv
+                                estimated_oxygen_variation-2025-04-02.csv
+                                estimated_oxygen_variation-2025-04-03.csv
+                                estimated_oxygen_variation-2025-07-17.csv
+                                estimated_oxygen_variation-2025-07-18.csv
+                                estimated_oxygen_variation-2025-07-19.csv
+                                estimated_oxygen_variation-2025-07-20.csv
+                                estimated_oxygen_variation-2025-07-21.csv
+                                estimated_oxygen_variation-2025-07-22.csv
+                                estimated_oxygen_variation-2025-07-26.csv
+                                estimated_oxygen_variation-2025-07-27.csv
+                                estimated_oxygen_variation-2025-07-29.csv
+                                estimated_oxygen_variation-2025-07-31.csv
+                                estimated_oxygen_variation-2025-08-01.csv
+                                estimated_oxygen_variation-2025-08-04.csv
+                                estimated_oxygen_variation-2025-08-05.csv
+                                estimated_oxygen_variation-2025-08-06.csv
+                                estimated_oxygen_variation-2025-08-07.csv
+                                estimated_oxygen_variation-2025-08-08.csv
+                                estimated_oxygen_variation-2025-08-09.csv
+                                estimated_oxygen_variation-2025-08-10.csv
+                                estimated_oxygen_variation-2025-08-11.csv
+                                estimated_oxygen_variation-2025-08-12.csv
+                                estimated_oxygen_variation-2025-08-14.csv
+                                estimated_oxygen_variation-2025-08-15.csv
+                                estimated_oxygen_variation-2025-08-16.csv
+                                estimated_oxygen_variation-2025-08-17.csv
+                                estimated_oxygen_variation-2025-08-18.csv
+                                estimated_oxygen_variation-2025-08-19.csv
+                                estimated_oxygen_variation-2025-08-20.csv
+                                estimated_oxygen_variation-2025-08-21.csv
+                                estimated_oxygen_variation-2025-12-09.csv
+                                estimated_oxygen_variation-2025-12-10.csv
+                                estimated_oxygen_variation-2025-12-11.csv
+                                estimated_oxygen_variation-2025-12-23.csv
+                                estimated_oxygen_variation-2025-12-24.csv
+                                estimated_oxygen_variation-2025-12-25.csv
+                                exercise-0.json
+                                heart_rate-2025-03-25.json
+                                heart_rate-2025-03-26.json
+                                heart_rate-2025-03-27.json
+                                heart_rate-2025-03-28.json
+                                heart_rate-2025-03-29.json
+                                heart_rate-2025-03-30.json
+                                heart_rate-2025-03-31.json
+                                heart_rate-2025-04-01.json
+                                heart_rate-2025-04-02.json
+                                heart_rate-2025-04-03.json
+                                heart_rate-2025-07-17.json
+                                heart_rate-2025-07-18.json
+                                heart_rate-2025-07-19.json
+                                heart_rate-2025-07-20.json
+                                heart_rate-2025-07-21.json
+                                heart_rate-2025-07-22.json
+                                heart_rate-2025-07-26.json
+                                heart_rate-2025-07-27.json
+                                heart_rate-2025-07-28.json
+                                heart_rate-2025-07-29.json
+                                heart_rate-2025-07-30.json
+                                heart_rate-2025-07-31.json
+                                heart_rate-2025-08-01.json
+                                heart_rate-2025-08-03.json
+                                heart_rate-2025-08-04.json
+                                heart_rate-2025-08-05.json
+                                heart_rate-2025-08-06.json
+                                heart_rate-2025-08-07.json
+                                heart_rate-2025-08-08.json
+                                heart_rate-2025-08-09.json
+                                heart_rate-2025-08-10.json
+                                heart_rate-2025-08-11.json
+                                heart_rate-2025-08-12.json
+                                heart_rate-2025-08-14.json
+                                heart_rate-2025-08-15.json
+                                heart_rate-2025-08-16.json
+                                heart_rate-2025-08-17.json
+                                heart_rate-2025-08-18.json
+                                heart_rate-2025-08-19.json
+                                heart_rate-2025-08-20.json
+                                heart_rate-2025-08-21.json
+                                heart_rate-2025-11-16.json
+                                heart_rate-2025-12-09.json
+                                heart_rate-2025-12-10.json
+                                heart_rate-2025-12-11.json
+                                heart_rate-2025-12-23.json
+                                heart_rate-2025-12-24.json
+                                heart_rate-2025-12-25.json
+                                height-2025-03-24.json
+                                lightly_active_minutes-2025-03-24.json
+                                lightly_active_minutes-2025-04-23.json
+                                lightly_active_minutes-2025-05-23.json
+                                lightly_active_minutes-2025-06-22.json
+                                lightly_active_minutes-2025-07-22.json
+                                lightly_active_minutes-2025-08-21.json
+                                lightly_active_minutes-2025-09-20.json
+                                lightly_active_minutes-2025-10-20.json
+                                lightly_active_minutes-2025-11-19.json
+                                lightly_active_minutes-2025-12-19.json
+                                moderately_active_minutes-2025-03-24.json
+                                moderately_active_minutes-2025-04-23.json
+                                moderately_active_minutes-2025-05-23.json
+                                moderately_active_minutes-2025-06-22.json
+                                moderately_active_minutes-2025-07-22.json
+                                moderately_active_minutes-2025-08-21.json
+                                moderately_active_minutes-2025-09-20.json
+                                moderately_active_minutes-2025-10-20.json
+                                moderately_active_minutes-2025-11-19.json
+                                moderately_active_minutes-2025-12-19.json
+                                resting_heart_rate-2025-03-24.json
+                                sedentary_minutes-2025-03-24.json
+                                sedentary_minutes-2025-04-23.json
+                                sedentary_minutes-2025-05-23.json
+                                sedentary_minutes-2025-06-22.json
+                                sedentary_minutes-2025-07-22.json
+                                sedentary_minutes-2025-08-21.json
+                                sedentary_minutes-2025-09-20.json
+                                sedentary_minutes-2025-10-20.json
+                                sedentary_minutes-2025-11-19.json
+                                sedentary_minutes-2025-12-19.json
+                                sleep-2025-03-24.json
+                                sleep-2025-06-22.json
+                                sleep-2025-07-22.json
+                                sleep-2025-12-19.json
+                                steps-2025-03-24.json
+                                steps-2025-06-22.json
+                                steps-2025-07-22.json
+                                steps-2025-08-21.json
+                                steps-2025-10-20.json
+                                steps-2025-11-19.json
+                                steps-2025-12-19.json
+                                swim_lengths_data-2025-03-24.json
+                                swim_lengths_data-2025-07-22.json
+                                swim_lengths_data-2025-10-20.json
+                                swim_lengths_data-2025-11-19.json
+                                swim_lengths_data-2025-12-19.json
+                                time_in_heart_rate_zones-2025-03-25.json
+                                time_in_heart_rate_zones-2025-03-26.json
+                                time_in_heart_rate_zones-2025-03-27.json
+                                time_in_heart_rate_zones-2025-03-28.json
+                                time_in_heart_rate_zones-2025-03-29.json
+                                time_in_heart_rate_zones-2025-03-30.json
+                                time_in_heart_rate_zones-2025-03-31.json
+                                time_in_heart_rate_zones-2025-04-01.json
+                                time_in_heart_rate_zones-2025-04-02.json
+                                time_in_heart_rate_zones-2025-04-03.json
+                                time_in_heart_rate_zones-2025-07-17.json
+                                time_in_heart_rate_zones-2025-07-18.json
+                                time_in_heart_rate_zones-2025-07-19.json
+                                time_in_heart_rate_zones-2025-07-20.json
+                                time_in_heart_rate_zones-2025-07-21.json
+                                time_in_heart_rate_zones-2025-07-22.json
+                                time_in_heart_rate_zones-2025-07-26.json
+                                time_in_heart_rate_zones-2025-07-27.json
+                                time_in_heart_rate_zones-2025-07-28.json
+                                time_in_heart_rate_zones-2025-07-29.json
+                                time_in_heart_rate_zones-2025-07-30.json
+                                time_in_heart_rate_zones-2025-07-31.json
+                                time_in_heart_rate_zones-2025-08-01.json
+                                time_in_heart_rate_zones-2025-08-03.json
+                                time_in_heart_rate_zones-2025-08-04.json
+                                time_in_heart_rate_zones-2025-08-05.json
+                                time_in_heart_rate_zones-2025-08-06.json
+                                time_in_heart_rate_zones-2025-08-07.json
+                                time_in_heart_rate_zones-2025-08-08.json
+                                time_in_heart_rate_zones-2025-08-09.json
+                                time_in_heart_rate_zones-2025-08-10.json
+                                time_in_heart_rate_zones-2025-08-11.json
+                                time_in_heart_rate_zones-2025-08-12.json
+                                time_in_heart_rate_zones-2025-08-14.json
+                                time_in_heart_rate_zones-2025-08-15.json
+                                time_in_heart_rate_zones-2025-08-16.json
+                                time_in_heart_rate_zones-2025-08-17.json
+                                time_in_heart_rate_zones-2025-08-18.json
+                                time_in_heart_rate_zones-2025-08-19.json
+                                time_in_heart_rate_zones-2025-08-20.json
+                                time_in_heart_rate_zones-2025-08-21.json
+                                time_in_heart_rate_zones-2025-11-16.json
+                                time_in_heart_rate_zones-2025-12-09.json
+                                time_in_heart_rate_zones-2025-12-10.json
+                                time_in_heart_rate_zones-2025-12-11.json
+                                time_in_heart_rate_zones-2025-12-23.json
+                                time_in_heart_rate_zones-2025-12-24.json
+                                time_in_heart_rate_zones-2025-12-25.json
+                                very_active_minutes-2025-03-24.json
+                                very_active_minutes-2025-04-23.json
+                                very_active_minutes-2025-05-23.json
+                                very_active_minutes-2025-06-22.json
+                                very_active_minutes-2025-07-22.json
+                                very_active_minutes-2025-08-21.json
+                                very_active_minutes-2025-09-20.json
+                                very_active_minutes-2025-10-20.json
+                                very_active_minutes-2025-11-19.json
+                                very_active_minutes-2025-12-19.json
+                                weight-2025-03-24.json
+                            Guided Programs/
+                                Fitbit Health Programs Data README.txt
+                            Health Fitness Data_GoogleData/
+                                CalibrationStatusForReadinessAndLoad README.txt
+                                CalibrationStatusForReadinessAndLoad.csv
+                                GoalSettingsHistory README.txt
+                                GoalSettingsHistory.csv
+                                HeartRateNotificationsProfile README.txt
+                                HeartRateNotificationsProfile.csv
+                                LabsEnrollmentRecords README.txt
+                                LabsEnrollmentRecords.csv
+                                UserAppSettingData README.txt
+                                UserAppSettingData.csv
+                                UserDemographicData README.txt
+                                UserDemographicData.csv
+                                UserExercises README.txt
+                                UserExercises_2025-03-25.csv
+                                UserLegacySettingData README.txt
+                                UserLegacySettingData.csv
+                                UserMBDData README.txt
+                                UserMBDData.csv
+                                UserProfileData README.txt
+                                UserProfileData.csv
+                                UserSleeps README.txt
+                                UserSleepScores README.txt
+                                UserSleepScores_2025-03-25.csv
+                                UserSleepStages README.txt
+                                UserSleepStages_2025-03-25.csv
+                                UserSleeps_2025-03-25.csv
+                            Heart Rate/
+                                Heart Rate Notifications Alerts.csv
+                                Heart Rate Notifications Profile.csv
+                                Heart Rate Notifications README.txt
+                            Heart Rate Variability/
+                                Daily Heart Rate Variability Summary - 2025-07-(26).csv
+                                Daily Heart Rate Variability Summary - 2025-08-(11).csv
+                                Daily Heart Rate Variability Summary - 2025-08-(8).csv
+                                Daily Heart Rate Variability Summary README.txt
+                                Daily Respiratory Rate Summary - 2025-07-27.csv
+                                Daily Respiratory Rate Summary README.txt
+                                Heart Rate Variability Details - 2025-07-27.csv
+                                Heart Rate Variability Details - 2025-08-09.csv
+                                Heart Rate Variability Details - 2025-08-11.csv
+                                Heart Rate Variability Histogram - 2025-07-01.csv
+                                Heart Rate Variability Histogram - 2025-08-01.csv
+                                Heart Rate Variability README.txt
+                                Respiratory Rate README.txt
+                                Respiratory Rate Summary - 2025-07-01.csv
+                                Respiratory Rate Summary - 2025-08-01.csv
+                            Menstrual Health/
+                                Menstrual Health README.txt
+                                menstrual_health_birth_control.csv
+                                menstrual_health_cycles.csv
+                                menstrual_health_settings.csv
+                                menstrual_health_symptoms.csv
+                            Oxygen Saturation (SpO2)/
+                                Daily SpO2 - 2025-07-03-2025-10-11.csv
+                                Daily SpO2 README.txt
+                                Minute SpO2 - 2025-07-27.csv
+                                Minute SpO2 - 2025-07-28.csv
+                                Minute SpO2 - 2025-07-29.csv
+                                Minute SpO2 - 2025-07-31.csv
+                                Minute SpO2 - 2025-08-01.csv
+                                Minute SpO2 README.txt
+                            Paired Devices/
+                                Devices Readme.txt
+                                Devices.csv
+                                iOS App Notification Settings.csv
+                                Scales.csv
+                                Tracker Optional Configuration.csv
+                                Trackers.csv
+                            Physical Activity_GoogleData/
+                                active_minutes_2025-03-25.csv
+                                active_minutes_2025-04-01.csv
+                                active_minutes_2025-07-01.csv
+                                active_minutes_2025-08-01.csv
+                                active_minutes_2025-09-01.csv
+                                active_minutes_2025-11-01.csv
+                                active_minutes_2025-12-01.csv
+                                active_minutes_readme.txt
+                                active_zone_minutes_2025-03-25.csv
+                                active_zone_minutes_2025-04-01.csv
+                                active_zone_minutes_2025-07-01.csv
+                                active_zone_minutes_2025-08-01.csv
+                                active_zone_minutes_2025-12-01.csv
+                                active_zone_minutes_readme.txt
+                                activity_level_2025-03-25.csv
+                                activity_level_2025-04-01.csv
+                                activity_level_2025-07-01.csv
+                                activity_level_2025-08-01.csv
+                                activity_level_2025-09-01.csv
+                                activity_level_2025-11-01.csv
+                                activity_level_2025-12-01.csv
+                                activity_level_readme.txt
+                                altitude_2025-03-25.csv
+                                altitude_2025-04-01.csv
+                                altitude_2025-07-01.csv
+                                altitude_2025-08-01.csv
+                                altitude_2025-11-01.csv
+                                altitude_2025-12-01.csv
+                                altitude_readme.txt
+                                body_temperature_2025-03-25.csv
+                                body_temperature_2025-03-26.csv
+                                body_temperature_2025-03-27.csv
+                                body_temperature_2025-03-28.csv
+                                body_temperature_2025-03-29.csv
+                                body_temperature_2025-03-30.csv
+                                body_temperature_2025-03-31.csv
+                                body_temperature_2025-04-01.csv
+                                body_temperature_2025-04-02.csv
+                                body_temperature_2025-04-03.csv
+                                body_temperature_2025-04-04.csv
+                                body_temperature_2025-07-17.csv
+                                body_temperature_2025-07-18.csv
+                                body_temperature_2025-07-19.csv
+                                body_temperature_2025-07-20.csv
+                                body_temperature_2025-07-21.csv
+                                body_temperature_2025-07-22.csv
+                                body_temperature_2025-07-23.csv
+                                body_temperature_2025-07-24.csv
+                                body_temperature_2025-07-25.csv
+                                body_temperature_2025-07-26.csv
+                                body_temperature_2025-07-27.csv
+                                body_temperature_2025-07-28.csv
+                                body_temperature_2025-07-29.csv
+                                body_temperature_2025-07-30.csv
+                                body_temperature_2025-07-31.csv
+                                body_temperature_2025-08-01.csv
+                                body_temperature_2025-08-02.csv
+                                body_temperature_2025-08-03.csv
+                                body_temperature_2025-08-04.csv
+                                body_temperature_2025-08-05.csv
+                                body_temperature_2025-08-06.csv
+                                body_temperature_2025-08-07.csv
+                                body_temperature_2025-08-08.csv
+                                body_temperature_2025-08-09.csv
+                                body_temperature_2025-08-10.csv
+                                body_temperature_2025-08-11.csv
+                                body_temperature_2025-08-14.csv
+                                body_temperature_2025-08-15.csv
+                                body_temperature_2025-08-16.csv
+                                body_temperature_2025-08-17.csv
+                                body_temperature_2025-08-18.csv
+                                body_temperature_2025-08-19.csv
+                                body_temperature_2025-08-20.csv
+                                body_temperature_2025-11-16.csv
+                                body_temperature_2025-12-09.csv
+                                body_temperature_2025-12-10.csv
+                                body_temperature_2025-12-11.csv
+                                body_temperature_2025-12-12.csv
+                                body_temperature_2025-12-13.csv
+                                body_temperature_2025-12-14.csv
+                                body_temperature_2025-12-15.csv
+                                body_temperature_2025-12-16.csv
+                                body_temperature_2025-12-23.csv
+                                body_temperature_2025-12-24.csv
+                                body_temperature_2025-12-25.csv
+                                body_temperature_readme.txt
+                                calories_2025-03-25.csv
+                                calories_2025-04-01.csv
+                                calories_2025-05-01.csv
+                                calories_2025-06-01.csv
+                                calories_2025-07-01.csv
+                                calories_2025-08-01.csv
+                                calories_2025-09-01.csv
+                                calories_2025-10-01.csv
+                                calories_2025-11-01.csv
+                                calories_2025-12-01.csv
+                                calories_in_heart_rate_zone_2025-03-25.csv
+                                calories_in_heart_rate_zone_2025-04-01.csv
+                                calories_in_heart_rate_zone_2025-05-01.csv
+                                calories_in_heart_rate_zone_2025-06-01.csv
+                                calories_in_heart_rate_zone_2025-07-01.csv
+                                calories_in_heart_rate_zone_2025-08-01.csv
+                                calories_in_heart_rate_zone_2025-09-01.csv
+                                calories_in_heart_rate_zone_2025-10-01.csv
+                                calories_in_heart_rate_zone_2025-11-01.csv
+                                calories_in_heart_rate_zone_2025-12-01.csv
+                                calories_in_heart_rate_zone_readme.txt
+                                calories_readme.txt
+                                cardio_load_2025-03-25.csv
+                                cardio_load_2025-04-01.csv
+                                cardio_load_2025-07-01.csv
+                                cardio_load_2025-08-01.csv
+                                cardio_load_2025-11-01.csv
+                                cardio_load_2025-12-01.csv
+                                cardio_load_observed_interval.csv
+                                cardio_load_observed_interval_readme.txt
+                                cardio_load_readme.txt
+                                continuous_eda_2025-07-01.csv
+                                continuous_eda_2025-08-01.csv
+                                continuous_eda_readme.txt
+                                daily_heart_rate_variability.csv
+                                daily_heart_rate_variability_readme.txt
+                                daily_heart_rate_zones.csv
+                                daily_heart_rate_zones_readme.txt
+                                daily_oxygen_saturation_2025-07-01.csv
+                                daily_oxygen_saturation_readme.txt
+                                daily_respiratory_rate.csv
+                                daily_respiratory_rate_readme.txt
+                                daily_resting_heart_rate.csv
+                                daily_resting_heart_rate_readme.txt
+                                daily_sleep_temperature_derivations.csv
+                                daily_sleep_temperature_derivations_readme.txt
+                                demographic_vo2max.csv
+                                demographic_vo2max_readme.txt
+                                distance_2025-03-25.csv
+                                distance_2025-04-01.csv
+                                distance_2025-07-01.csv
+                                distance_2025-08-01.csv
+                                distance_2025-09-01.csv
+                                distance_2025-11-01.csv
+                                distance_2025-12-01.csv
+                                distance_readme.txt
+                                floors_2025-03-25.csv
+                                floors_2025-04-01.csv
+                                floors_2025-07-01.csv
+                                floors_2025-08-01.csv
+                                floors_2025-11-01.csv
+                                floors_2025-12-01.csv
+                                floors_readme.txt
+                                heart_rate_2025-03-25.csv
+                                heart_rate_2025-03-26.csv
+                                heart_rate_2025-03-27.csv
+                                heart_rate_2025-03-28.csv
+                                heart_rate_2025-03-29.csv
+                                heart_rate_2025-03-30.csv
+                                heart_rate_2025-03-31.csv
+                                heart_rate_2025-04-01.csv
+                                heart_rate_2025-04-02.csv
+                                heart_rate_2025-04-03.csv
+                                heart_rate_2025-07-17.csv
+                                heart_rate_2025-07-18.csv
+                                heart_rate_2025-07-19.csv
+                                heart_rate_2025-07-20.csv
+                                heart_rate_2025-07-21.csv
+                                heart_rate_2025-07-22.csv
+                                heart_rate_2025-07-26.csv
+                                heart_rate_2025-07-27.csv
+                                heart_rate_2025-07-28.csv
+                                heart_rate_2025-07-29.csv
+                                heart_rate_2025-07-30.csv
+                                heart_rate_2025-07-31.csv
+                                heart_rate_2025-08-01.csv
+                                heart_rate_2025-08-03.csv
+                                heart_rate_2025-08-04.csv
+                                heart_rate_2025-08-05.csv
+                                heart_rate_2025-08-06.csv
+                                heart_rate_2025-08-07.csv
+                                heart_rate_2025-08-08.csv
+                                heart_rate_2025-08-09.csv
+                                heart_rate_2025-08-10.csv
+                                heart_rate_2025-08-11.csv
+                                heart_rate_2025-08-14.csv
+                                heart_rate_2025-08-15.csv
+                                heart_rate_2025-08-16.csv
+                                heart_rate_2025-08-17.csv
+                                heart_rate_2025-08-18.csv
+                                heart_rate_2025-08-19.csv
+                                heart_rate_2025-08-20.csv
+                                heart_rate_2025-11-16.csv
+                                heart_rate_2025-12-09.csv
+                                heart_rate_2025-12-10.csv
+                                heart_rate_2025-12-23.csv
+                                heart_rate_2025-12-24.csv
+                                heart_rate_2025-12-25.csv
+                                heart_rate_readme.txt
+                                heart_rate_variability_2025-07-01.csv
+                                heart_rate_variability_2025-08-01.csv
+                                heart_rate_variability_readme.txt
+                                height_readme.txt
+                                live_pace_2025-07-17.csv
+                                live_pace_2025-07-20.csv
+                                live_pace_2025-07-27.csv
+                                live_pace_2025-07-28.csv
+                                live_pace_2025-07-31.csv
+                                live_pace_readme.txt
+                                oxygen_saturation_2025-07-01.csv
+                                oxygen_saturation_readme.txt
+                                respiratory_rate_sleep_summary_2025-07-01.csv
+                                respiratory_rate_sleep_summary_2025-08-01.csv
+                                respiratory_rate_sleep_summary_readme.txt
+                                sedentary_period_2025-03-25.csv
+                                sedentary_period_2025-03-26.csv
+                                sedentary_period_2025-03-27.csv
+                                sedentary_period_2025-03-28.csv
+                                sedentary_period_2025-03-29.csv
+                                sedentary_period_2025-03-30.csv
+                                sedentary_period_2025-03-31.csv
+                                sedentary_period_2025-04-01.csv
+                                sedentary_period_2025-04-02.csv
+                                sedentary_period_2025-04-03.csv
+                                sedentary_period_2025-07-17.csv
+                                sedentary_period_2025-07-18.csv
+                                sedentary_period_2025-07-22.csv
+                                sedentary_period_2025-07-26.csv
+                                sedentary_period_2025-07-27.csv
+                                sedentary_period_2025-07-28.csv
+                                sedentary_period_2025-07-31.csv
+                                sedentary_period_2025-08-03.csv
+                                sedentary_period_2025-08-06.csv
+                                sedentary_period_2025-08-07.csv
+                                sedentary_period_2025-08-08.csv
+                                sedentary_period_2025-08-10.csv
+                                sedentary_period_2025-08-11.csv
+                                sedentary_period_2025-08-14.csv
+                                sedentary_period_2025-08-15.csv
+                                sedentary_period_2025-08-16.csv
+                                sedentary_period_2025-08-17.csv
+                                sedentary_period_2025-08-20.csv
+                                sedentary_period_readme.txt
+                                steps_2025-03-25.csv
+                                steps_2025-04-01.csv
+                                steps_2025-07-01.csv
+                                steps_2025-08-01.csv
+                                steps_2025-09-01.csv
+                                steps_2025-11-01.csv
+                                steps_2025-12-01.csv
+                                steps_readme.txt
+                                swim_lengths_data_2025-03-25.csv
+                                swim_lengths_data_2025-07-01.csv
+                                swim_lengths_data_2025-08-01.csv
+                                swim_lengths_data_2025-11-01.csv
+                                swim_lengths_data_2025-12-01.csv
+                                swim_lengths_data_readme.txt
+                                time_in_heart_rate_zone_2025-08-01.csv
+                                time_in_heart_rate_zone_2025-11-01.csv
+                                time_in_heart_rate_zone_2025-12-01.csv
+                                time_in_heart_rate_zone_readme.txt
+                                weight.csv
+                                weight_readme.txt
+                            Sleep Score/
+                                sleep_score.csv
+                            Snore and Noise Detect/
+                                Snore README.txt
+                            Social/
+                                Feed README.txt
+                            Stress Journal/
+                                CEDA Data 2025-08-25.csv
+                                Stress Daily Summaries.csv
+                                Stress Journal README.txt
+                            Stress Score/
+                                Stress Score Readme.txt
+                                Stress Score.csv
+                            Temperature/
+                                Computed Temperature - 2025-03-25.csv
+                                Computed Temperature - 2025-04-01.csv
+                                Computed Temperature - 2025-07-01.csv
+                                Computed Temperature - 2025-08-01.csv
+                                Device Temperature - 2025-03-25.csv
+                                Device Temperature - 2025-03-26.csv
+                                Device Temperature - 2025-03-27.csv
+                                Device Temperature - 2025-03-28.csv
+                                Device Temperature - 2025-03-29.csv
+                                Device Temperature - 2025-03-30.csv
+                                Device Temperature - 2025-03-31.csv
+                                Device Temperature - 2025-04-01.csv
+                                Device Temperature - 2025-04-02.csv
+                                Device Temperature - 2025-04-03.csv
+                                Device Temperature - 2025-07-17.csv
+                                Device Temperature - 2025-07-18.csv
+                                Device Temperature - 2025-07-19.csv
+                                Device Temperature - 2025-07-20.csv
+                                Device Temperature - 2025-07-21.csv
+                                Device Temperature - 2025-07-22.csv
+                                Device Temperature - 2025-07-26.csv
+                                Device Temperature - 2025-07-27.csv
+                                Device Temperature - 2025-07-28.csv
+                                Device Temperature - 2025-07-29.csv
+                                Device Temperature - 2025-07-30.csv
+                                Device Temperature - 2025-07-31.csv
+                                Device Temperature - 2025-08-01.csv
+                                Device Temperature - 2025-08-03.csv
+                                Device Temperature - 2025-08-04.csv
+                                Device Temperature - 2025-08-05.csv
+                                Device Temperature - 2025-08-06.csv
+                                Device Temperature - 2025-08-07.csv
+                                Device Temperature - 2025-08-08.csv
+                                Device Temperature - 2025-08-09.csv
+                                Device Temperature - 2025-08-10.csv
+                                Device Temperature - 2025-08-11.csv
+                                Device Temperature - 2025-08-12.csv
+                                Device Temperature - 2025-08-14.csv
+                                Device Temperature - 2025-08-15.csv
+                                Device Temperature - 2025-08-16.csv
+                                Device Temperature - 2025-08-17.csv
+                                Device Temperature - 2025-08-18.csv
+                                Device Temperature - 2025-08-19.csv
+                                Device Temperature - 2025-08-20.csv
+                                Device Temperature - 2025-08-21.csv
+                                Device Temperature - 2025-11-16.csv
+                                Device Temperature - 2025-12-09.csv
+                                Device Temperature - 2025-12-10.csv
+                                Device Temperature - 2025-12-11.csv
+                                Device Temperature - 2025-12-12.csv
+                                Device Temperature - 2025-12-16.csv
+                                Device Temperature - 2025-12-23.csv
+                                Device Temperature - 2025-12-24.csv
+                                Device Temperature - 2025-12-25.csv
+                                Wrist Temperature - 2025-04-02.csv
+                                Wrist Temperature - 2025-07-27.csv
+                                Wrist Temperature - 2025-08-07.csv
+                                Wrist Temperature - 2025-08-08.csv
+                                Wrist Temperature - 2025-08-09.csv
+                                Wrist Temperature - 2025-08-11.csv
+                                Wrist Temperature - 2025-08-12.csv
+                                Wrist Temperature - 2025-08-16.csv
+                            User Security Data/
+                                User_Email_Audit_Entry.csv
+                                User_Retired_Password.csv
+                            Your Profile/
+                                Media_Avatar Photo.png
+                                Profile.csv
+                                User Profile README.txt
+            aritra/
+                Takeout/
+                    Fitbit/
+                        Account Changes/
+                            Account_Management_Events_1.csv
+                        Activity Goals/
+                            Activity Goals README.txt
+                            Activity Goals.csv
+                        Atrial Fibrillation PPG/
+                            afib_ppg_README.txt
+                        Biometrics/
+                            Biometrics Readme.txt
+                            Glucose 200706.csv
+                            Glucose 200707.csv
+                            Glucose 200708.csv
+                            Glucose 200709.csv
+                            Glucose 200710.csv
+                            Glucose 200711.csv
+                            Glucose 200712.csv
+                            Glucose 200801.csv
+                            Glucose 200802.csv
+                            Glucose 200803.csv
+                            Glucose 200804.csv
+                            Glucose 200805.csv
+                            Glucose 200806.csv
+                            Glucose 200807.csv
+                            Glucose 200808.csv
+                            Glucose 200809.csv
+                            Glucose 200810.csv
+                            Glucose 200811.csv
+                            Glucose 200812.csv
+                            Glucose 200901.csv
+                            Glucose 200902.csv
+                            Glucose 200903.csv
+                            Glucose 200904.csv
+                            Glucose 200905.csv
+                            Glucose 200906.csv
+                            Glucose 200907.csv
+                            Glucose 200908.csv
+                            Glucose 200909.csv
+                            Glucose 200910.csv
+                            Glucose 200911.csv
+                            Glucose 200912.csv
+                            Glucose 201001.csv
+                            Glucose 201002.csv
+                            Glucose 201003.csv
+                            Glucose 201004.csv
+                            Glucose 201005.csv
+                            Glucose 201006.csv
+                            Glucose 201007.csv
+                            Glucose 201008.csv
+                            Glucose 201009.csv
+                            Glucose 201010.csv
+                            Glucose 201011.csv
+                            Glucose 201012.csv
+                            Glucose 201101.csv
+                            Glucose 201102.csv
+                            Glucose 201103.csv
+                            Glucose 201104.csv
+                            Glucose 201105.csv
+                            Glucose 201106.csv
+                            Glucose 201107.csv
+                            Glucose 201108.csv
+                            Glucose 201109.csv
+                            Glucose 201110.csv
+                            Glucose 201111.csv
+                            Glucose 201112.csv
+                            Glucose 201201.csv
+                            Glucose 201202.csv
+                            Glucose 201203.csv
+                            Glucose 201204.csv
+                            Glucose 201205.csv
+                            Glucose 201206.csv
+                            Glucose 201207.csv
+                            Glucose 201208.csv
+                            Glucose 201209.csv
+                            Glucose 201210.csv
+                            Glucose 201211.csv
+                            Glucose 201212.csv
+                            Glucose 201301.csv
+                            Glucose 201302.csv
+                            Glucose 201303.csv
+                            Glucose 201304.csv
+                            Glucose 201305.csv
+                            Glucose 201306.csv
+                            Glucose 201307.csv
+                            Glucose 201308.csv
+                            Glucose 201309.csv
+                            Glucose 201310.csv
+                            Glucose 201311.csv
+                            Glucose 201312.csv
+                            Glucose 201401.csv
+                            Glucose 201402.csv
+                            Glucose 201403.csv
+                            Glucose 201404.csv
+                            Glucose 201405.csv
+                            Glucose 201406.csv
+                            Glucose 201407.csv
+                            Glucose 201408.csv
+                            Glucose 201409.csv
+                            Glucose 201410.csv
+                            Glucose 201411.csv
+                            Glucose 201412.csv
+                            Glucose 201501.csv
+                            Glucose 201502.csv
+                            Glucose 201503.csv
+                            Glucose 201504.csv
+                            Glucose 201505.csv
+                            Glucose 201506.csv
+                            Glucose 201507.csv
+                            Glucose 201508.csv
+                            Glucose 201509.csv
+                            Glucose 201510.csv
+                            Glucose 201511.csv
+                            Glucose 201512.csv
+                            Glucose 201601.csv
+                            Glucose 201602.csv
+                            Glucose 201603.csv
+                            Glucose 201604.csv
+                            Glucose 201605.csv
+                            Glucose 201606.csv
+                            Glucose 201607.csv
+                            Glucose 201608.csv
+                            Glucose 201609.csv
+                            Glucose 201610.csv
+                            Glucose 201611.csv
+                            Glucose 201612.csv
+                            Glucose 201701.csv
+                            Glucose 201702.csv
+                            Glucose 201703.csv
+                            Glucose 201704.csv
+                            Glucose 201705.csv
+                            Glucose 201706.csv
+                            Glucose 201707.csv
+                            Glucose 201708.csv
+                            Glucose 201709.csv
+                            Glucose 201710.csv
+                            Glucose 201711.csv
+                            Glucose 201712.csv
+                            Glucose 201801.csv
+                            Glucose 201802.csv
+                            Glucose 201803.csv
+                            Glucose 201804.csv
+                            Glucose 201805.csv
+                            Glucose 201806.csv
+                            Glucose 201807.csv
+                            Glucose 201808.csv
+                            Glucose 201809.csv
+                            Glucose 201810.csv
+                            Glucose 201811.csv
+                            Glucose 201812.csv
+                            Glucose 201901.csv
+                            Glucose 201902.csv
+                            Glucose 201903.csv
+                            Glucose 201904.csv
+                            Glucose 201905.csv
+                            Glucose 201906.csv
+                            Glucose 201907.csv
+                            Glucose 201908.csv
+                            Glucose 201909.csv
+                            Glucose 201910.csv
+                            Glucose 201911.csv
+                            Glucose 201912.csv
+                            Glucose 202001.csv
+                            Glucose 202002.csv
+                            Glucose 202003.csv
+                            Glucose 202004.csv
+                            Glucose 202005.csv
+                            Glucose 202006.csv
+                            Glucose 202007.csv
+                            Glucose 202008.csv
+                            Glucose 202009.csv
+                            Glucose 202010.csv
+                            Glucose 202011.csv
+                            Glucose 202012.csv
+                            Glucose 202101.csv
+                            Glucose 202102.csv
+                            Glucose 202103.csv
+                            Glucose 202104.csv
+                            Glucose 202105.csv
+                            Glucose 202106.csv
+                            Glucose 202107.csv
+                            Glucose 202108.csv
+                            Glucose 202109.csv
+                            Glucose 202110.csv
+                            Glucose 202111.csv
+                            Glucose 202112.csv
+                            Glucose 202201.csv
+                            Glucose 202202.csv
+                            Glucose 202203.csv
+                            Glucose 202204.csv
+                            Glucose 202205.csv
+                            Glucose 202206.csv
+                            Glucose 202207.csv
+                            Glucose 202208.csv
+                            Glucose 202209.csv
+                            Glucose 202210.csv
+                            Glucose 202211.csv
+                            Glucose 202212.csv
+                            Glucose 202301.csv
+                            Glucose 202302.csv
+                            Glucose 202303.csv
+                            Glucose 202304.csv
+                            Glucose 202305.csv
+                            Glucose 202306.csv
+                            Glucose 202307.csv
+                            Glucose 202308.csv
+                            Glucose 202309.csv
+                            Glucose 202310.csv
+                            Glucose 202311.csv
+                            Glucose 202312.csv
+                            Glucose 202401.csv
+                            Glucose 202402.csv
+                            Glucose 202403.csv
+                            Glucose 202404.csv
+                            Glucose 202405.csv
+                            Glucose 202406.csv
+                            Glucose 202407.csv
+                            Glucose 202408.csv
+                            Glucose 202409.csv
+                            Glucose 202410.csv
+                            Glucose 202411.csv
+                            Glucose 202412.csv
+                            Glucose 202501.csv
+                            Glucose 202502.csv
+                            Glucose 202503.csv
+                            Glucose 202504.csv
+                            Glucose 202505.csv
+                            Glucose 202506.csv
+                            Glucose 202507.csv
+                            Glucose 202508.csv
+                            Glucose 202509.csv
+                            Glucose 202510.csv
+                            Glucose 202511.csv
+                        Commerce_GoogleData/
+                            README.txt
+                        Daily Readiness/
+                            Daily Readiness README.txt
+                            Daily Readiness User Properties - 2025-10-28.csv
+                        Discover/
+                            Coach README.txt
+                        Fitbit Premium/
+                            Products Export Readme.txt
+                        Global Export Data/
+                            altitude-2025-10-27.json
+                            calories-2025-10-27.json
+                            distance-2025-10-27.json
+                            estimated_oxygen_variation-2025-10-28.csv
+                            estimated_oxygen_variation-2025-11-06.csv
+                            heart_rate-2025-10-28.json
+                            heart_rate-2025-11-06.json
+                            height-2025-10-27.json
+                            lightly_active_minutes-2025-10-27.json
+                            moderately_active_minutes-2025-10-27.json
+                            resting_heart_rate-2025-10-27.json
+                            sedentary_minutes-2025-10-27.json
+                            steps-2025-10-27.json
+                            time_in_heart_rate_zones-2025-10-28.json
+                            time_in_heart_rate_zones-2025-11-06.json
+                            very_active_minutes-2025-10-27.json
+                            weight-2025-10-27.json
+                        Guided Programs/
+                            Fitbit Health Programs Data README.txt
+                        Health Fitness Data_GoogleData/
+                            CalibrationStatusForReadinessAndLoad README.txt
+                            CalibrationStatusForReadinessAndLoad.csv
+                            GoalSettingsHistory README.txt
+                            GoalSettingsHistory.csv
+                            UserAppSettingData README.txt
+                            UserAppSettingData.csv
+                            UserDemographicData README.txt
+                            UserDemographicData.csv
+                            UserLegacySettingData README.txt
+                            UserLegacySettingData.csv
+                            UserMBDData README.txt
+                            UserMBDData.csv
+                            UserProfileData README.txt
+                            UserProfileData.csv
+                        Heart Rate/
+                            Heart Rate Notifications Alerts.csv
+                            Heart Rate Notifications Profile.csv
+                            Heart Rate Notifications README.txt
+                        Heart Rate Variability/
+                            Daily Heart Rate Variability Summary README.txt
+                            Daily Respiratory Rate Summary README.txt
+                            Heart Rate Variability README.txt
+                            Respiratory Rate README.txt
+                        Menstrual Health/
+                            Menstrual Health README.txt
+                            menstrual_health_birth_control.csv
+                            menstrual_health_cycles.csv
+                            menstrual_health_settings.csv
+                            menstrual_health_symptoms.csv
+                        Oxygen Saturation (SpO2)/
+                            Daily SpO2 README.txt
+                            Minute SpO2 README.txt
+                        Paired Devices/
+                            Devices Readme.txt
+                            Devices.csv
+                            iOS App Notification Settings.csv
+                            Scales.csv
+                            Tracker Optional Configuration.csv
+                            Trackers.csv
+                        Physical Activity_GoogleData/
+                            activity_level_2025-10-28.csv
+                            activity_level_2025-11-01.csv
+                            activity_level_readme.txt
+                            altitude_2025-11-01.csv
+                            altitude_readme.txt
+                            body_temperature_2025-10-28.csv
+                            body_temperature_2025-11-06.csv
+                            body_temperature_2025-11-07.csv
+                            body_temperature_readme.txt
+                            calories_2025-10-28.csv
+                            calories_2025-11-01.csv
+                            calories_in_heart_rate_zone_2025-10-28.csv
+                            calories_in_heart_rate_zone_2025-11-01.csv
+                            calories_in_heart_rate_zone_readme.txt
+                            calories_readme.txt
+                            cardio_load_2025-10-28.csv
+                            cardio_load_observed_interval.csv
+                            cardio_load_observed_interval_readme.txt
+                            cardio_load_readme.txt
+                            distance_2025-10-28.csv
+                            distance_2025-11-01.csv
+                            distance_readme.txt
+                            floors_2025-11-01.csv
+                            floors_readme.txt
+                            heart_rate_2025-10-28.csv
+                            heart_rate_2025-11-06.csv
+                            heart_rate_2025-11-07.csv
+                            heart_rate_readme.txt
+                            height.csv
+                            height_readme.txt
+                            steps_2025-10-28.csv
+                            steps_2025-11-01.csv
+                            steps_readme.txt
+                            time_in_heart_rate_zone_2025-10-28.csv
+                            time_in_heart_rate_zone_2025-11-01.csv
+                            time_in_heart_rate_zone_readme.txt
+                            weight.csv
+                            weight_readme.txt
+                        Sleep Score/
+                            sleep_score.csv
+                        Snore and Noise Detect/
+                            Snore README.txt
+                        Social/
+                            Feed README.txt
+                        Stress Journal/
+                            Stress Journal README.txt
+                        Stress Score/
+                            Stress Score Readme.txt
+                            Stress Score.csv
+                        Temperature/
+                            Device Temperature - 2025-10-28.csv
+                            Device Temperature - 2025-11-06.csv
+                            Device Temperature - 2025-11-07.csv
+                        User Security Data/
+                            User_Email_Audit_Entry.csv
+                            User_Retired_Password.csv
+                        Your Profile/
+                            Media_Avatar Photo.png
+                            Profile.csv
+                            User Profile README.txt
+            Debjit/
+                Takeout/
+                    Fitbit/
+                        Account Changes/
+                            Account_Management_Events_1.csv
+                        Activity Goals/
+                            Activity Goals README.txt
+                            Activity Goals.csv
+                        Atrial Fibrillation PPG/
+                            afib_ppg_README.txt
+                        Biometrics/
+                            Biometrics Readme.txt
+                            Glucose 200706.csv
+                            Glucose 200707.csv
+                            Glucose 200708.csv
+                            Glucose 200709.csv
+                            Glucose 200710.csv
+                            Glucose 200711.csv
+                            Glucose 200712.csv
+                            Glucose 200801.csv
+                            Glucose 200802.csv
+                            Glucose 200803.csv
+                            Glucose 200804.csv
+                            Glucose 200805.csv
+                            Glucose 200806.csv
+                            Glucose 200807.csv
+                            Glucose 200808.csv
+                            Glucose 200809.csv
+                            Glucose 200810.csv
+                            Glucose 200811.csv
+                            Glucose 200812.csv
+                            Glucose 200901.csv
+                            Glucose 200902.csv
+                            Glucose 200903.csv
+                            Glucose 200904.csv
+                            Glucose 200905.csv
+                            Glucose 200906.csv
+                            Glucose 200907.csv
+                            Glucose 200908.csv
+                            Glucose 200909.csv
+                            Glucose 200910.csv
+                            Glucose 200911.csv
+                            Glucose 200912.csv
+                            Glucose 201001.csv
+                            Glucose 201002.csv
+                            Glucose 201003.csv
+                            Glucose 201004.csv
+                            Glucose 201005.csv
+                            Glucose 201006.csv
+                            Glucose 201007.csv
+                            Glucose 201008.csv
+                            Glucose 201009.csv
+                            Glucose 201010.csv
+                            Glucose 201011.csv
+                            Glucose 201012.csv
+                            Glucose 201101.csv
+                            Glucose 201102.csv
+                            Glucose 201103.csv
+                            Glucose 201104.csv
+                            Glucose 201105.csv
+                            Glucose 201106.csv
+                            Glucose 201107.csv
+                            Glucose 201108.csv
+                            Glucose 201109.csv
+                            Glucose 201110.csv
+                            Glucose 201111.csv
+                            Glucose 201112.csv
+                            Glucose 201201.csv
+                            Glucose 201202.csv
+                            Glucose 201203.csv
+                            Glucose 201204.csv
+                            Glucose 201205.csv
+                            Glucose 201206.csv
+                            Glucose 201207.csv
+                            Glucose 201208.csv
+                            Glucose 201209.csv
+                            Glucose 201210.csv
+                            Glucose 201211.csv
+                            Glucose 201212.csv
+                            Glucose 201301.csv
+                            Glucose 201302.csv
+                            Glucose 201303.csv
+                            Glucose 201304.csv
+                            Glucose 201305.csv
+                            Glucose 201306.csv
+                            Glucose 201307.csv
+                            Glucose 201308.csv
+                            Glucose 201309.csv
+                            Glucose 201310.csv
+                            Glucose 201311.csv
+                            Glucose 201312.csv
+                            Glucose 201401.csv
+                            Glucose 201402.csv
+                            Glucose 201403.csv
+                            Glucose 201404.csv
+                            Glucose 201405.csv
+                            Glucose 201406.csv
+                            Glucose 201407.csv
+                            Glucose 201408.csv
+                            Glucose 201409.csv
+                            Glucose 201410.csv
+                            Glucose 201411.csv
+                            Glucose 201412.csv
+                            Glucose 201501.csv
+                            Glucose 201502.csv
+                            Glucose 201503.csv
+                            Glucose 201504.csv
+                            Glucose 201505.csv
+                            Glucose 201506.csv
+                            Glucose 201507.csv
+                            Glucose 201508.csv
+                            Glucose 201509.csv
+                            Glucose 201510.csv
+                            Glucose 201511.csv
+                            Glucose 201512.csv
+                            Glucose 201601.csv
+                            Glucose 201602.csv
+                            Glucose 201603.csv
+                            Glucose 201604.csv
+                            Glucose 201605.csv
+                            Glucose 201606.csv
+                            Glucose 201607.csv
+                            Glucose 201608.csv
+                            Glucose 201609.csv
+                            Glucose 201610.csv
+                            Glucose 201611.csv
+                            Glucose 201612.csv
+                            Glucose 201701.csv
+                            Glucose 201702.csv
+                            Glucose 201703.csv
+                            Glucose 201704.csv
+                            Glucose 201705.csv
+                            Glucose 201706.csv
+                            Glucose 201707.csv
+                            Glucose 201708.csv
+                            Glucose 201709.csv
+                            Glucose 201710.csv
+                            Glucose 201711.csv
+                            Glucose 201712.csv
+                            Glucose 201801.csv
+                            Glucose 201802.csv
+                            Glucose 201803.csv
+                            Glucose 201804.csv
+                            Glucose 201805.csv
+                            Glucose 201806.csv
+                            Glucose 201807.csv
+                            Glucose 201808.csv
+                            Glucose 201809.csv
+                            Glucose 201810.csv
+                            Glucose 201811.csv
+                            Glucose 201812.csv
+                            Glucose 201901.csv
+                            Glucose 201902.csv
+                            Glucose 201903.csv
+                            Glucose 201904.csv
+                            Glucose 201905.csv
+                            Glucose 201906.csv
+                            Glucose 201907.csv
+                            Glucose 201908.csv
+                            Glucose 201909.csv
+                            Glucose 201910.csv
+                            Glucose 201911.csv
+                            Glucose 201912.csv
+                            Glucose 202001.csv
+                            Glucose 202002.csv
+                            Glucose 202003.csv
+                            Glucose 202004.csv
+                            Glucose 202005.csv
+                            Glucose 202006.csv
+                            Glucose 202007.csv
+                            Glucose 202008.csv
+                            Glucose 202009.csv
+                            Glucose 202010.csv
+                            Glucose 202011.csv
+                            Glucose 202012.csv
+                            Glucose 202101.csv
+                            Glucose 202102.csv
+                            Glucose 202103.csv
+                            Glucose 202104.csv
+                            Glucose 202105.csv
+                            Glucose 202106.csv
+                            Glucose 202107.csv
+                            Glucose 202108.csv
+                            Glucose 202109.csv
+                            Glucose 202110.csv
+                            Glucose 202111.csv
+                            Glucose 202112.csv
+                            Glucose 202201.csv
+                            Glucose 202202.csv
+                            Glucose 202203.csv
+                            Glucose 202204.csv
+                            Glucose 202205.csv
+                            Glucose 202206.csv
+                            Glucose 202207.csv
+                            Glucose 202208.csv
+                            Glucose 202209.csv
+                            Glucose 202210.csv
+                            Glucose 202211.csv
+                            Glucose 202212.csv
+                            Glucose 202301.csv
+                            Glucose 202302.csv
+                            Glucose 202303.csv
+                            Glucose 202304.csv
+                            Glucose 202305.csv
+                            Glucose 202306.csv
+                            Glucose 202307.csv
+                            Glucose 202308.csv
+                            Glucose 202309.csv
+                            Glucose 202310.csv
+                            Glucose 202311.csv
+                            Glucose 202312.csv
+                            Glucose 202401.csv
+                            Glucose 202402.csv
+                            Glucose 202403.csv
+                            Glucose 202404.csv
+                            Glucose 202405.csv
+                            Glucose 202406.csv
+                            Glucose 202407.csv
+                            Glucose 202408.csv
+                            Glucose 202409.csv
+                            Glucose 202410.csv
+                            Glucose 202411.csv
+                            Glucose 202412.csv
+                            Glucose 202501.csv
+                            Glucose 202502.csv
+                            Glucose 202503.csv
+                            Glucose 202504.csv
+                            Glucose 202505.csv
+                            Glucose 202506.csv
+                            Glucose 202507.csv
+                            Glucose 202508.csv
+                            Glucose 202509.csv
+                            Glucose 202510.csv
+                        Commerce_GoogleData/
+                            README.txt
+                        Daily Readiness/
+                            Daily Readiness README.txt
+                            Daily Readiness User Properties - 2025-10-15.csv
+                        Discover/
+                            Coach README.txt
+                        Fitbit Premium/
+                            Products Export Readme.txt
+                        Global Export Data/
+                            calories-2025-10-14.json
+                            demographic_vo2_max-2025-10-14.json
+                            distance-2025-10-14.json
+                            estimated_oxygen_variation-2025-10-22.csv
+                            estimated_oxygen_variation-2025-10-23.csv
+                            estimated_oxygen_variation-2025-10-24.csv
+                            heart_rate-2025-10-15.json
+                            heart_rate-2025-10-22.json
+                            heart_rate-2025-10-23.json
+                            heart_rate-2025-10-24.json
+                            height-2025-10-14.json
+                            lightly_active_minutes-2025-10-14.json
+                            moderately_active_minutes-2025-10-14.json
+                            resting_heart_rate-2025-10-14.json
+                            sedentary_minutes-2025-10-14.json
+                            steps-2025-10-14.json
+                            swim_lengths_data-2025-10-14.json
+                            time_in_heart_rate_zones-2025-10-15.json
+                            time_in_heart_rate_zones-2025-10-22.json
+                            time_in_heart_rate_zones-2025-10-23.json
+                            time_in_heart_rate_zones-2025-10-24.json
+                            very_active_minutes-2025-10-14.json
+                            weight-2025-10-14.json
+                        Guided Programs/
+                            Fitbit Health Programs Data README.txt
+                        Health Fitness Data_GoogleData/
+                            CalibrationStatusForReadinessAndLoad README.txt
+                            CalibrationStatusForReadinessAndLoad.csv
+                            GoalSettingsHistory README.txt
+                            GoalSettingsHistory.csv
+                            UserAppSettingData README.txt
+                            UserAppSettingData.csv
+                            UserDemographicData README.txt
+                            UserDemographicData.csv
+                            UserLegacySettingData README.txt
+                            UserLegacySettingData.csv
+                            UserMBDData README.txt
+                            UserMBDData.csv
+                            UserProfileData README.txt
+                            UserProfileData.csv
+                        Heart Rate/
+                            Heart Rate Notifications Alerts.csv
+                            Heart Rate Notifications Profile.csv
+                            Heart Rate Notifications README.txt
+                        Heart Rate Variability/
+                            Daily Heart Rate Variability Summary README.txt
+                            Daily Respiratory Rate Summary README.txt
+                            Heart Rate Variability README.txt
+                            Respiratory Rate README.txt
+                        Menstrual Health/
+                            Menstrual Health README.txt
+                            menstrual_health_birth_control.csv
+                            menstrual_health_cycles.csv
+                            menstrual_health_settings.csv
+                            menstrual_health_symptoms.csv
+                        Oxygen Saturation (SpO2)/
+                            Daily SpO2 README.txt
+                            Minute SpO2 README.txt
+                        Paired Devices/
+                            Devices Readme.txt
+                            Devices.csv
+                            iOS App Notification Settings.csv
+                            Scales.csv
+                            Tracker Optional Configuration.csv
+                            Trackers.csv
+                        Physical Activity_GoogleData/
+                            active_minutes_2025-10-15.csv
+                            active_minutes_readme.txt
+                            activity_level_2025-10-15.csv
+                            activity_level_readme.txt
+                            body_temperature_2025-10-15.csv
+                            body_temperature_2025-10-22.csv
+                            body_temperature_2025-10-23.csv
+                            body_temperature_2025-10-24.csv
+                            body_temperature_readme.txt
+                            calories_2025-10-15.csv
+                            calories_in_heart_rate_zone_2025-10-15.csv
+                            calories_in_heart_rate_zone_readme.txt
+                            calories_readme.txt
+                            cardio_load_2025-10-15.csv
+                            cardio_load_observed_interval.csv
+                            cardio_load_observed_interval_readme.txt
+                            cardio_load_readme.txt
+                            daily_resting_heart_rate.csv
+                            daily_resting_heart_rate_readme.txt
+                            demographic_vo2max.csv
+                            demographic_vo2max_readme.txt
+                            distance_2025-10-15.csv
+                            distance_readme.txt
+                            heart_rate_2025-10-15.csv
+                            heart_rate_2025-10-22.csv
+                            heart_rate_2025-10-23.csv
+                            heart_rate_readme.txt
+                            height.csv
+                            height_readme.txt
+                            steps_2025-10-15.csv
+                            steps_readme.txt
+                            swim_lengths_data_2025-10-15.csv
+                            swim_lengths_data_readme.txt
+                            time_in_heart_rate_zone_2025-10-15.csv
+                            time_in_heart_rate_zone_readme.txt
+                            weight.csv
+                            weight_readme.txt
+                        Sleep Score/
+                            sleep_score.csv
+                        Snore and Noise Detect/
+                            Snore README.txt
+                        Social/
+                            Feed README.txt
+                        Stress Journal/
+                            Stress Journal README.txt
+                        Stress Score/
+                            Stress Score Readme.txt
+                            Stress Score.csv
+                        Temperature/
+                            Device Temperature - 2025-10-15.csv
+                            Device Temperature - 2025-10-22.csv
+                            Device Temperature - 2025-10-23.csv
+                            Device Temperature - 2025-10-24.csv
+                        User Security Data/
+                            User_Email_Audit_Entry.csv
+                            User_Retired_Password.csv
+                        Your Profile/
+                            Profile.csv
+                            User Profile README.txt
+            Nishant/
+                Takeout/
+                    Fitbit/
+                        Account Changes/
+                            Account_Management_Events_1.csv
+                        Activity Goals/
+                            Activity Goals README.txt
+                            Activity Goals.csv
+                        Atrial Fibrillation PPG/
+                            afib_ppg_README.txt
+                        Biometrics/
+                            Biometrics Readme.txt
+                            Glucose 200706.csv
+                            Glucose 200707.csv
+                            Glucose 200708.csv
+                            Glucose 200709.csv
+                            Glucose 200710.csv
+                            Glucose 200711.csv
+                            Glucose 200712.csv
+                            Glucose 200801.csv
+                            Glucose 200802.csv
+                            Glucose 200803.csv
+                            Glucose 200804.csv
+                            Glucose 200805.csv
+                            Glucose 200806.csv
+                            Glucose 200807.csv
+                            Glucose 200808.csv
+                            Glucose 200809.csv
+                            Glucose 200810.csv
+                            Glucose 200811.csv
+                            Glucose 200812.csv
+                            Glucose 200901.csv
+                            Glucose 200902.csv
+                            Glucose 200903.csv
+                            Glucose 200904.csv
+                            Glucose 200905.csv
+                            Glucose 200906.csv
+                            Glucose 200907.csv
+                            Glucose 200908.csv
+                            Glucose 200909.csv
+                            Glucose 200910.csv
+                            Glucose 200911.csv
+                            Glucose 200912.csv
+                            Glucose 201001.csv
+                            Glucose 201002.csv
+                            Glucose 201003.csv
+                            Glucose 201004.csv
+                            Glucose 201005.csv
+                            Glucose 201006.csv
+                            Glucose 201007.csv
+                            Glucose 201008.csv
+                            Glucose 201009.csv
+                            Glucose 201010.csv
+                            Glucose 201011.csv
+                            Glucose 201012.csv
+                            Glucose 201101.csv
+                            Glucose 201102.csv
+                            Glucose 201103.csv
+                            Glucose 201104.csv
+                            Glucose 201105.csv
+                            Glucose 201106.csv
+                            Glucose 201107.csv
+                            Glucose 201108.csv
+                            Glucose 201109.csv
+                            Glucose 201110.csv
+                            Glucose 201111.csv
+                            Glucose 201112.csv
+                            Glucose 201201.csv
+                            Glucose 201202.csv
+                            Glucose 201203.csv
+                            Glucose 201204.csv
+                            Glucose 201205.csv
+                            Glucose 201206.csv
+                            Glucose 201207.csv
+                            Glucose 201208.csv
+                            Glucose 201209.csv
+                            Glucose 201210.csv
+                            Glucose 201211.csv
+                            Glucose 201212.csv
+                            Glucose 201301.csv
+                            Glucose 201302.csv
+                            Glucose 201303.csv
+                            Glucose 201304.csv
+                            Glucose 201305.csv
+                            Glucose 201306.csv
+                            Glucose 201307.csv
+                            Glucose 201308.csv
+                            Glucose 201309.csv
+                            Glucose 201310.csv
+                            Glucose 201311.csv
+                            Glucose 201312.csv
+                            Glucose 201401.csv
+                            Glucose 201402.csv
+                            Glucose 201403.csv
+                            Glucose 201404.csv
+                            Glucose 201405.csv
+                            Glucose 201406.csv
+                            Glucose 201407.csv
+                            Glucose 201408.csv
+                            Glucose 201409.csv
+                            Glucose 201410.csv
+                            Glucose 201411.csv
+                            Glucose 201412.csv
+                            Glucose 201501.csv
+                            Glucose 201502.csv
+                            Glucose 201503.csv
+                            Glucose 201504.csv
+                            Glucose 201505.csv
+                            Glucose 201506.csv
+                            Glucose 201507.csv
+                            Glucose 201508.csv
+                            Glucose 201509.csv
+                            Glucose 201510.csv
+                            Glucose 201511.csv
+                            Glucose 201512.csv
+                            Glucose 201601.csv
+                            Glucose 201602.csv
+                            Glucose 201603.csv
+                            Glucose 201604.csv
+                            Glucose 201605.csv
+                            Glucose 201606.csv
+                            Glucose 201607.csv
+                            Glucose 201608.csv
+                            Glucose 201609.csv
+                            Glucose 201610.csv
+                            Glucose 201611.csv
+                            Glucose 201612.csv
+                            Glucose 201701.csv
+                            Glucose 201702.csv
+                            Glucose 201703.csv
+                            Glucose 201704.csv
+                            Glucose 201705.csv
+                            Glucose 201706.csv
+                            Glucose 201707.csv
+                            Glucose 201708.csv
+                            Glucose 201709.csv
+                            Glucose 201710.csv
+                            Glucose 201711.csv
+                            Glucose 201712.csv
+                            Glucose 201801.csv
+                            Glucose 201802.csv
+                            Glucose 201803.csv
+                            Glucose 201804.csv
+                            Glucose 201805.csv
+                            Glucose 201806.csv
+                            Glucose 201807.csv
+                            Glucose 201808.csv
+                            Glucose 201809.csv
+                            Glucose 201810.csv
+                            Glucose 201811.csv
+                            Glucose 201812.csv
+                            Glucose 201901.csv
+                            Glucose 201902.csv
+                            Glucose 201903.csv
+                            Glucose 201904.csv
+                            Glucose 201905.csv
+                            Glucose 201906.csv
+                            Glucose 201907.csv
+                            Glucose 201908.csv
+                            Glucose 201909.csv
+                            Glucose 201910.csv
+                            Glucose 201911.csv
+                            Glucose 201912.csv
+                            Glucose 202001.csv
+                            Glucose 202002.csv
+                            Glucose 202003.csv
+                            Glucose 202004.csv
+                            Glucose 202005.csv
+                            Glucose 202006.csv
+                            Glucose 202007.csv
+                            Glucose 202008.csv
+                            Glucose 202009.csv
+                            Glucose 202010.csv
+                            Glucose 202011.csv
+                            Glucose 202012.csv
+                            Glucose 202101.csv
+                            Glucose 202102.csv
+                            Glucose 202103.csv
+                            Glucose 202104.csv
+                            Glucose 202105.csv
+                            Glucose 202106.csv
+                            Glucose 202107.csv
+                            Glucose 202108.csv
+                            Glucose 202109.csv
+                            Glucose 202110.csv
+                            Glucose 202111.csv
+                            Glucose 202112.csv
+                            Glucose 202201.csv
+                            Glucose 202202.csv
+                            Glucose 202203.csv
+                            Glucose 202204.csv
+                            Glucose 202205.csv
+                            Glucose 202206.csv
+                            Glucose 202207.csv
+                            Glucose 202208.csv
+                            Glucose 202209.csv
+                            Glucose 202210.csv
+                            Glucose 202211.csv
+                            Glucose 202212.csv
+                            Glucose 202301.csv
+                            Glucose 202302.csv
+                            Glucose 202303.csv
+                            Glucose 202304.csv
+                            Glucose 202305.csv
+                            Glucose 202306.csv
+                            Glucose 202307.csv
+                            Glucose 202308.csv
+                            Glucose 202309.csv
+                            Glucose 202310.csv
+                            Glucose 202311.csv
+                            Glucose 202312.csv
+                            Glucose 202401.csv
+                            Glucose 202402.csv
+                            Glucose 202403.csv
+                            Glucose 202404.csv
+                            Glucose 202405.csv
+                            Glucose 202406.csv
+                            Glucose 202407.csv
+                            Glucose 202408.csv
+                            Glucose 202409.csv
+                            Glucose 202410.csv
+                            Glucose 202411.csv
+                            Glucose 202412.csv
+                            Glucose 202501.csv
+                            Glucose 202502.csv
+                            Glucose 202503.csv
+                            Glucose 202504.csv
+                            Glucose 202505.csv
+                            Glucose 202506.csv
+                            Glucose 202507.csv
+                            Glucose 202508.csv
+                            Glucose 202509.csv
+                            Glucose 202510.csv
+                        Commerce_GoogleData/
+                            README.txt
+                        Daily Readiness/
+                            Daily Readiness README.txt
+                            Daily Readiness User Properties - 2025-10-17.csv
+                        Discover/
+                            Coach README.txt
+                        Fitbit Premium/
+                            Products Export Readme.txt
+                        Global Export Data/
+                            altitude-2025-10-16.json
+                            calories-2025-10-16.json
+                            demographic_vo2_max-2025-10-16.json
+                            distance-2025-10-16.json
+                            estimated_oxygen_variation-2025-10-17.csv
+                            estimated_oxygen_variation-2025-10-18.csv
+                            estimated_oxygen_variation-2025-10-19.csv
+                            estimated_oxygen_variation-2025-10-20.csv
+                            estimated_oxygen_variation-2025-10-21.csv
+                            estimated_oxygen_variation-2025-10-28.csv
+                            heart_rate-2025-10-17.json
+                            heart_rate-2025-10-18.json
+                            heart_rate-2025-10-19.json
+                            heart_rate-2025-10-20.json
+                            heart_rate-2025-10-21.json
+                            heart_rate-2025-10-27.json
+                            heart_rate-2025-10-28.json
+                            height-2025-10-16.json
+                            lightly_active_minutes-2025-10-16.json
+                            moderately_active_minutes-2025-10-16.json
+                            resting_heart_rate-2025-10-16.json
+                            sedentary_minutes-2025-10-16.json
+                            sleep-2025-10-16.json
+                            steps-2025-10-16.json
+                            swim_lengths_data-2025-10-16.json
+                            time_in_heart_rate_zones-2025-10-17.json
+                            time_in_heart_rate_zones-2025-10-18.json
+                            time_in_heart_rate_zones-2025-10-19.json
+                            time_in_heart_rate_zones-2025-10-20.json
+                            time_in_heart_rate_zones-2025-10-21.json
+                            time_in_heart_rate_zones-2025-10-27.json
+                            time_in_heart_rate_zones-2025-10-28.json
+                            very_active_minutes-2025-10-16.json
+                            weight-2025-10-16.json
+                        Guided Programs/
+                            Fitbit Health Programs Data README.txt
+                        Health Fitness Data_GoogleData/
+                            CalibrationStatusForReadinessAndLoad README.txt
+                            CalibrationStatusForReadinessAndLoad.csv
+                            GoalSettingsHistory README.txt
+                            GoalSettingsHistory.csv
+                            UserAppSettingData README.txt
+                            UserAppSettingData.csv
+                            UserDemographicData README.txt
+                            UserDemographicData.csv
+                            UserLegacySettingData README.txt
+                            UserLegacySettingData.csv
+                            UserMBDData README.txt
+                            UserMBDData.csv
+                            UserProfileData README.txt
+                            UserProfileData.csv
+                            UserSleeps README.txt
+                            UserSleepStages README.txt
+                            UserSleepStages_2025-10-17.csv
+                            UserSleeps_2025-10-17.csv
+                        Heart Rate/
+                            Heart Rate Notifications Alerts.csv
+                            Heart Rate Notifications Profile.csv
+                            Heart Rate Notifications README.txt
+                        Heart Rate Variability/
+                            Daily Heart Rate Variability Summary README.txt
+                            Daily Respiratory Rate Summary README.txt
+                            Heart Rate Variability README.txt
+                            Respiratory Rate README.txt
+                        InAppNotifications_GoogleData/
+                            In-app Notification Messages README.txt
+                            in-app-notification-messages.csv
+                        Menstrual Health/
+                            Menstrual Health README.txt
+                            menstrual_health_birth_control.csv
+                            menstrual_health_cycles.csv
+                            menstrual_health_settings.csv
+                            menstrual_health_symptoms.csv
+                        Oxygen Saturation (SpO2)/
+                            Daily SpO2 README.txt
+                            Minute SpO2 README.txt
+                        Paired Devices/
+                            Devices Readme.txt
+                            Devices.csv
+                            iOS App Notification Settings.csv
+                            Scales.csv
+                            Tracker Optional Configuration.csv
+                            Trackers.csv
+                        Physical Activity_GoogleData/
+                            activity_level_2025-10-17.csv
+                            activity_level_readme.txt
+                            altitude_2025-10-17.csv
+                            altitude_readme.txt
+                            body_temperature_2025-10-17.csv
+                            body_temperature_2025-10-18.csv
+                            body_temperature_2025-10-19.csv
+                            body_temperature_2025-10-20.csv
+                            body_temperature_2025-10-21.csv
+                            body_temperature_2025-10-27.csv
+                            body_temperature_2025-10-28.csv
+                            body_temperature_readme.txt
+                            calories_2025-10-17.csv
+                            calories_in_heart_rate_zone_2025-10-17.csv
+                            calories_in_heart_rate_zone_readme.txt
+                            calories_readme.txt
+                            cardio_load_2025-10-17.csv
+                            cardio_load_observed_interval.csv
+                            cardio_load_observed_interval_readme.txt
+                            cardio_load_readme.txt
+                            daily_resting_heart_rate_readme.txt
+                            demographic_vo2max.csv
+                            demographic_vo2max_readme.txt
+                            distance_2025-10-17.csv
+                            distance_readme.txt
+                            floors_2025-10-17.csv
+                            floors_readme.txt
+                            heart_rate_2025-10-17.csv
+                            heart_rate_2025-10-18.csv
+                            heart_rate_2025-10-19.csv
+                            heart_rate_2025-10-20.csv
+                            heart_rate_2025-10-21.csv
+                            heart_rate_2025-10-27.csv
+                            heart_rate_2025-10-28.csv
+                            heart_rate_readme.txt
+                            height.csv
+                            height_readme.txt
+                            steps_2025-10-17.csv
+                            steps_readme.txt
+                            swim_lengths_data_2025-10-17.csv
+                            swim_lengths_data_readme.txt
+                            time_in_heart_rate_zone_2025-10-17.csv
+                            time_in_heart_rate_zone_readme.txt
+                            weight.csv
+                            weight_readme.txt
+                        Sleep Score/
+                            sleep_score.csv
+                        Snore and Noise Detect/
+                            Snore README.txt
+                        Social/
+                            Feed README.txt
+                        Stress Journal/
+                            Stress Journal README.txt
+                        Stress Score/
+                            Stress Score Readme.txt
+                            Stress Score.csv
+                        Temperature/
+                            Device Temperature - 2025-10-17.csv
+                            Device Temperature - 2025-10-18.csv
+                            Device Temperature - 2025-10-19.csv
+                            Device Temperature - 2025-10-20.csv
+                            Device Temperature - 2025-10-21.csv
+                            Device Temperature - 2025-10-27.csv
+                            Device Temperature - 2025-10-28.csv
+                        User Security Data/
+                            User_Email_Audit_Entry.csv
+                            User_Retired_Password.csv
+                        Your Profile/
+                            Media_Avatar Photo.png
+                            Profile.csv
+                            User Profile README.txt
+            pranjal/
+                Takeout/
+                    Fitbit/
+                        Account Changes/
+                            Account_Management_Events_1.csv
+                        Activity Goals/
+                            Activity Goals README.txt
+                            Activity Goals.csv
+                        Atrial Fibrillation PPG/
+                            afib_ppg_README.txt
+                        Biometrics/
+                            Biometrics Readme.txt
+                            Glucose 200706.csv
+                            Glucose 200707.csv
+                            Glucose 200708.csv
+                            Glucose 200709.csv
+                            Glucose 200710.csv
+                            Glucose 200711.csv
+                            Glucose 200712.csv
+                            Glucose 200801.csv
+                            Glucose 200802.csv
+                            Glucose 200803.csv
+                            Glucose 200804.csv
+                            Glucose 200805.csv
+                            Glucose 200806.csv
+                            Glucose 200807.csv
+                            Glucose 200808.csv
+                            Glucose 200809.csv
+                            Glucose 200810.csv
+                            Glucose 200811.csv
+                            Glucose 200812.csv
+                            Glucose 200901.csv
+                            Glucose 200902.csv
+                            Glucose 200903.csv
+                            Glucose 200904.csv
+                            Glucose 200905.csv
+                            Glucose 200906.csv
+                            Glucose 200907.csv
+                            Glucose 200908.csv
+                            Glucose 200909.csv
+                            Glucose 200910.csv
+                            Glucose 200911.csv
+                            Glucose 200912.csv
+                            Glucose 201001.csv
+                            Glucose 201002.csv
+                            Glucose 201003.csv
+                            Glucose 201004.csv
+                            Glucose 201005.csv
+                            Glucose 201006.csv
+                            Glucose 201007.csv
+                            Glucose 201008.csv
+                            Glucose 201009.csv
+                            Glucose 201010.csv
+                            Glucose 201011.csv
+                            Glucose 201012.csv
+                            Glucose 201101.csv
+                            Glucose 201102.csv
+                            Glucose 201103.csv
+                            Glucose 201104.csv
+                            Glucose 201105.csv
+                            Glucose 201106.csv
+                            Glucose 201107.csv
+                            Glucose 201108.csv
+                            Glucose 201109.csv
+                            Glucose 201110.csv
+                            Glucose 201111.csv
+                            Glucose 201112.csv
+                            Glucose 201201.csv
+                            Glucose 201202.csv
+                            Glucose 201203.csv
+                            Glucose 201204.csv
+                            Glucose 201205.csv
+                            Glucose 201206.csv
+                            Glucose 201207.csv
+                            Glucose 201208.csv
+                            Glucose 201209.csv
+                            Glucose 201210.csv
+                            Glucose 201211.csv
+                            Glucose 201212.csv
+                            Glucose 201301.csv
+                            Glucose 201302.csv
+                            Glucose 201303.csv
+                            Glucose 201304.csv
+                            Glucose 201305.csv
+                            Glucose 201306.csv
+                            Glucose 201307.csv
+                            Glucose 201308.csv
+                            Glucose 201309.csv
+                            Glucose 201310.csv
+                            Glucose 201311.csv
+                            Glucose 201312.csv
+                            Glucose 201401.csv
+                            Glucose 201402.csv
+                            Glucose 201403.csv
+                            Glucose 201404.csv
+                            Glucose 201405.csv
+                            Glucose 201406.csv
+                            Glucose 201407.csv
+                            Glucose 201408.csv
+                            Glucose 201409.csv
+                            Glucose 201410.csv
+                            Glucose 201411.csv
+                            Glucose 201412.csv
+                            Glucose 201501.csv
+                            Glucose 201502.csv
+                            Glucose 201503.csv
+                            Glucose 201504.csv
+                            Glucose 201505.csv
+                            Glucose 201506.csv
+                            Glucose 201507.csv
+                            Glucose 201508.csv
+                            Glucose 201509.csv
+                            Glucose 201510.csv
+                            Glucose 201511.csv
+                            Glucose 201512.csv
+                            Glucose 201601.csv
+                            Glucose 201602.csv
+                            Glucose 201603.csv
+                            Glucose 201604.csv
+                            Glucose 201605.csv
+                            Glucose 201606.csv
+                            Glucose 201607.csv
+                            Glucose 201608.csv
+                            Glucose 201609.csv
+                            Glucose 201610.csv
+                            Glucose 201611.csv
+                            Glucose 201612.csv
+                            Glucose 201701.csv
+                            Glucose 201702.csv
+                            Glucose 201703.csv
+                            Glucose 201704.csv
+                            Glucose 201705.csv
+                            Glucose 201706.csv
+                            Glucose 201707.csv
+                            Glucose 201708.csv
+                            Glucose 201709.csv
+                            Glucose 201710.csv
+                            Glucose 201711.csv
+                            Glucose 201712.csv
+                            Glucose 201801.csv
+                            Glucose 201802.csv
+                            Glucose 201803.csv
+                            Glucose 201804.csv
+                            Glucose 201805.csv
+                            Glucose 201806.csv
+                            Glucose 201807.csv
+                            Glucose 201808.csv
+                            Glucose 201809.csv
+                            Glucose 201810.csv
+                            Glucose 201811.csv
+                            Glucose 201812.csv
+                            Glucose 201901.csv
+                            Glucose 201902.csv
+                            Glucose 201903.csv
+                            Glucose 201904.csv
+                            Glucose 201905.csv
+                            Glucose 201906.csv
+                            Glucose 201907.csv
+                            Glucose 201908.csv
+                            Glucose 201909.csv
+                            Glucose 201910.csv
+                            Glucose 201911.csv
+                            Glucose 201912.csv
+                            Glucose 202001.csv
+                            Glucose 202002.csv
+                            Glucose 202003.csv
+                            Glucose 202004.csv
+                            Glucose 202005.csv
+                            Glucose 202006.csv
+                            Glucose 202007.csv
+                            Glucose 202008.csv
+                            Glucose 202009.csv
+                            Glucose 202010.csv
+                            Glucose 202011.csv
+                            Glucose 202012.csv
+                            Glucose 202101.csv
+                            Glucose 202102.csv
+                            Glucose 202103.csv
+                            Glucose 202104.csv
+                            Glucose 202105.csv
+                            Glucose 202106.csv
+                            Glucose 202107.csv
+                            Glucose 202108.csv
+                            Glucose 202109.csv
+                            Glucose 202110.csv
+                            Glucose 202111.csv
+                            Glucose 202112.csv
+                            Glucose 202201.csv
+                            Glucose 202202.csv
+                            Glucose 202203.csv
+                            Glucose 202204.csv
+                            Glucose 202205.csv
+                            Glucose 202206.csv
+                            Glucose 202207.csv
+                            Glucose 202208.csv
+                            Glucose 202209.csv
+                            Glucose 202210.csv
+                            Glucose 202211.csv
+                            Glucose 202212.csv
+                            Glucose 202301.csv
+                            Glucose 202302.csv
+                            Glucose 202303.csv
+                            Glucose 202304.csv
+                            Glucose 202305.csv
+                            Glucose 202306.csv
+                            Glucose 202307.csv
+                            Glucose 202308.csv
+                            Glucose 202309.csv
+                            Glucose 202310.csv
+                            Glucose 202311.csv
+                            Glucose 202312.csv
+                            Glucose 202401.csv
+                            Glucose 202402.csv
+                            Glucose 202403.csv
+                            Glucose 202404.csv
+                            Glucose 202405.csv
+                            Glucose 202406.csv
+                            Glucose 202407.csv
+                            Glucose 202408.csv
+                            Glucose 202409.csv
+                            Glucose 202410.csv
+                            Glucose 202411.csv
+                            Glucose 202412.csv
+                            Glucose 202501.csv
+                            Glucose 202502.csv
+                            Glucose 202503.csv
+                            Glucose 202504.csv
+                            Glucose 202505.csv
+                            Glucose 202506.csv
+                            Glucose 202507.csv
+                            Glucose 202508.csv
+                            Glucose 202509.csv
+                            Glucose 202510.csv
+                        Commerce_GoogleData/
+                            README.txt
+                        Daily Readiness/
+                            Daily Readiness README.txt
+                            Daily Readiness User Properties - 2025-10-29.csv
+                        Discover/
+                            Coach README.txt
+                        Fitbit Premium/
+                            Products Export Readme.txt
+                        Global Export Data/
+                            altitude-2025-10-28.json
+                            calories-2025-10-28.json
+                            distance-2025-10-28.json
+                            estimated_oxygen_variation-2025-10-29.csv
+                            estimated_oxygen_variation-2025-10-30.csv
+                            heart_rate-2025-10-29.json
+                            heart_rate-2025-10-30.json
+                            height-2025-10-28.json
+                            lightly_active_minutes-2025-10-28.json
+                            moderately_active_minutes-2025-10-28.json
+                            resting_heart_rate-2025-10-28.json
+                            sedentary_minutes-2025-10-28.json
+                            steps-2025-10-28.json
+                            time_in_heart_rate_zones-2025-10-29.json
+                            time_in_heart_rate_zones-2025-10-30.json
+                            very_active_minutes-2025-10-28.json
+                            weight-2025-10-28.json
+                        Guided Programs/
+                            Fitbit Health Programs Data README.txt
+                        Health Fitness Data_GoogleData/
+                            CalibrationStatusForReadinessAndLoad README.txt
+                            CalibrationStatusForReadinessAndLoad.csv
+                            GoalSettingsHistory README.txt
+                            GoalSettingsHistory.csv
+                            UserAppSettingData README.txt
+                            UserAppSettingData.csv
+                            UserDemographicData README.txt
+                            UserDemographicData.csv
+                            UserLegacySettingData README.txt
+                            UserLegacySettingData.csv
+                            UserMBDData README.txt
+                            UserMBDData.csv
+                            UserProfileData README.txt
+                            UserProfileData.csv
+                        Heart Rate/
+                            Heart Rate Notifications Alerts.csv
+                            Heart Rate Notifications Profile.csv
+                            Heart Rate Notifications README.txt
+                        Heart Rate Variability/
+                            Daily Heart Rate Variability Summary README.txt
+                            Daily Respiratory Rate Summary README.txt
+                            Heart Rate Variability README.txt
+                            Respiratory Rate README.txt
+                        InAppNotifications_GoogleData/
+                            In-app Notification Messages README.txt
+                            in-app-notification-messages.csv
+                        Menstrual Health/
+                            Menstrual Health README.txt
+                            menstrual_health_birth_control.csv
+                            menstrual_health_cycles.csv
+                            menstrual_health_settings.csv
+                            menstrual_health_symptoms.csv
+                        Oxygen Saturation (SpO2)/
+                            Daily SpO2 README.txt
+                            Minute SpO2 README.txt
+                        Paired Devices/
+                            Devices Readme.txt
+                            Devices.csv
+                            iOS App Notification Settings.csv
+                            Scales.csv
+                            Tracker Optional Configuration.csv
+                            Trackers.csv
+                        Physical Activity_GoogleData/
+                            activity_level_2025-10-29.csv
+                            activity_level_readme.txt
+                            altitude_2025-10-29.csv
+                            altitude_readme.txt
+                            body_temperature_2025-10-29.csv
+                            body_temperature_2025-10-30.csv
+                            body_temperature_2025-10-31.csv
+                            body_temperature_readme.txt
+                            calories_2025-10-29.csv
+                            calories_in_heart_rate_zone_2025-10-29.csv
+                            calories_in_heart_rate_zone_readme.txt
+                            calories_readme.txt
+                            cardio_load_2025-10-29.csv
+                            cardio_load_observed_interval.csv
+                            cardio_load_observed_interval_readme.txt
+                            cardio_load_readme.txt
+                            distance_2025-10-29.csv
+                            distance_readme.txt
+                            floors_2025-10-29.csv
+                            floors_readme.txt
+                            heart_rate_2025-10-29.csv
+                            heart_rate_2025-10-30.csv
+                            heart_rate_2025-10-31.csv
+                            heart_rate_readme.txt
+                            height.csv
+                            height_readme.txt
+                            steps_2025-10-29.csv
+                            steps_readme.txt
+                            time_in_heart_rate_zone_2025-10-29.csv
+                            time_in_heart_rate_zone_readme.txt
+                            weight.csv
+                            weight_readme.txt
+                        Sleep Score/
+                            sleep_score.csv
+                        Snore and Noise Detect/
+                            Snore README.txt
+                        Social/
+                            Feed README.txt
+                        Stress Journal/
+                            Stress Journal README.txt
+                        Stress Score/
+                            Stress Score Readme.txt
+                            Stress Score.csv
+                        Temperature/
+                            Device Temperature - 2025-10-29.csv
+                            Device Temperature - 2025-10-30.csv
+                            Device Temperature - 2025-10-31.csv
+                        User Security Data/
+                            User_Email_Audit_Entry.csv
+                            User_Retired_Password.csv
+                        Your Profile/
+                            Profile.csv
+                            User Profile README.txt
+            sayantan/
+                takeout-20251205T125952Z-3-001/
+                    Takeout/
+                        Fitbit/
+                            Account Changes/
+                                Account_Management_Events_1.csv
+                            Activity Goals/
+                                Activity Goals README.txt
+                                Activity Goals.csv
+                            Atrial Fibrillation PPG/
+                                afib_ppg_README.txt
+                            Biometrics/
+                                Biometrics Readme.txt
+                                Glucose 200706.csv
+                                Glucose 200707.csv
+                                Glucose 200708.csv
+                                Glucose 200709.csv
+                                Glucose 200710.csv
+                                Glucose 200711.csv
+                                Glucose 200712.csv
+                                Glucose 200801.csv
+                                Glucose 200802.csv
+                                Glucose 200803.csv
+                                Glucose 200804.csv
+                                Glucose 200805.csv
+                                Glucose 200806.csv
+                                Glucose 200807.csv
+                                Glucose 200808.csv
+                                Glucose 200809.csv
+                                Glucose 200810.csv
+                                Glucose 200811.csv
+                                Glucose 200812.csv
+                                Glucose 200901.csv
+                                Glucose 200902.csv
+                                Glucose 200903.csv
+                                Glucose 200904.csv
+                                Glucose 200905.csv
+                                Glucose 200906.csv
+                                Glucose 200907.csv
+                                Glucose 200908.csv
+                                Glucose 200909.csv
+                                Glucose 200910.csv
+                                Glucose 200911.csv
+                                Glucose 200912.csv
+                                Glucose 201001.csv
+                                Glucose 201002.csv
+                                Glucose 201003.csv
+                                Glucose 201004.csv
+                                Glucose 201005.csv
+                                Glucose 201006.csv
+                                Glucose 201007.csv
+                                Glucose 201008.csv
+                                Glucose 201009.csv
+                                Glucose 201010.csv
+                                Glucose 201011.csv
+                                Glucose 201012.csv
+                                Glucose 201101.csv
+                                Glucose 201102.csv
+                                Glucose 201103.csv
+                                Glucose 201104.csv
+                                Glucose 201105.csv
+                                Glucose 201106.csv
+                                Glucose 201107.csv
+                                Glucose 201108.csv
+                                Glucose 201109.csv
+                                Glucose 201110.csv
+                                Glucose 201111.csv
+                                Glucose 201112.csv
+                                Glucose 201201.csv
+                                Glucose 201202.csv
+                                Glucose 201203.csv
+                                Glucose 201204.csv
+                                Glucose 201205.csv
+                                Glucose 201206.csv
+                                Glucose 201207.csv
+                                Glucose 201208.csv
+                                Glucose 201209.csv
+                                Glucose 201210.csv
+                                Glucose 201211.csv
+                                Glucose 201212.csv
+                                Glucose 201301.csv
+                                Glucose 201302.csv
+                                Glucose 201303.csv
+                                Glucose 201304.csv
+                                Glucose 201305.csv
+                                Glucose 201306.csv
+                                Glucose 201307.csv
+                                Glucose 201308.csv
+                                Glucose 201309.csv
+                                Glucose 201310.csv
+                                Glucose 201311.csv
+                                Glucose 201312.csv
+                                Glucose 201401.csv
+                                Glucose 201402.csv
+                                Glucose 201403.csv
+                                Glucose 201404.csv
+                                Glucose 201405.csv
+                                Glucose 201406.csv
+                                Glucose 201407.csv
+                                Glucose 201408.csv
+                                Glucose 201409.csv
+                                Glucose 201410.csv
+                                Glucose 201411.csv
+                                Glucose 201412.csv
+                                Glucose 201501.csv
+                                Glucose 201502.csv
+                                Glucose 201503.csv
+                                Glucose 201504.csv
+                                Glucose 201505.csv
+                                Glucose 201506.csv
+                                Glucose 201507.csv
+                                Glucose 201508.csv
+                                Glucose 201509.csv
+                                Glucose 201510.csv
+                                Glucose 201511.csv
+                                Glucose 201512.csv
+                                Glucose 201601.csv
+                                Glucose 201602.csv
+                                Glucose 201603.csv
+                                Glucose 201604.csv
+                                Glucose 201605.csv
+                                Glucose 201606.csv
+                                Glucose 201607.csv
+                                Glucose 201608.csv
+                                Glucose 201609.csv
+                                Glucose 201610.csv
+                                Glucose 201611.csv
+                                Glucose 201612.csv
+                                Glucose 201701.csv
+                                Glucose 201702.csv
+                                Glucose 201703.csv
+                                Glucose 201704.csv
+                                Glucose 201705.csv
+                                Glucose 201706.csv
+                                Glucose 201707.csv
+                                Glucose 201708.csv
+                                Glucose 201709.csv
+                                Glucose 201710.csv
+                                Glucose 201711.csv
+                                Glucose 201712.csv
+                                Glucose 201801.csv
+                                Glucose 201802.csv
+                                Glucose 201803.csv
+                                Glucose 201804.csv
+                                Glucose 201805.csv
+                                Glucose 201806.csv
+                                Glucose 201807.csv
+                                Glucose 201808.csv
+                                Glucose 201809.csv
+                                Glucose 201810.csv
+                                Glucose 201811.csv
+                                Glucose 201812.csv
+                                Glucose 201901.csv
+                                Glucose 201902.csv
+                                Glucose 201903.csv
+                                Glucose 201904.csv
+                                Glucose 201905.csv
+                                Glucose 201906.csv
+                                Glucose 201907.csv
+                                Glucose 201908.csv
+                                Glucose 201909.csv
+                                Glucose 201910.csv
+                                Glucose 201911.csv
+                                Glucose 201912.csv
+                                Glucose 202001.csv
+                                Glucose 202002.csv
+                                Glucose 202003.csv
+                                Glucose 202004.csv
+                                Glucose 202005.csv
+                                Glucose 202006.csv
+                                Glucose 202007.csv
+                                Glucose 202008.csv
+                                Glucose 202009.csv
+                                Glucose 202010.csv
+                                Glucose 202011.csv
+                                Glucose 202012.csv
+                                Glucose 202101.csv
+                                Glucose 202102.csv
+                                Glucose 202103.csv
+                                Glucose 202104.csv
+                                Glucose 202105.csv
+                                Glucose 202106.csv
+                                Glucose 202107.csv
+                                Glucose 202108.csv
+                                Glucose 202109.csv
+                                Glucose 202110.csv
+                                Glucose 202111.csv
+                                Glucose 202112.csv
+                                Glucose 202201.csv
+                                Glucose 202202.csv
+                                Glucose 202203.csv
+                                Glucose 202204.csv
+                                Glucose 202205.csv
+                                Glucose 202206.csv
+                                Glucose 202207.csv
+                                Glucose 202208.csv
+                                Glucose 202209.csv
+                                Glucose 202210.csv
+                                Glucose 202211.csv
+                                Glucose 202212.csv
+                                Glucose 202301.csv
+                                Glucose 202302.csv
+                                Glucose 202303.csv
+                                Glucose 202304.csv
+                                Glucose 202305.csv
+                                Glucose 202306.csv
+                                Glucose 202307.csv
+                                Glucose 202308.csv
+                                Glucose 202309.csv
+                                Glucose 202310.csv
+                                Glucose 202311.csv
+                                Glucose 202312.csv
+                                Glucose 202401.csv
+                                Glucose 202402.csv
+                                Glucose 202403.csv
+                                Glucose 202404.csv
+                                Glucose 202405.csv
+                                Glucose 202406.csv
+                                Glucose 202407.csv
+                                Glucose 202408.csv
+                                Glucose 202409.csv
+                                Glucose 202410.csv
+                                Glucose 202411.csv
+                                Glucose 202412.csv
+                                Glucose 202501.csv
+                                Glucose 202502.csv
+                                Glucose 202503.csv
+                                Glucose 202504.csv
+                                Glucose 202505.csv
+                                Glucose 202506.csv
+                                Glucose 202507.csv
+                                Glucose 202508.csv
+                                Glucose 202509.csv
+                                Glucose 202510.csv
+                                Glucose 202511.csv
+                                Glucose 202512.csv
+                            Commerce_GoogleData/
+                                README.txt
+                            Daily Readiness/
+                                Daily Readiness README.txt
+                                Daily Readiness User Properties - 2025-11-20.csv
+                            Discover/
+                                Coach README.txt
+                            Fitbit Premium/
+                                Products Export Readme.txt
+                            Global Export Data/
+                                altitude-2025-11-19.json
+                                calories-2025-11-19.json
+                                demographic_vo2_max-2025-11-19.json
+                                distance-2025-11-19.json
+                                estimated_oxygen_variation-2025-11-20.csv
+                                estimated_oxygen_variation-2025-11-21.csv
+                                heart_rate-2025-11-20.json
+                                heart_rate-2025-11-21.json
+                                height-2025-11-19.json
+                                lightly_active_minutes-2025-11-19.json
+                                moderately_active_minutes-2025-11-19.json
+                                resting_heart_rate-2025-11-19.json
+                                sedentary_minutes-2025-11-19.json
+                                steps-2025-11-19.json
+                                swim_lengths_data-2025-11-19.json
+                                time_in_heart_rate_zones-2025-11-20.json
+                                time_in_heart_rate_zones-2025-11-21.json
+                                very_active_minutes-2025-11-19.json
+                                weight-2025-11-19.json
+                            Guided Programs/
+                                Fitbit Health Programs Data README.txt
+                            Health Fitness Data_GoogleData/
+                                CalibrationStatusForReadinessAndLoad README.txt
+                                CalibrationStatusForReadinessAndLoad.csv
+                                GoalSettingsHistory README.txt
+                                GoalSettingsHistory.csv
+                                UserAppSettingData README.txt
+                                UserAppSettingData.csv
+                                UserDemographicData README.txt
+                                UserDemographicData.csv
+                                UserLegacySettingData README.txt
+                                UserLegacySettingData.csv
+                                UserMBDData README.txt
+                                UserMBDData.csv
+                                UserProfileData README.txt
+                                UserProfileData.csv
+                            Heart Rate/
+                                Heart Rate Notifications Alerts.csv
+                                Heart Rate Notifications Profile.csv
+                                Heart Rate Notifications README.txt
+                            Heart Rate Variability/
+                                Daily Heart Rate Variability Summary README.txt
+                                Daily Respiratory Rate Summary README.txt
+                                Heart Rate Variability README.txt
+                                Respiratory Rate README.txt
+                            Menstrual Health/
+                                Menstrual Health README.txt
+                                menstrual_health_birth_control.csv
+                                menstrual_health_cycles.csv
+                                menstrual_health_settings.csv
+                                menstrual_health_symptoms.csv
+                            Oxygen Saturation (SpO2)/
+                                Daily SpO2 README.txt
+                                Minute SpO2 README.txt
+                            Paired Devices/
+                                Devices Readme.txt
+                                Devices.csv
+                                iOS App Notification Settings.csv
+                                Scales.csv
+                                Tracker Optional Configuration.csv
+                                Trackers.csv
+                            Physical Activity_GoogleData/
+                                active_minutes_2025-11-20.csv
+                                active_minutes_readme.txt
+                                activity_level_2025-11-20.csv
+                                activity_level_readme.txt
+                                altitude_2025-11-20.csv
+                                altitude_readme.txt
+                                body_temperature_2025-11-20.csv
+                                body_temperature_2025-11-21.csv
+                                body_temperature_readme.txt
+                                calories_2025-11-20.csv
+                                calories_2025-12-01.csv
+                                calories_in_heart_rate_zone_2025-11-20.csv
+                                calories_in_heart_rate_zone_2025-12-01.csv
+                                calories_in_heart_rate_zone_readme.txt
+                                calories_readme.txt
+                                cardio_load_2025-11-20.csv
+                                cardio_load_observed_interval.csv
+                                cardio_load_observed_interval_readme.txt
+                                cardio_load_readme.txt
+                                distance_2025-11-20.csv
+                                distance_readme.txt
+                                floors_2025-11-20.csv
+                                floors_readme.txt
+                                heart_rate_2025-11-20.csv
+                                heart_rate_2025-11-21.csv
+                                heart_rate_readme.txt
+                                height_readme.txt
+                                steps_2025-11-20.csv
+                                steps_readme.txt
+                                swim_lengths_data_2025-11-20.csv
+                                swim_lengths_data_readme.txt
+                                time_in_heart_rate_zone_2025-11-20.csv
+                                time_in_heart_rate_zone_readme.txt
+                                weight.csv
+                                weight_readme.txt
+                            Sleep Score/
+                                sleep_score.csv
+                            Snore and Noise Detect/
+                                Snore README.txt
+                            Social/
+                                Feed README.txt
+                            Stress Journal/
+                                Stress Journal README.txt
+                            Stress Score/
+                                Stress Score Readme.txt
+                                Stress Score.csv
+                            Temperature/
+                                Device Temperature - 2025-11-20.csv
+                                Device Temperature - 2025-11-21.csv
+                            User Security Data/
+                                User_Email_Audit_Entry.csv
+                                User_Retired_Password.csv
+                            Your Profile/
+                                Media_Avatar Photo.png
+                                Profile.csv
+                                User Profile README.txt
+        K-EmoCon/
+            e4_data.tar
+            emotion_annotations.tar.gz
+            extracted/
+                e4_data/
+                    1/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    10/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    11/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    12/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    13/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    14/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    15/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    16/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    17/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    18/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    19/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    20/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    21/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    22/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    23/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    24/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    25/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    26/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_TEMP.csv
+                    27/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    28/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    29/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    30/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    31/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    32/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    4/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    5/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    8/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                    9/
+                        E4_ACC.csv
+                        E4_BVP.csv
+                        E4_EDA.csv
+                        E4_HR.csv
+                        E4_IBI.csv
+                        E4_TEMP.csv
+                emotion_annotations/
+                    aggregated_external_annotations/
+                        P1.external.csv
+                        P10.external.csv
+                        P11.external.csv
+                        P12.external.csv
+                        P13.external.csv
+                        P14.external.csv
+                        P15.external.csv
+                        P16.external.csv
+                        P17.external.csv
+                        P18.external.csv
+                        P19.external.csv
+                        P2.external.csv
+                        P20.external.csv
+                        P21.external.csv
+                        P22.external.csv
+                        P23.external.csv
+                        P24.external.csv
+                        P25.external.csv
+                        P26.external.csv
+                        P27.external.csv
+                        P28.external.csv
+                        P29.external.csv
+                        P3.external.csv
+                        P30.external.csv
+                        P31.external.csv
+                        P32.external.csv
+                        P4.external.csv
+                        P5.external.csv
+                        P6.external.csv
+                        P7.external.csv
+                        P8.external.csv
+                        P9.external.csv
+                    external_annotations/
+                        P1.R1.csv
+                        P1.R2.csv
+                        P1.R3.csv
+                        P1.R4.csv
+                        P1.R5.csv
+                        P10.R1.csv
+                        P10.R2.csv
+                        P10.R3.csv
+                        P10.R4.csv
+                        P10.R5.csv
+                        P11.R1.csv
+                        P11.R2.csv
+                        P11.R3.csv
+                        P11.R4.csv
+                        P11.R5.csv
+                        P12.R1.csv
+                        P12.R2.csv
+                        P12.R3.csv
+                        P12.R4.csv
+                        P12.R5.csv
+                        P13.R1.csv
+                        P13.R2.csv
+                        P13.R3.csv
+                        P13.R4.csv
+                        P13.R5.csv
+                        P14.R1.csv
+                        P14.R2.csv
+                        P14.R3.csv
+                        P14.R4.csv
+                        P14.R5.csv
+                        P15.R1.csv
+                        P15.R2.csv
+                        P15.R3.csv
+                        P15.R4.csv
+                        P15.R5.csv
+                        P16.R1.csv
+                        P16.R2.csv
+                        P16.R3.csv
+                        P16.R4.csv
+                        P16.R5.csv
+                        P17.R1.csv
+                        P17.R2.csv
+                        P17.R3.csv
+                        P17.R4.csv
+                        P17.R5.csv
+                        P18.R1.csv
+                        P18.R2.csv
+                        P18.R3.csv
+                        P18.R4.csv
+                        P18.R5.csv
+                        P19.R1.csv
+                        P19.R2.csv
+                        P19.R3.csv
+                        P19.R4.csv
+                        P19.R5.csv
+                        P2.R1.csv
+                        P2.R2.csv
+                        P2.R3.csv
+                        P2.R4.csv
+                        P2.R5.csv
+                        P20.R1.csv
+                        P20.R2.csv
+                        P20.R3.csv
+                        P20.R4.csv
+                        P20.R5.csv
+                        P21.R1.csv
+                        P21.R2.csv
+                        P21.R3.csv
+                        P21.R4.csv
+                        P21.R5.csv
+                        P22.R1.csv
+                        P22.R2.csv
+                        P22.R3.csv
+                        P22.R4.csv
+                        P22.R5.csv
+                        P23.R1.csv
+                        P23.R2.csv
+                        P23.R3.csv
+                        P23.R4.csv
+                        P23.R5.csv
+                        P24.R1.csv
+                        P24.R2.csv
+                        P24.R3.csv
+                        P24.R4.csv
+                        P24.R5.csv
+                        P25.R1.csv
+                        P25.R2.csv
+                        P25.R3.csv
+                        P25.R4.csv
+                        P25.R5.csv
+                        P26.R1.csv
+                        P26.R2.csv
+                        P26.R3.csv
+                        P26.R4.csv
+                        P26.R5.csv
+                        P27.R1.csv
+                        P27.R2.csv
+                        P27.R3.csv
+                        P27.R4.csv
+                        P27.R5.csv
+                        P28.R1.csv
+                        P28.R2.csv
+                        P28.R3.csv
+                        P28.R4.csv
+                        P28.R5.csv
+                        P29.R1.csv
+                        P29.R2.csv
+                        P29.R3.csv
+                        P29.R4.csv
+                        P29.R5.csv
+                        P3.R1.csv
+                        P3.R2.csv
+                        P3.R3.csv
+                        P3.R4.csv
+                        P3.R5.csv
+                        P30.R1.csv
+                        P30.R2.csv
+                        P30.R3.csv
+                        P30.R4.csv
+                        P30.R5.csv
+                        P31.R1.csv
+                        P31.R2.csv
+                        P31.R3.csv
+                        P31.R4.csv
+                        P31.R5.csv
+                        P32.R1.csv
+                        P32.R2.csv
+                        P32.R3.csv
+                        P32.R4.csv
+                        P32.R5.csv
+                        P4.R1.csv
+                        P4.R2.csv
+                        P4.R3.csv
+                        P4.R4.csv
+                        P4.R5.csv
+                        P5.R1.csv
+                        P5.R2.csv
+                        P5.R3.csv
+                        P5.R4.csv
+                        P5.R5.csv
+                        P6.R1.csv
+                        P6.R2.csv
+                        P6.R3.csv
+                        P6.R4.csv
+                        P6.R5.csv
+                        P7.R1.csv
+                        P7.R2.csv
+                        P7.R3.csv
+                        P7.R4.csv
+                        P7.R5.csv
+                        P8.R1.csv
+                        P8.R2.csv
+                        P8.R3.csv
+                        P8.R4.csv
+                        P8.R5.csv
+                        P9.R1.csv
+                        P9.R2.csv
+                        P9.R3.csv
+                        P9.R4.csv
+                        P9.R5.csv
+                    partner_annotations/
+                        P1.partner.csv
+                        P10.partner.csv
+                        P11.partner.csv
+                        P12.partner.csv
+                        P13.partner.csv
+                        P14.partner.csv
+                        P15.partner.csv
+                        P16.partner.csv
+                        P17.partner.csv
+                        P18.partner.csv
+                        P19.partner.csv
+                        P2.partner.csv
+                        P20.partner.csv
+                        P21.partner.csv
+                        P22.partner.csv
+                        P23.partner.csv
+                        P24.partner.csv
+                        P25.partner.csv
+                        P26.partner.csv
+                        P27.partner.csv
+                        P28.partner.csv
+                        P29.partner.csv
+                        P3.partner.csv
+                        P30.partner.csv
+                        P31.partner.csv
+                        P32.partner.csv
+                        P4.partner.csv
+                        P5.partner.csv
+                        P6.partner.csv
+                        P7.partner.csv
+                        P8.partner.csv
+                        P9.partner.csv
+                    self_annotations/
+                        P1.self.csv
+                        P10.self.csv
+                        P11.self.csv
+                        P12.self.csv
+                        P13.self.csv
+                        P14.self.csv
+                        P15.self.csv
+                        P16.self.csv
+                        P17.self.csv
+                        P18.self.csv
+                        P19.self.csv
+                        P2.self.csv
+                        P20.self.csv
+                        P21.self.csv
+                        P22.self.csv
+                        P23.self.csv
+                        P24.self.csv
+                        P25.self.csv
+                        P26.self.csv
+                        P27.self.csv
+                        P28.self.csv
+                        P29.self.csv
+                        P3.self.csv
+                        P30.self.csv
+                        P31.self.csv
+                        P32.self.csv
+                        P4.self.csv
+                        P5.self.csv
+                        P6.self.csv
+                        P7.self.csv
+                        P8.self.csv
+                        P9.self.csv

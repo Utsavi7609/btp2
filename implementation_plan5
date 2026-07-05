@@ -1,0 +1,21 @@
+# BTP Thesis: Phase 3 (Validation & Export)
+
+This plan outlines the final steps for user verification of the "Drift" hypothesis and the thesis document finalization.
+
+## Proposed Changes
+
+### 1. High-Precision Full Run (Finalization)
+- Resume and finalize the **Shifted V3 Qwen** inference to process all 1,495 rows.
+- **Goal:** Reach a H1 (All Match) baseline of >80 rows for Video, proving the impact of the stimulus-period heart rate window.
+
+### 2. Scientific Thesis Report (Comprehensive)
+- Produce a doctoral-level report ([BTP_Comprehensive_Thesis_Report.md](file:///D:/BTP/btp2/salmamaterials/BTP_Comprehensive_Thesis_Report.md)) combining:
+    - K-EmoCon Clinical Validation (few-shot results).
+    - In-House Shifted Window Evidence.
+    - Mathematical definition of Affective Drift ($P = E \neq I$).
+    - 12-Table Master Matrix ($P, E, I, B$) for all thresholds.
+
+## Verification Plan
+- [ ] **Shifted Window Proof:** Ensure the final 1,495-row inference displays H1 (All Match) baseline reaching >80 rows for Video.
+- [ ] **Drift Ratio Analysis:** Confirm that $B$ aligns with $P$ (Consensus) more frequently than $I$ (Subjective) in the noisy In-House data.
+- [ ] **MAE 0.12 Target:** Validate that Shifted Qwen achieves the targeted Random Forest precision.

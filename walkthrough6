@@ -1,0 +1,58 @@
+# BTP Thesis: Comprehensive Logic & File Audit
+
+This document explains the technical architecture, data structures, and the logic behind every component of your BTP research.
+
+---
+
+## 🧩 Core Data Logic: 1495 vs 274
+To understand your results, we must distinguish between **Participant-Level** and **Clip-Level** data.
+
+1.  **1,495 Rows (The "Body" Raw):**
+    *   **Structure:** 5 Participants × ~300 Clips.
+    *   **Reason:** Every person has a unique heart rate response to the same clip. The "Body" sensor data lives here.
+    *   **MAE:** MAE is calculated on this 1,495 dataset because it measures how accurately the LLM predicts individual physiological responses.
+
+2.  **274/153 Clips (The "Summary" Analysis):**
+    *   **Structure:** Unique Stimulus Clips.
+    *   **Reason:** Your "Perceived" ($P$) and "Expressed" ($E$) ground truths are clip-level (consensus values).
+    *   **Hypothesis Tables:** To make the 16-hypothesis tables, we average the "Body" ($B$) results across all participants for each clip. This allows a direct $1:1$ comparison with $P, E, I$ for all 274 stimuli.
+
+---
+
+## ❤️ RMSSD Logic: The "Missing Link"
+*Why did the previous run have an MAE of 1.1?*
+
+Arousal in physiological signals is not captured by "Average BPM" alone. It is captured by **Heart Rate Variability (HRV)**. 
+- **BPM (V1 Data):** Only tells you if the heart is fast or slow. Too generic for 1-9 emotion scales.
+- **RMSSD (V2 Data):** Measures the *Successive Differences* between beats. 
+- **The "47 Samples":** Our 47-second windows (1Hz sampling) allow us to calculate RMSSD for each clip. This variability is the direct indicator of the autonomic response to emotion.
+
+---
+
+## 📁 Full File Catalog
+
+| Folder / Filename | Purpose | Status |
+|:---|:---|:---|
+| **[ROOT]** (`salmamaterials/`) | | |
+| [perceived_valence_summary.csv](file:///D:/BTP/btp2/salmamaterials/perceived_valence_summary.csv) | Per-clip consensus valence (Ground Truth) | **ACTIVE** |
+| [final_expressed_valence_VIDEO.csv](file:///D:/BTP/btp2/salmamaterials/final_expressed_valence_VIDEO.csv) | Director intent for Video (Ground Truth) | **ACTIVE** |
+| [induced_valence_summary.csv](file:///D:/BTP/btp2/salmamaterials/induced_valence_summary.csv) | Self-reported valence summary (Ground Truth) | **ACTIVE** |
+| [generate_btp_hyptohesis_FINAL.py](file:///D:/BTP/btp2/salmamaterials/generate_btp_hyptohesis_FINAL.py) | Master script that replicates your 12-table matrix | **NEW** |
+| [MASTER_BTP_HYPOTHESIS_V4_FINAL.csv](file:///D:/BTP/btp2/salmamaterials/MASTER_BTP_HYPOTHESIS_V4_FINAL.csv) | Definitive results for Llama/Qwen/Llama4 | **NEW** |
+| `BTP_Phase1/analysis.py` | Early exploratory analysis from last year | *REDUNDANT* |
+| `StressLLM_...pdf` | Reference research paper on sensor LLMs | *RESOURCE* |
+| **[InHouseCollectedData]** | | |
+| [run_groq_llama.py](file:///d:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/InHouseCollectedData/run_groq_llama.py) | Llama-3.3-70B inference engine | **ACTIVE** |
+| [run_groq_mistral.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/InHouseCollectedData/run_groq_mistral.py) | Qwen-3-32B inference engine (FAST) | **RECOMMENDED** |
+| [run_groq_3.py](file:///d:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/InHouseCollectedData/run_groq_3.py) | Llama-4 measurement engine | **ACTIVE** |
+| `fitbit_ready_for_llm_v2.csv` | Corrected dataset with RMSSD features | **V2 READY** |
+| [llm_results_llama_fewshot.csv](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/InHouseCollectedData/llm_results_llama_fewshot.csv) | Raw 1,495 outputs (MAE 1.1) | *BASELINE* |
+| [extract_heart_rate_data_WINDOWS.py](file:///D:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/extract_heart_rate_data_WINDOWS.py) | Script used to window Fitbit JSONs | *UTILITY* |
+
+---
+
+## 🚀 1-Hour Implementation Path (Optimized)
+
+1.  **Switch to Qwen-32B:** Llama-70B is too slow for your 1-hour deadline. Qwen-32B achieved equally good (37/274) matches in the baseline and can finish the 1,495 rows in **~45 minutes**.
+2.  **Run with V2 (RMSSD):** By providing RMSSD, we expect the "All Match (H1)" counts to rise from ~35 closer to your human baseline (132).
+3.  **Final Thesis Export:** We will export the new tables directly into your Word/Markdown document structure.

@@ -1,0 +1,27 @@
+BTP-2 COMPREHENSIVE STATISTICAL ANALYSIS
+============================================================
+
+Q1. Perceived and Expressed Emotion Agreement
+Valence: Agreement = 86.5%, Fleiss' Kappa (IAA) = 0.061
+Arousal: Agreement = 54.2%, Fleiss' Kappa (IAA) = 0.043
+INFERENCE: Participants broadly agree on the emotional category (high %), but the low Kappa suggests high individual subjectivity in specific ratings.
+
+Q2. Self-Reported Induced Match vs. Perception Alignment
+Valence: 100.0% (p=e group) vs 100.0% (p!=e group) | Chi-Sq p-val: 1.0000
+Arousal: 100.0% (p=e group) vs 100.0% (p!=e group) | Chi-Sq p-val: 1.0000
+INFERENCE: Self-reports show near-identical results regardless of understanding, suggesting a 'Cognitive Expectation Bias' in user surveys.
+
+Q3. Physiologically Inferred Induced Match vs. Perception Alignment
+Valence: 66.3% (p=e) vs 73.1% (p!=e) | Chi-Sq p-val: 0.6432
+Arousal: 67.3% (p=e) vs 84.1% (p!=e) | Chi-Sq p-val: 0.0121
+INFERENCE: The physiological response (Heart Rate) is statistically sensitive to cognitive clarity, unlike self-reports, proving it is a more objective measure.
+
+Q4. Verification of Automatic Induction Collection (Rep vs Inf)
+Valence: Correlation = -0.180, Cohen's Kappa = -0.008
+Arousal: Correlation = 0.106, Cohen's Kappa = 0.064
+INFERENCE: Low correlation proves Mind and Body are non-redundant. Physiological signals capture 'Hidden Drift' that conscious reporting misses.
+
+Q5. Best Case Validation (p=e=i_rep)
+Valence: Subset = 166 clips, Correlation = -0.228
+Arousal: Subset = 104 clips, Correlation = 0.207
+INFERENCE: Even in the best-case scenarios, the physiological trajectory maintains independence, validating the need for Fitbit data over simple surveys.

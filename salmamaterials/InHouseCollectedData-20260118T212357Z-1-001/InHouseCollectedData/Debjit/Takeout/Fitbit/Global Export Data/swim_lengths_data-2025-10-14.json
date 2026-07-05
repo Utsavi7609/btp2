@@ -1,0 +1,17 @@
+[{
+  "dateTime" : "10/15/25 14:33:14",
+  "value" : {
+    "lapDurationSec" : 13,
+    "strokeCount" : 11,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+},{
+  "dateTime" : "10/15/25 14:33:33",
+  "value" : {
+    "lapDurationSec" : 14,
+    "strokeCount" : 13,
+    "swimStrokeType" : "UNKNOWN",
+    "swimAlgorithmType" : "EUCLID"
+  }
+}]

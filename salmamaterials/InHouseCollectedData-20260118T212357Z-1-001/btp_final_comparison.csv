@@ -1,0 +1,7 @@
+Model,Method,Valence MAE,Arousal MAE,Valence R,Arousal R,Valence Acc ±1,Arousal Acc ±1
+Llama-3.3-70B,Zero-Shot,1.201,1.066,-0.175,0.023,63.8%,71.6%
+Llama-3.3-70B,Few-Shot (3-Shot),1.160,1.358,-0.089,0.045,68.9%,58.3%
+Qwen3-32B,Zero-Shot,1.056,1.032,-0.071,0.000,70.2%,72.6%
+Qwen3-32B,Few-Shot (3-Shot),1.060,1.225,-0.064,0.022,72.6%,64.5%
+Llama-4-Scout,Zero-Shot,1.053,1.105,-0.112,-0.008,72.8%,70.2%
+Llama-4-Scout,Few-Shot (3-Shot),1.051,1.328,-0.052,0.036,75.1%,60.9%

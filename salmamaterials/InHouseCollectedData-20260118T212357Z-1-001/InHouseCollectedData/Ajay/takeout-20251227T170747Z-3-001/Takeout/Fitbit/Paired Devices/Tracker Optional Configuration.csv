@@ -1,0 +1,3 @@
+tracker_id,enabled_notification_types,on_right_hand,clock_face,enable_inactivity_alerts,last_updated_ia_time,last_reboot_time,payments_enabled,last_successful_wifi_connection_time,last_successful_wifi_connectionipv4addr,last_successful_wifi_connectionipv6addr,last_successful_wifi_connectionssid,live_data_disabled
+2980719432,"[TEXT_MESSAGE, INCOMING_CALL, APP_NOTIFICATIONS, CALENDAR]",false,,,,,false,2025-12-09T11:03:43.000Z,/192.168.137.96,,TP-E14 3525,
+2968118814,,false,,,,,false,,,,,

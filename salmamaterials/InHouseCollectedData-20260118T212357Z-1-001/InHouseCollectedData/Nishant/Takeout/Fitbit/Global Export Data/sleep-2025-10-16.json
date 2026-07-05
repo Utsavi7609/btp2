@@ -1,0 +1,54 @@
+[{
+  "logId" : 50779945046,
+  "dateOfSleep" : "2025-10-28",
+  "startTime" : "2025-10-28T10:31:00.000",
+  "endTime" : "2025-10-28T11:37:30.000",
+  "duration" : 3960000,
+  "minutesToFallAsleep" : 0,
+  "minutesAsleep" : 62,
+  "minutesAwake" : 4,
+  "minutesAfterWakeup" : 0,
+  "timeInBed" : 66,
+  "efficiency" : 94,
+  "type" : "classic",
+  "infoCode" : 2,
+  "logType" : "auto_detected",
+  "levels" : {
+    "summary" : {
+      "restless" : {
+        "count" : 2,
+        "minutes" : 4
+      },
+      "awake" : {
+        "count" : 0,
+        "minutes" : 0
+      },
+      "asleep" : {
+        "count" : 0,
+        "minutes" : 62
+      }
+    },
+    "data" : [{
+      "dateTime" : "2025-10-28T10:31:00.000",
+      "level" : "asleep",
+      "seconds" : 2580
+    },{
+      "dateTime" : "2025-10-28T11:14:00.000",
+      "level" : "restless",
+      "seconds" : 120
+    },{
+      "dateTime" : "2025-10-28T11:16:00.000",
+      "level" : "asleep",
+      "seconds" : 300
+    },{
+      "dateTime" : "2025-10-28T11:21:00.000",
+      "level" : "restless",
+      "seconds" : 120
+    },{
+      "dateTime" : "2025-10-28T11:23:00.000",
+      "level" : "asleep",
+      "seconds" : 840
+    }]
+  },
+  "mainSleep" : true
+}]

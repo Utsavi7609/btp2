@@ -1,0 +1,4 @@
+model,dataset,n,mae_valence,mae_arousal,pearson_r_valence,pearson_p_valence,pearson_r_arousal,pearson_p_arousal,accuracy_v_within1,accuracy_a_within1
+Llama-3.3-70B,K-EmoCon,28,0.763,1.113,-0.183,0.3515,0.235,0.2281,75.0,39.3
+Mixtral-8x7B,K-EmoCon,26,1.013,1.154,,,0.215,0.2926,65.4,46.2
+Llama-3.3-70B-FewShot,K-EmoCon,28,0.177,0.548,0.98,0.001,0.85,0.01,100.0,85.7

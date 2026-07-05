@@ -1,0 +1,270 @@
+# BTP-2: Switching Analysis Pipeline — Implementation Plan
+
+---
+
+## Critical Clarification: Two Different I2 Datasets
+
+Before anything else — you asked "if we're not using the Llama file, what was the point?" — we ARE using it, just in a **different analysis**.
+
+| Dataset | What It Is | Used For |
+|---|---|---|
+| [inferred_valence_summary_qwen_FS.csv](file:///d:/BTP/btp2/salmamaterials/inferred_valence_summary_qwen_FS.csv) | I2 **per movie clip** — Fitbit data recorded while each user was physically watching the 274 clips | **Switching Analysis** (this plan) |
+| [inferred_emotions_enhanced_llama.csv](file:///d:/BTP/btp2/salmamaterials/InHouseCollectedData-20260118T212357Z-1-001/inferred_emotions_enhanced_llama.csv) | I2 **per 2-hour background window** — Ajay, Nishant etc. going about their daily lives (368 windows) | **Affective Drift Analysis** (next plan — comparing daily background emotion vs self-reported) |
+
+These are two **completely different experiments** feeding two different chapters of your thesis. The Llama file is absolutely essential — just not here.
+
+---
+
+## All Input Files (Exact Paths)
+
+All source files live in **`d:\BTP\btp2\salmamaterials\`**
+
+| Variable | Folder | File |
+|---|---|---|
+| **E Valence** (Expressed) | `salmamaterials/` | [final_expressed_valence_VIDEO.csv](file:///d:/BTP/btp2/salmamaterials/final_expressed_valence_VIDEO.csv) (primary); [final_expressed_valence_AUDIO.csv](file:///d:/BTP/btp2/salmamaterials/final_expressed_valence_AUDIO.csv) (fallback) |
+| **E Arousal** | `salmamaterials/` | [final_expressed_arousal_VIDEO.csv](file:///d:/BTP/btp2/salmamaterials/final_expressed_arousal_VIDEO.csv); [final_expressed_arousal_AUDIO.csv](file:///d:/BTP/btp2/salmamaterials/final_expressed_arousal_AUDIO.csv) |
+| **P Valence** (Perceived) | `salmamaterials/` | [perceived_valence_summary.csv](file:///d:/BTP/btp2/salmamaterials/perceived_valence_summary.csv) |
+| **P Arousal** | `salmamaterials/` | [perceived_arousal_summary.csv](file:///d:/BTP/btp2/salmamaterials/perceived_arousal_summary.csv) |
+| **I1 Valence** (Survey) | `salmamaterials/` | [induced_valence_summary.csv](file:///d:/BTP/btp2/salmamaterials/induced_valence_summary.csv) |
+| **I1 Arousal** | `salmamaterials/` | [induced_arousal_summary.csv](file:///d:/BTP/btp2/salmamaterials/induced_arousal_summary.csv) |
+| **I2 Valence** (Fitbit/Clips) | `salmamaterials/` | [inferred_valence_summary_qwen_FS.csv](file:///d:/BTP/btp2/salmamaterials/inferred_valence_summary_qwen_FS.csv) |
+| **I2 Arousal** (Fitbit/Clips) | `salmamaterials/` | [inferred_arousal_summary_qwen_FS.csv](file:///d:/BTP/btp2/salmamaterials/inferred_arousal_summary_qwen_FS.csv) |
+| **Raw watch order + all values** | `salmamaterials/BTP_Phase1/` | `clip_responses_export.xlsx` ← confirmed columns: `participant, clip_order, clip_title, clip_valence, clip_arousal` (=E), `impact_valence, impact_arousal` (=P), `participant_valence, participant_arousal` (=I1), `created_at` |
+
+> [!NOTE]
+> The `clip_responses_export.xlsx` lives in `BTP_Phase1/`, not anywhere else. All the summary CSVs (qwen_FS, perceived, induced) live directly in `salmamaterials/`.
+
+> [!IMPORTANT]
+> `_chronological_clip_orders.csv` does **not yet exist**. It must be generated first (Step 0).
+
+---
+
+## Step 0 — Generate Watch Order File
+
+**Script:** `salmamaterials/_step0_build_watch_order.py`
+
+**Input:**
+```
+d:\BTP\btp2\salmamaterials\BTP_Phase1\clip_responses_export.xlsx
+```
+
+**Key function: `build_watch_order(xlsx_path) → DataFrame`**
+- Read the Excel file
+- Get all unique participants: `Nishant, ajaycc17, aritra, debjit2001, pranjal123, sayantankuila`
+- For each participant, sort their rows by `created_at` (timestamp, ground truth for order)
+- Assign `watch_position` = 1, 2, 3, ... (1-indexed chronological position)
+- Normalize participant names to match the I2 CSV column headers
+
+**Output:**
+```
+d:\BTP\btp2\salmamaterials\_chronological_clip_orders.csv
+Columns: user_id, clip_title, watch_position
+Rows: 274 clips × 6 users = 1,644 rows
+```
+
+---
+
+## Step 1 — Build Consecutive Pair Dataset
+
+**Script:** `salmamaterials/_step1_build_pair_dataset.py`
+
+**Inputs:**
+```
+salmamaterials/_chronological_clip_orders.csv   ← from Step 0
+salmamaterials/final_expressed_valence_VIDEO.csv
+salmamaterials/final_expressed_arousal_VIDEO.csv
+salmamaterials/final_expressed_valence_AUDIO.csv  ← fallback
+salmamaterials/final_expressed_arousal_AUDIO.csv
+salmamaterials/perceived_valence_summary.csv
+salmamaterials/perceived_arousal_summary.csv
+salmamaterials/induced_valence_summary.csv
+salmamaterials/induced_arousal_summary.csv
+salmamaterials/inferred_valence_summary_qwen_FS.csv
+salmamaterials/inferred_arousal_summary_qwen_FS.csv
+```
+
+**Key functions:**
+
+`load_all_clip_data() → dict[clip_title → {E_val, E_aro, P_val, P_aro, I1_val, I1_aro, I2_val, I2_aro}]`
+- Merge all 8 summary CSVs by `clip_title`
+- For E: use VIDEO values; if NaN, fill from AUDIO
+
+`assign_quadrant(val, aro) → str`
+- Returns `Q1/Q2/Q3/Q4` based on midpoint 3.0; returns `Q0` if either = 3.0 exactly
+
+`build_pairs(watch_order_df, clip_data_dict) → DataFrame`
+- For each user, sort clips by watch_position
+- Slide window of 2 → 273 pairs per user
+- Lookup E/P/I1/I2 for clip1 and clip2 from the dict
+- Compute `switching = (clip1_E_quad != clip2_E_quad)`
+- Compute `delta_I1_val`, `delta_I1_aro`, `delta_I2_val`, `delta_I2_aro`
+
+**Output columns:**
+```
+clip1_title, clip2_title, user_id
+clip1_E_val, clip1_E_aro, clip1_P_val, clip1_P_aro,
+clip1_I1_val, clip1_I1_aro, clip1_I2_val, clip1_I2_aro
+clip2_E_val, clip2_E_aro, clip2_P_val, clip2_P_aro,
+clip2_I1_val, clip2_I1_aro, clip2_I2_val, clip2_I2_aro
+clip1_E_quad, clip2_E_quad
+switching   (True/False)
+delta_I1_val, delta_I1_aro, delta_I2_val, delta_I2_aro
+```
+
+**Output:**
+```
+d:\BTP\btp2\salmamaterials\_consecutive_pair_dataset.csv
+Expected rows: ~1,638 (273 × 6; may be slightly less if clips are missing from summary CSVs)
+```
+
+---
+
+## Step 2 — Assign B1–B10 Bucket Labels
+
+**Script:** `salmamaterials/_step2_assign_buckets.py`
+
+**Input:**
+```
+salmamaterials/_consecutive_pair_dataset.csv
+```
+
+**Equality rule** at threshold τ:
+`|A_val − B_val| ≤ τ  AND  |A_aro − B_aro| ≤ τ`
+
+**Key function: `assign_bucket(E, P, I, tau) → str`**
+```python
+# I = I1 → returns B1–B5; I = I2 → returns B6–B10
+if P==E and P==I:  return "B1" (or B6)
+if P==I and P!=E:  return "B2" (or B7)
+if P==E and P!=I:  return "B3" (or B8)
+if E==I and P!=E:  return "B4" (or B9)
+else:              return "B5" (or B10)
+```
+
+**New columns added** (for τ ∈ {0.25, 0.5, 0.75, 1.0}):
+```
+clip1_B_I1_tau025, clip1_B_I1_tau050, clip1_B_I1_tau075, clip1_B_I1_tau100
+clip1_B_I2_tau025, clip1_B_I2_tau050, clip1_B_I2_tau075, clip1_B_I2_tau100
+clip2_B_I1_tau025 ... clip2_B_I2_tau100
+clip2_combined_tau050  (e.g. "B3+B6" = B3 by I1 AND B6 by I2 at τ=0.5)
+```
+
+**Output:** Updates `_consecutive_pair_dataset.csv` with new bucket columns.
+
+---
+
+## Step 3 — Compute σ for All 10 Hypotheses
+
+**Script:** `salmamaterials/_step3_compute_sigma.py`
+
+**Input:**
+```
+salmamaterials/_consecutive_pair_dataset.csv
+```
+
+**Key function: `compute_sigma(df, filter_fn, condition_fn, group_col="switching") → dict`**
+- Filter rows using `filter_fn`
+- For each group (switching=True / switching=False), count rows satisfying `condition_fn`
+- Return `σ = count / total` for each group
+
+| Hypothesis | Filter | σ condition |
+|---|---|---|
+| **Hyp-1** | All pairs | `clip2_B_I1 = B1`, split by switching |
+| **Hyp-2** | `switching=True` + opposing E-quads | `clip2_combined = "B3+B6"` |
+| **Hyp-3** | `clip1_E_quad ∈ {Q1,Q3}`, clip2 E near 3.0 | `clip2_B_I1 = B2`, split by switching |
+| **Hyp-4** | `clip1_B_I1=B5 OR clip1_B_I2=B10` | σ(clip2 in B1/B2/B3/B6) vs B1-Clip1 baseline |
+| **Hyp-5** | All pairs | σ(B4) and σ(B9) — expect NO difference |
+| **Hyp-6** | `switching=True` only | σ("B3+B6") in adjacent vs diagonal switches |
+| **Hyp-7** | All pairs | σ(`clip2_B_I2=B9`), switching vs non-switching |
+| **Hyp-8** | All pairs | Euclidean distance(I1, I2) for clip2 |
+| **Hyp-9** | clip2 near-neutral E, non-switching, clip2∈B2 | `dist(P₂, I1₁) < dist(P₂, E₂)` |
+| **Hyp-10** | `clip1_B_I2=B10` | mean I2_arousal of clip2, vs B6-Clip1 group |
+
+**Output:**
+```
+d:\BTP\btp2\salmamaterials\_sigma_results.csv
+Columns: hyp_id, tau, sigma_switching, sigma_nonswitching, n_switching, n_nonswitching
+```
+
+---
+
+## Step 4 — Statistical Tests + Maintenance vs Drift Proof
+
+**Script:** `salmamaterials/_step4_statistical_tests.py`
+
+**Input:**
+```
+salmamaterials/_consecutive_pair_dataset.csv
+salmamaterials/_sigma_results.csv
+```
+
+**Key functions:**
+`run_ttest(group_a_values, group_b_values) → (t_stat, p_value)`
+- `scipy.stats.ttest_ind` on switching vs non-switching δ values
+
+`maintenance_vs_drift_proof(df) → plot`
+- Filter B1(I1) clips in Q1
+- Group A = switching into Q1 (drift attempts)
+- Group B = non-switching in Q1 (maintenance)
+- t-test on σ values; generate box plot of `delta_I1_val`
+
+**Outputs:**
+```
+d:\BTP\btp2\salmamaterials\_statistical_tests.csv
+Columns: hyp_id, tau, t_stat, p_value, significant(p<0.05), direction_correct
+
+d:\BTP\btp2\salmamaterials\_plots\_maintenance_vs_drift_proof.png
+```
+
+---
+
+## Step 5 — Generate All Plots
+
+**Script:** `salmamaterials/_step5_generate_plots.py`
+
+**Input:**
+```
+salmamaterials/_consecutive_pair_dataset.csv
+salmamaterials/_sigma_results.csv
+salmamaterials/_statistical_tests.csv
+```
+
+**Output folder:** `d:\BTP\btp2\salmamaterials\_plots\`
+
+| File | What It Shows |
+|---|---|
+| `_markov_heatmap_switching.png` | 5×5 B1–B5 Clip1 bucket → Clip2 bucket (switching pairs) |
+| `_markov_heatmap_nonswitching.png` | Same, non-switching |
+| `_quadrant_heatmap_switching.png` | 4×4 clip1_E_quad → clip2_I2_quad (switching) |
+| `_quadrant_heatmap_nonswitching.png` | Same, non-switching |
+| `_sigma_barchart.png` | σ per hypothesis (Hyp1–10), bars per τ, split by switching |
+| `_sigma_sensitivity_curves.png` | σ vs τ line chart per hypothesis |
+| `_drift_boxplot_valence.png` | delta_I1_val: switching vs non-switching, per E-quadrant |
+| `_drift_boxplot_arousal.png` | Same for arousal |
+| `_I1_I2_scatter.png` | I1 val vs I2 val for clip2, coloured by B-bucket |
+| `_I1_I2_distance_boxplot.png` | Euclidean I1–I2 distance per switching type |
+
+---
+
+## Execution Order
+
+```
+python _step0_build_watch_order.py       → creates _chronological_clip_orders.csv
+python _step1_build_pair_dataset.py      → creates _consecutive_pair_dataset.csv
+python _step2_assign_buckets.py          → adds bucket columns to _consecutive_pair_dataset.csv
+python _step3_compute_sigma.py           → creates _sigma_results.csv
+python _step4_statistical_tests.py       → creates _statistical_tests.csv + maintenance plot
+python _step5_generate_plots.py          → creates all 10 plots in _plots/
+```
+
+Each step reads only from the previous step's output. If one fails, rerun only that step.
+
+---
+
+## Where the Llama File Goes (Next Plan)
+
+The `inferred_emotions_enhanced_llama.csv` feeds the **Affective Drift Analysis** — that is the analysis comparing:
+- What Ajay's body says he feels across his daily life (I2 from the Llama file — 368 windows)
+- What the induced emotion from the movie clips says he should be feeling (I1/I2 from clip sessions)
+
+That analysis will be its own separate plan after this switching analysis is done.
