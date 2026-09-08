@@ -310,9 +310,8 @@ import random
 import re
 
 # ─── CONFIGURATION ────────────────────────────────────────────────────────────
-GROQ_API_KEY = os.environ["GROQ_API_KEY"]  # set this in your shell/env, do not hardcode
 
-# 
+#
 
 MODEL        = "qwen/qwen3-32b"
 
