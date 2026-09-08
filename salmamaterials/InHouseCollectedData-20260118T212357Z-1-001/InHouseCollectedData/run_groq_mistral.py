@@ -310,7 +310,7 @@ import random
 import re
 
 # ─── CONFIGURATION ────────────────────────────────────────────────────────────
-GROQ_API_KEY = "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"
+GROQ_API_KEY = os.environ["GROQ_API_KEY"]  # set this in your shell/env, do not hardcode
 
 # 
 
