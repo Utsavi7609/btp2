@@ -1,0 +1,23 @@
+This repo is a research artifact dump for the BTP-2 project (emotion alignment
+analysis pipeline), not a single installable application — there's no
+package.json or requirements.txt for a unified project, and no node_modules/
+venv was ever committed (confirmed clean).
+
+See _BTP2_REPO_DOCUMENTATION.md at the repo root first — it documents what
+every top-level file and folder is for, including the files/ pipeline
+structure and btp2main/ subproject.
+
+The many standalone Python scripts under files/ and files/redundant/ share a
+common set of third-party dependencies (found by scanning all .py imports).
+If you need to run one of them, install what it imports — most commonly:
+
+    pip install pandas numpy scipy scikit-learn matplotlib seaborn groq \
+                google-generativeai tqdm openpyxl requests
+
+Notes:
+- `groq` and `google-generativeai` are used by the LLM-inference scripts
+  (e.g. files/redundant/inhouse/*llm*.py) — you'll also need API keys for
+  those services, not included in the repo.
+- salmamaterials/ is raw collected data (~600MB), not code.
+- No __pycache__/venv bloat was present in this repo; a .gitignore was added
+  here purely as a precaution for future work.
